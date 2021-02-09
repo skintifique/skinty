@@ -8,6 +8,8 @@
 <body>
 <!-- inputs to provide when deploying the file -->  
 <input hidden id="promb" value="sk"></input>
+<!-- floatingBtn_themeb defines the default theme that floating SkinTy will open on (provided it is shown as specified with floatingBtn_showb -->
+<!-- if a value is provided for floatingBtn_themeb, then it takes precedence over floatingBtn_url_keywords which becomes useless  --> 
 <input hidden id="floatingBtn_themeb" value=""></input>
 <!-- floatingBtn_showb defines which pages will display the floating btn: if "all": all pages, if keyword "xxx": only the pages where the url contains "xxx". At the present time, only one keyword is possible -->  
 <!-- At the present time, only one keyword is possible. If no input is provided, the parameter will be set up so as to show the floating button on all pages, by default -->  
@@ -15,6 +17,7 @@
 <input hidden id="floatingBtn_formatb" value="close"></input>
 <input hidden id="floatingBtn_url_keywords" value="skintifique,eczema,dermatitis,maternity,pregnant,allergy"></input>
 <!-- floatingBtn_url_keywords specifies whether the floating button, if displayed and clicked, will start on a page specified by the url of the page where the code is installed-->  
+<!-- floatingBtn_url_keywords is useless if a theme has been entered through floatingBtn_themeb -->  
 <!-- end -->  
 <br>
 <br>
@@ -52,6 +55,8 @@ document.getElementById("divSkintyFrame").className ="divSkintyForIframe" ;
 }
 </script>
 
+<p id="devdemo">p</p>
+
 <script>
 function openSkintyModal (x) {
 // Get the modal
@@ -68,6 +73,7 @@ let t = y.search("Theme") ;
 let u = y.search("Float");
 let btnType ; 
 if (z > -1) {btnType = "Query";} else if (t > -1) {btnType = "Theme";} else if (u > -1) {btnType = "Float";};
+  document.getElementById("devdemo").innerHTML = btnType ;
 if (btnType == "Float") {
   openSkintyModalFloat () ;
   } else if (btnType == "Theme") {
