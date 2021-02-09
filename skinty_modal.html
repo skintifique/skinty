@@ -81,9 +81,12 @@ if (btnType == "Float") {
  }
 </script>
 
+<p id="devdemo">p</p>
+
 <script>
 function openSkintyModalFloat () {
 let prombM = document.getELementById("promb").value ;
+    document.getElementById("skintyframe").src = prombM ;
 let formatbM = "close" ;
 let showbM ;
 let url = window.location.href ;
@@ -123,11 +126,9 @@ let floatingBtn_url_keywords = document.getELementById("floatingBtn_url_keywords
     themebM = "default" ;
    }
 let target_urlM = "https://skintifique.github.io/index.html" + "?promb=" + prombM  + "queryb=" + "&themeb=" + themebM + "&formatb=" + formatbM + "&showb=" + showbM ;
-document.getElementById("skintyframe").src = target_urlM ;
 }
 </script>
 
-<p id="devdemo">p</p>
 <script>
 function openSkintyModalTheme (x) {
 let prombM = document.getELementById("promb").value ;
