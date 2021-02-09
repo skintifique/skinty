@@ -83,14 +83,8 @@ if (btnType == "Float") {
 
 <script>
 function openSkintyModalFloat () {
-          document.getElementById("devdemo").innerHTML = "poaure" ;
- }
-</script> 
-
-
-  
-let prombM = document.getELementById("promb").value ;
-let formatbM = "close" ;
+let prombM = document.getElementById("promb").value ;
+let formatbM = "open" ;
 let showbM ;
 let url = window.location.href ;
 let floatingBtn_showb = document.getElementById("floatingBtn_showb").value ;
@@ -103,6 +97,9 @@ let floatingBtn_showb = document.getElementById("floatingBtn_showb").value ;
     } else {
     showbM = "hide" ;
     } 
+          document.getElementById("devdemo").innerHTML = "poaure" ;
+ }
+</script> 
 let themebM ;
 let floatingBtn_url_keywords = document.getELementById("floatingBtn_url_keywords").value ;
   if (floatingBtn_url_keywords.length > 0) {
