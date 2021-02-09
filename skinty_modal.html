@@ -140,7 +140,7 @@ let prombM = document.getElementById("promb").value ;
             document.getElementById("devdemo").innerHTML = prombM ;
 let formatbM = "open" ;
 let showbM = "show" ;
-let themebM = "lghjkgj" ;
+let themebM = x.value ;
 let querybM = "" ;
 let target_urlM = "https://skintifique.github.io/index.html" + "?promb=" + prombM  + "&queryb=" + querybM + "&themeb=" + themebM + "&formatb=" + formatbM + "&showb=" + showbM ;
 document.getElementById("skintyframe").src = target_urlM ;
@@ -148,12 +148,12 @@ document.getElementById("skintyframe").src = target_urlM ;
 </script>
 
 <script>
-function openSkintyModalQuery () {
+function openSkintyModalQuery (x) {
 let prombM = document.getELementById("promb").value ;
 let formatbM = "open" ;
 let showbM = "show" ;
 let themebM = "" ;
-let querybM = "gkjgjg" ;
+let querybM = x.value ;
 let target_urlM = "https://skintifique.github.io/index.html" + "?promb=" + prombM  + "&queryb=" + querybM + "&themeb=" + themebM + "&formatb=" + formatbM + "&showb=" + showbM ;
 document.getElementById("skintyframe").src = target_urlM ;
 }
