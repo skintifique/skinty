@@ -58,6 +58,7 @@ document.getElementById("divSkintyFrame").className ="divSkintyForIframe" ;
 <p id="devdemo">p</p>
 <script>
 function openSkintyModal (x) {
+  document.getElementById("devdemo").innerHTML = "poaure" ;
 // Get the modal
 let modal = document.getElementById("myModal");
 
@@ -72,7 +73,6 @@ let t = y.search("Theme") ;
 let u = y.search("Float");
 let btnType ; 
 if (z > -1) {btnType = "Query";} else if (t > -1) {btnType = "Theme";} else if (u > -1) {btnType = "Float";}
-    document.getElementById("devdemo").innerHTML = btnType ;
 if (btnType == "Float") {
   openSkintyModalFloat () ;
   } else if (btnType == "Theme") {
@@ -130,11 +130,11 @@ document.getElementById("skintyframe").src = target_urlM ;
 </script>
 
 <script>
-function openSkintyModalTheme (x) {
+function openSkintyModalTheme () {
 let prombM = document.getELementById("promb").value ;
 let formatbM = "close" ;
 let showbM = "show" ;
-let themebM = x.value ;
+let themebM = "lghjkgj" ;
 let querybM = "" ;
 let target_urlM = "https://skintifique.github.io/index.html" + "?promb=" + prombM  + "&queryb=" + querybM + "&themeb=" + themebM + "&formatb=" + formatbM + "&showb=" + showbM ;
 document.getElementById("skintyframe").src = target_urlM ;
@@ -142,12 +142,12 @@ document.getElementById("skintyframe").src = target_urlM ;
 </script>
 
 <script>
-function openSkintyModalQuery (x) {
+function openSkintyModalQuery () {
 let prombM = document.getELementById("promb").value ;
 let formatbM = "close" ;
 let showbM = "show" ;
 let themebM = "" ;
-let querybM = x.value ;
+let querybM = "gkjgjg" ;
 let target_urlM = "https://skintifique.github.io/index.html" + "?promb=" + prombM  + "&queryb=" + querybM + "&themeb=" + themebM + "&formatb=" + formatbM + "&showb=" + showbM ;
 document.getElementById("skintyframe").src = target_urlM ;
 }
