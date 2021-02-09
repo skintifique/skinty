@@ -90,6 +90,18 @@ z-index:101;
         z-index:100;
 }
 
+.SkinTyBtnFloat {
+  background-color: rgba(45,133,154,1);
+  border: none;
+  border-radius: 30px;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+}
+
 .img.displayed {
     display: block;
     margin-left: auto;
