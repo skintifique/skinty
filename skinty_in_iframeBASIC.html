@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!-- This is a basic page to display SkinTy in an iframe. -->
+<!--The default key parameters are set up directly in the code. -->
+<!--The values of the url parameters, if any, take precedence over those of the default values -->
+<!-- All the js is included on this page (no external js) -->
+
+<html>
+<head>
+<meta name="viewport" content="width-device-width, initial-scale=1">
+<style>
+.divSkintyForIframe {
+  display : block;
+  margin-left : auto ;
+  margin-right : auto ;
+  width = 30% ;
+  min-width : 320px;
+  max-width : 500px; 
+  background-color: rgba(242,242,242,1);
+  border: "none" ;
+  border-radius: 30px;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.divSkintyForIframe30 {
+  display : block;
+  margin-left : auto ;
+  margin-right : auto ;
+  width = 30% ;
+  min-width : 320px;
+  max-width : 500px; 
+  background-color: rgba(242,242,242,1);
+  border: 2px solid rgba(45,133,154,1) ;
+  border-radius: 30px;
+  color: black;
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+</style>
+</head>
+<body>
+  
+<div id="divSkintyFrame" class="divSkintyForIframe30">
+<iframe id="skintyframe" src="" width="100%" height="700px" style="border:none;"></iframe>
+<script>  
+let url = window.location.href ;
+let urlParams = (new URL(document.location)).searchParams ;
+let promb = urlParams.get("promb") ;
+if (promb) {promb2 = promb;} else {promb2 = "sk";}
+let queryb = urlParams.get("queryb") ;
+if (queryb) {queryb2 = queryb;} else {queryb2 = "";}
+let themeb = urlParams.get("themeb") ;
+let formatb = urlParams.get("formatb") ;
+let showb = urlParams.get("showb") ;
+let target_url = "https://skintifique.github.io/index.html" + "?promb=" + promb2  + "&queryb=" + queryb2 + "&themeb=" + themeb + "&formatb=" + formatb + "&showb=" + showb ;
+document.getElementById("skintyframe").src = target_url ;
+</script>
+<script>
+let windowwidth = window.innerWidth;
+if (windowwidth < 500) {
+document.getElementById("divSkintyFrame").className ="divSkintyForIframe" ;
+}
+</script>
+</div>
+
+</body>
+</html>
