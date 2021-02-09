@@ -9,9 +9,10 @@
 <!-- inputs to provide when deploying the file -->  
 <input hidden id="promb" value="sk"></input>
 <input hidden id="floatingBtn_themeb" value=""></input>
-<input hidden id="floatingBtn_showb" value="yes"></input>
+<!-- floatingBtn_showb defines which pages will display the floating btn: if "all": all pages, if keyword "xxx": only the pages where the url contains "xxx". At the present time, only one keyword is possible -->  
+<!-- At the present time, only one keyword is possible. If no input is provided, the parameter will be set up so as to show the floating button on all pages, by default -->  
+<input hidden id="floatingBtn_showb" value="all"></input>
 <input hidden id="floatingBtn_formatb" value="close"></input>
-<input hidden id="floatingBtn_showb" value="show"></input>
 <input hidden id="floatingBtn_url_keywords" value="skintifique,eczema,dermatitis,maternity,pregnant,allergy"></input>
 <!-- floatingBtn_url_keywords specifies whether the floating button, if displayed and clicked, will start on a page specified by the url of the page where the code is installed-->  
 <!-- end -->  
@@ -64,36 +65,84 @@ let span = document.getElementsByClassName("close")[0];
 let y = x.id ;
 let z = y.search("Query") ;
 let t = y.search("Theme") ;
+let u = y.search("Float");
 let btnType ; 
-if (z > -1) {btnType = "Query";} else if (t > -1) {btnType = "Theme";} ;
-let v ;
+if (z > -1) {btnType = "Query";} else if (t > -1) {btnType = "Theme";} else if (u > -1) {btnType = "Float";};
+if (btnType == "Float") {
+  openSkintyModalFloat () ;
+  } else if (btnType == "Theme") {
+  openSkintyModalTheme (x) ;
+  } else if (btnType == "Query") {
+  openSkintyModalTheme (x) ;
+ }
+ }
+</script>
+
+<script>
+function openSkintyModalFloat () {
+let prombM = document.getELementById("promb").value ;
+let formatbM = "close" ;
+let showbM ;
 let url = window.location.href ;
-if (url.includes("eczema")) {
-    v = "eczema" ;
-} else if (url.includes("dermatit")) {
-    v = "eczema" ;
-} else if (url.includes("psoriasis")) {
-    v = "psoriasis"
-} else if (url.includes("allergy")) {
-    v = "allergy" ;
-} else if (url.includes("maternity")) {
-    v = "maternity" ;
-} else if (url.includes("pregnan")) {
-    v = "maternity" ;
-} else if (url.includes("acne")) {
-    v = "acne" ;
-} else if (url.includes("mature")) {
-    v = "mature" ;
-} else {
-    v = "default" ; 
-}
-let prombM = "sk" ;
-let querybM ;
-if (btnType == "Query") {querybM = v ;} else {querybM = "";} ;
+let floatingBtn_showb = document.getElementById("floatingBtn_showb").value ;
+  if (floatingBtn_showb.length == "all") {
+    showbM = "show" ;
+    } else if (url.includes(floatingBtn_showb)) {
+    showbM = "show" ;
+    } else if (floatingBtn_showb.length == 0) {
+    showbM = "show" ;
+    } else {
+    showbM = "hide" ;
+    } 
 let themebM ;
-if (btnType == "Theme") {themebM = v ;} else {themebM = "";} ;
-let formatbM = "" ;
+let floatingBtn_url_keywords = document.getELementById("floatingBtn_url_keywords").value ;
+  if (floatingBtn_url_keywords.length > 0) {
+    if (url.includes("eczema")) && (floatingBtn_url_keywords.includes("eczema")) {
+    themebM = "eczema" ;
+    } else if (url.includes("dermatit")) && (floatingBtn_url_keywords.includes("dermatit")) {
+    themebM = "eczema" ;
+    } else if (url.includes("psoriasis")) && (floatingBtn_url_keywords.includes("psoriasis")) {
+    themebM = "psoriasis"
+    } else if (url.includes("allergy")) && (floatingBtn_url_keywords.includes("allergy")) {
+    themebM = "allergy" ;
+    } else if (url.includes("maternity")) && (floatingBtn_url_keywords.includes("maternity")) {
+    themebM = "maternity" ;
+    } else if (url.includes("pregnan")) && (floatingBtn_url_keywords.includes("pregnant")) {
+    themebM = "maternity" ;
+    } else if (url.includes("acne")) && (floatingBtn_url_keywords.includes("acne")) {
+    themebM = "acne" ;
+    } else if (url.includes("mature-skin")) && (floatingBtn_url_keywords.includes("mature-skin")) {
+    themebM = "mature_skin" ;
+    } else {
+    themebM = "default" ; 
+    } 
+   } else {
+    themebM = "default" ;
+   }
+let target_urlM = "https://skintifique.github.io/index.html" + "?promb=" + prombM  + "queryb=" + "&themeb=" + themebM + "&formatb=" + formatbM + "&showb=" + showbM ;
+document.getElementById("skintyframe").src = target_urlM ;
+}
+</script>
+
+<script>
+function openSkintyModalTheme (x) {
+let prombM = document.getELementById("promb").value ;
+let formatbM = "close" ;
 let showbM = "show" ;
+let themebM = x.value ;
+let querybM = "" ;
+let target_urlM = "https://skintifique.github.io/index.html" + "?promb=" + prombM  + "&queryb=" + querybM + "&themeb=" + themebM + "&formatb=" + formatbM + "&showb=" + showbM ;
+document.getElementById("skintyframe").src = target_urlM ;
+}
+</script>
+
+<script>
+function openSkintyModalQuery (x) {
+let prombM = document.getELementById("promb").value ;
+let formatbM = "close" ;
+let showbM = "show" ;
+let themebM = "" ;
+let querybM = x.value ;
 let target_urlM = "https://skintifique.github.io/index.html" + "?promb=" + prombM  + "&queryb=" + querybM + "&themeb=" + themebM + "&formatb=" + formatbM + "&showb=" + showbM ;
 document.getElementById("skintyframe").src = target_urlM ;
 }
