@@ -58,10 +58,6 @@ document.getElementById("divSkintyFrame").className ="divSkintyForIframe" ;
 <p id="devdemo">p</p>
 <script>
 function openSkintyModal (x) {
-  document.getElementById("devdemo").innerHTML = "poaure" ;
- }
-</script> 
-  
 // Get the modal
 let modal = document.getElementById("myModal");
 
@@ -75,6 +71,10 @@ let z = y.search("Query") ;
 let t = y.search("Theme") ;
 let u = y.search("Float");
 let btnType ; 
+    document.getElementById("devdemo").innerHTML = "poaure" ;
+ }
+</script> 
+
 if (z > -1) {btnType = "Query";} else if (t > -1) {btnType = "Theme";} else if (u > -1) {btnType = "Float";}
 if (btnType == "Float") {
   openSkintyModalFloat () ;
