@@ -74,7 +74,8 @@ z-index:101;
   cursor: pointer;
 }
 
-.float{
+/* The SkinTy float Button */
+.SkinTyBtnFloat{
 	position:fixed;
 	width:60px;
 	height:60px;
@@ -94,3 +95,16 @@ z-index:101;
     margin-left: auto;
     margin-right: auto ;
  }
+
+/* The SkinTy default Button */
+.SkinTyBtnDefault {
+  background-color: rgba(45,133,154,1);
+  border: none;
+  border-radius: 30px;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+}
