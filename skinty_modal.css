@@ -111,7 +111,7 @@ z-index:101;
 /* The SkinTy default Button */
 .SkinTyBtnDefault {
   background-color: white;
-  border: none;
+  border: white;
   border-radius: 30px;
   color: black;
   padding: 5px 10px;
