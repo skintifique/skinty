@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<!-- This is a wip modal + floating button. css and js may be external -->
+<html>
+<head>
+<meta name="viewport" content="width-device-width, initial-scale=1">
+<link rel="stylesheet" href="https://skintifique.github.io/skinty/skinty_modal.css">
+</head>
+<body>
+<!-- inputs to provide when deploying the file -->  
+<!-- floatingBtn_display defines which pages display the floating btn: if "all": all pages, if keyword "xxx": only the pages where the url contains "xxx". -->  
+<!-- At the present time, only one keyword is possible (e.g.: "Skintifique"). If no input is provided, the floating button will be displayed on all pages, by default -->  
+<!-- This feature is only relevant when the module is deployed across many pages, eg through Google GTM, but SkinTy should only be displayed on some of them -->  
+<input hidden id="floatingBtn_display" value=""></input>
+  <input hidden id="promb" value="sk"></input>
+<!-- floatingBtn_themeb defines the default theme that floating SkinTy will open on (provided it is shown as specified with floatingBtn_showb -->
+<!-- if a value is provided for floatingBtn_themeb, then it takes precedence over floatingBtn_kwds which becomes useless  --> 
+<input hidden id="floatingBtn_themeb" value=""></input>
+<input hidden id="floatingBtn_kwds" value="eczema,dermatitis,maternity,pregnant,allergy"></input>
+<!-- floatingBtn_kwds specifies whether the floating button, if displayed and clicked, will start on a page specified by the url of the page where the code is installed-->  
+<!-- floatingBtn_kwds is useless if a theme has been entered through floatingBtn_themeb -->  
+<!-- end -->  
+<br>
+<br>
+<br>
+<!-- example of a button triggering opening of SkinTy modal page, starting on a specific theme -->  
+<button id="ModalBtnTheme_1" class="SkintyBtnDefault" onclick="openSkintyModal(this)" value="allergy">When you click me, SkinTy will show up and start on the allergy page</button>
+<!-- example of a button triggering opening of SkinTy modal page, starting with a specific query -->    
+<p>lorem ipsum...<button id="ModalBtnQuery_1" class="SkintyBtnDefault" onclick="openSkintyModal(this)" value="Which ingredients should be avoided in skincare products?"><u>Skintifique products contain no ingredients that should be avoided in skincare products</u></button>...lorem ipsum</p> 
+<!-- end example buttons -->  
+  
+  
+<button id="ModalBtnFloat" class="SkintyBtnFloat, float" onclick="openSkintyModal(this)" value="">
+<img class= "img.displayed" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYA2n-s-Pn6rtQz-3aLUgj8s1XxhahIv0ZPA&usqp=CAU"  width="30px" height="30px" />
+</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close" onclick="closeSkintyModal()">&times;</span>
+    <p>
+<div id="divSkintyFrame" class="divSkintyForIframe30">
+<iframe id="skintyframe" src="" width="100%" height="700px" style="border:none;"></iframe>
+</div>
+    </p>
+<span class="close" onclick="closeSkintyModal()">&times;</span>
+  </div>
+</div>
+
+<script>
+let floatingBtn_display = document.getElementById("floatingBtn_display").value ;
+let this_page_url = window.location.href ;
+if (floatingBtn_display == "all") {
+document.getElementById("ModalBtnFloat").style.display = "block" ;
+} else if (this_page_url.includes(floatingBtn_display)) {
+document.getElementById("ModalBtnFloat").style.display = "block" ;
+} else if (floatingBtn_display.length == 0) {
+document.getElementById("ModalBtnFloat").style.display = "block" ;
+} else {
+document.getElementById("ModalBtnFloat").style.display ="none" ;
+}
+</script>
+
+<script>
+let windowwidth = window.innerWidth;
+if (windowwidth < 500) {
+document.getElementById("divSkintyFrame").className ="divSkintyForIframe" ;
+}
+</script>
+
+<script>
+function openSkintyModal (x) {
+// Get the modal
+let modal = document.getElementById("myModal");
+
+// Get the <span> element that closes the modal
+let span = document.getElementsByClassName("close")[0];
+
+// open the modal 
+  modal.style.display = "block";
+let y = x.id ;
+let z = y.search("Query") ;
+let t = y.search("Theme") ;
+let u = y.search("Float");
+let btnType ; 
+if (z > -1) {btnType = "Query";} else if (t > -1) {btnType = "Theme";} else if (u > -1) {btnType = "Float";}
+if (btnType == "Float") {
+  openSkintyModalFloat ()
+  } else if (btnType == "Theme") {
+  openSkintyModalTheme (x)
+  } else if (btnType == "Query") {
+  openSkintyModalQuery (x)
+ }
+ }
+</script>
+
+<script>
+function openSkintyModalFloat () {
+let prombM = document.getElementById("promb").value ;
+let formatbM = "open" ;
+let showbM = "show";
+let themebM ;
+let url = window.location.href ;
+let floatingBtn_kwds = document.getElementById("floatingBtn_kwds").value ;
+  if (floatingBtn_kwds.length > 0) {
+    if (url.includes("eczema") && floatingBtn_kwds.includes("eczema")) {
+    themebM = "eczema" ;
+    } else if (url.includes("dermatit") && floatingBtn_kwds.includes("dermatit")) {
+    themebM = "eczema" ;
+    } else if (url.includes("psoriasis") && floatingBtn_kwds.includes("psoriasis")) {
+    themebM = "psoriasis"
+    } else if (url.includes("allergy") && floatingBtn_kwds.includes("allergy")) {
+    themebM = "allergy" ;
+    } else if (url.includes("maternity") && floatingBtn_kwds.includes("maternity")) {
+    themebM = "maternity" ;
+    } else if (url.includes("pregnan") && floatingBtn_kwds.includes("pregnant")) {
+    themebM = "maternity" ;
+    } else if (url.includes("acne") && floatingBtn_kwds.includes("acne")) {
+    themebM = "acne" ;
+    } else if (url.includes("mature-skin") && floatingBtn_kwds.includes("mature-skin")) {
+    themebM = "mature_skin" ;
+    } else {
+    themebM = "default" ; 
+    } 
+   } else {
+    themebM = "default" ;
+   }
+let target_urlM = "https://skintifique.github.io/index.html" + "?promb=" + prombM  + "&queryb=" + "&themeb=" + themebM + "&formatb=" + formatbM + "&showb=" + showbM ;
+document.getElementById("skintyframe").src = target_urlM ;
+}
+</script>
+
+<script>
+function openSkintyModalTheme (x) {
+let prombM = document.getElementById("promb").value ;
+let formatbM = "open" ;
+let showbM = "show" ;
+let themebM = x.value ;
+let querybM = "" ;
+let target_urlM = "https://skintifique.github.io/index.html" + "?promb=" + prombM  + "&queryb=" + querybM + "&themeb=" + themebM + "&formatb=" + formatbM + "&showb=" + showbM ;
+document.getElementById("skintyframe").src = target_urlM ;
+}
+</script>
+
+<script>
+function openSkintyModalQuery (x) {
+let prombM = document.getElementById("promb").value ;
+let formatbM = "open" ;
+let showbM = "show" ;
+let themebM = "" ;
+let querybM = x.value ;
+let target_urlM = "https://skintifique.github.io/index.html" + "?promb=" + prombM  + "&queryb=" + querybM + "&themeb=" + themebM + "&formatb=" + formatbM + "&showb=" + showbM ;
+document.getElementById("skintyframe").src = target_urlM ;
+}
+</script>
+
+<script>
+function closeSkintyModal() {
+// Get the modal
+let modal = document.getElementById("myModal");
+// When the user clicks on <span> (x), close the modal
+  modal.style.display = "none";
+}
+</script>
+
+<script>
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+// Get the modal
+let modal = document.getElementById("myModal");
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+
+</body>
+</html>
