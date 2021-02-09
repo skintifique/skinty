@@ -72,7 +72,6 @@ let t = y.search("Theme") ;
 let u = y.search("Float");
 let btnType ; 
 if (z > -1) {btnType = "Query";} else if (t > -1) {btnType = "Theme";} else if (u > -1) {btnType = "Float";}
-  document.getElementById("skintyframe").src = btnType ;
 if (btnType == "Float") {
   openSkintyModalFloat () ;
   } else if (btnType == "Theme") {
@@ -85,6 +84,7 @@ if (btnType == "Float") {
 
 <script>
 function openSkintyModalFloat () {
+  document.getElementById("devdemo").innerHTML = "apoeiru" ;
 let prombM = document.getELementById("promb").value ;
 let formatbM = "close" ;
 let showbM ;
@@ -125,6 +125,7 @@ let floatingBtn_url_keywords = document.getELementById("floatingBtn_url_keywords
     themebM = "default" ;
    }
 let target_urlM = "https://skintifique.github.io/index.html" + "?promb=" + prombM  + "queryb=" + "&themeb=" + themebM + "&formatb=" + formatbM + "&showb=" + showbM ;
+document.getElementById("skintyframe").src = target_urlM ;
 }
 </script>
 
@@ -136,7 +137,6 @@ let showbM = "show" ;
 let themebM = x.value ;
 let querybM = "" ;
 let target_urlM = "https://skintifique.github.io/index.html" + "?promb=" + prombM  + "&queryb=" + querybM + "&themeb=" + themebM + "&formatb=" + formatbM + "&showb=" + showbM ;
-  document.getElementById("devdemo").innerHTML = target_urlM ;
 document.getElementById("skintyframe").src = target_urlM ;
 }
 </script>
