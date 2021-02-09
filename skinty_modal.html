@@ -74,9 +74,9 @@ if (z > -1) {btnType = "Query";} else if (t > -1) {btnType = "Theme";} else if (
 if (btnType == "Float") {
   openSkintyModalFloat ()
   } else if (btnType == "Theme") {
-  openSkintyModalTheme ()
+  openSkintyModalTheme (x)
   } else if (btnType == "Query") {
-  openSkintyModalQuery ()
+  openSkintyModalQuery (x)
  }
  }
 </script>
@@ -135,9 +135,10 @@ document.getElementById("skintyframe").src = target_urlM ;
 </script>
 
 <script>
-function openSkintyModalTheme () {
+function openSkintyModalTheme (x) {
 let prombM = document.getELementById("promb").value ;
-let formatbM = "close" ;
+            document.getElementById("devdemo").innerHTML = prombM ;
+let formatbM = "open" ;
 let showbM = "show" ;
 let themebM = "lghjkgj" ;
 let querybM = "" ;
@@ -149,7 +150,7 @@ document.getElementById("skintyframe").src = target_urlM ;
 <script>
 function openSkintyModalQuery () {
 let prombM = document.getELementById("promb").value ;
-let formatbM = "close" ;
+let formatbM = "open" ;
 let showbM = "show" ;
 let themebM = "" ;
 let querybM = "gkjgjg" ;
