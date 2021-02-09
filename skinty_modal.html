@@ -81,7 +81,6 @@ if (btnType == "Float") {
  }
 </script>
 
-<p id="devdemo">p</p>
 <script>
 function openSkintyModalFloat () {
           document.getElementById("devdemo").innerHTML = "poaure" ;
@@ -134,9 +133,10 @@ document.getElementById("skintyframe").src = target_urlM ;
 }
 </script>
 
+<p id="devdemo">p</p>
 <script>
 function openSkintyModalTheme (x) {
-let prombM = document.getELementById("promb").value ;
+let prombM = document.getElementById("promb").value ;
             document.getElementById("devdemo").innerHTML = prombM ;
 let formatbM = "open" ;
 let showbM = "show" ;
