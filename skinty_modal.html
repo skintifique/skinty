@@ -13,11 +13,11 @@
 <input hidden id="floatingBtn_display" value="all"></input>
   <input hidden id="promb" value="sk"></input>
 <!-- floatingBtn_themeb defines the default theme that floating SkinTy will open on (provided it is shown as specified with floatingBtn_showb -->
-<!-- if a value is provided for floatingBtn_themeb, then it takes precedence over floatingBtn_url_keywords which becomes useless  --> 
+<!-- if a value is provided for floatingBtn_themeb, then it takes precedence over floatingBtn_kwds which becomes useless  --> 
 <input hidden id="floatingBtn_themeb" value=""></input>
-<input hidden id="floatingBtn_url_keywords" value="skintifique,eczema,dermatitis,maternity,pregnant,allergy"></input>
-<!-- floatingBtn_url_keywords specifies whether the floating button, if displayed and clicked, will start on a page specified by the url of the page where the code is installed-->  
-<!-- floatingBtn_url_keywords is useless if a theme has been entered through floatingBtn_themeb -->  
+<input hidden id="floatingBtn_kwds" value="skintifique,eczema,dermatitis,maternity,pregnant,allergy"></input>
+<!-- floatingBtn_kwds specifies whether the floating button, if displayed and clicked, will start on a page specified by the url of the page where the code is installed-->  
+<!-- floatingBtn_kwds is useless if a theme has been entered through floatingBtn_themeb -->  
 <!-- end -->  
 <br>
 <br>
@@ -95,29 +95,32 @@ if (btnType == "Float") {
  }
 </script>
 
+<p id="devdemo">p</p>
+
 <script>
 function openSkintyModalFloat () {
 let prombM = document.getElementById("promb").value ;
 let formatbM = "open" ;
 let showbM = "show";
 let themebM ;
-let floatingBtn_url_keywords = document.getELementById("floatingBtn_url_keywords").value ;
-  if (floatingBtn_url_keywords.length > 0) {
-    if (url.includes("eczema")) && (floatingBtn_url_keywords.includes("eczema")) {
+let url = window.location.href ;
+let floatingBtn_kwds = document.getElementById("floatingBtn_kwds").value ;
+  if (floatingBtn_kwds.length > 0) {
+    if (url.includes("eczema") && floatingBtn_kwds.includes("eczema")) {
     themebM = "eczema" ;
-    } else if (url.includes("dermatit")) && (floatingBtn_url_keywords.includes("dermatit")) {
+    } else if (url.includes("dermatit") && floatingBtn_kwds.includes("dermatit")) {
     themebM = "eczema" ;
-    } else if (url.includes("psoriasis")) && (floatingBtn_url_keywords.includes("psoriasis")) {
+    } else if (url.includes("psoriasis") && floatingBtn_kwds.includes("psoriasis")) {
     themebM = "psoriasis"
-    } else if (url.includes("allergy")) && (floatingBtn_url_keywords.includes("allergy")) {
+    } else if (url.includes("allergy") && floatingBtn_kwds.includes("allergy")) {
     themebM = "allergy" ;
-    } else if (url.includes("maternity")) && (floatingBtn_url_keywords.includes("maternity")) {
+    } else if (url.includes("maternity") && floatingBtn_kwds.includes("maternity")) {
     themebM = "maternity" ;
-    } else if (url.includes("pregnan")) && (floatingBtn_url_keywords.includes("pregnant")) {
+    } else if (url.includes("pregnan") && floatingBtn_kwds.includes("pregnant")) {
     themebM = "maternity" ;
-    } else if (url.includes("acne")) && (floatingBtn_url_keywords.includes("acne")) {
+    } else if (url.includes("acne") && floatingBtn_kwds.includes("acne")) {
     themebM = "acne" ;
-    } else if (url.includes("mature-skin")) && (floatingBtn_url_keywords.includes("mature-skin")) {
+    } else if (url.includes("mature-skin") && floatingBtn_kwds.includes("mature-skin")) {
     themebM = "mature_skin" ;
     } else {
     themebM = "default" ; 
@@ -130,11 +133,9 @@ document.getElementById("skintyframe").src = target_urlM ;
 }
 </script>
 
-<p id="devdemo">p</p>
 <script>
 function openSkintyModalTheme (x) {
 let prombM = document.getElementById("promb").value ;
-            document.getElementById("devdemo").innerHTML = prombM ;
 let formatbM = "open" ;
 let showbM = "show" ;
 let themebM = x.value ;
