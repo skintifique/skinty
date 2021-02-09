@@ -75,7 +75,7 @@ z-index:101;
 }
 
 /* The SkinTy float Button */
-.SkinTyBtnFloat{
+.float{
 	position:fixed;
 	width:60px;
 	height:60px;
