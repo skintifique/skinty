@@ -56,6 +56,32 @@ document.getElementById("divSkintyFrame").className ="divSkintyForIframe" ;
 </script>
 
 <script>
+function openSkintyModal (x) {
+// Get the modal
+let modal = document.getElementById("myModal");
+
+// Get the <span> element that closes the modal
+let span = document.getElementsByClassName("close")[0];
+
+// open the modal 
+  modal.style.display = "block";
+let y = x.id ;
+let z = y.search("Query") ;
+let t = y.search("Theme") ;
+let u = y.search("Float");
+let btnType ; 
+if (z > -1) {btnType = "Query";} else if (t > -1) {btnType = "Theme";} else if (u > -1) {btnType = "Float";}
+if (btnType == "Float") {
+  openSkintyModalFloat () ;
+  } else if (btnType == "Theme") {
+  openSkintyModalTheme (x) ;
+  } else (btnType == "Query") {
+  openSkintyModalQuery (x) ;
+ }
+ }
+</script>
+
+<script>
 function openSkintyModalFloat () {
 let prombM = document.getELementById("promb").value ;
 let formatbM = "close" ;
@@ -125,32 +151,6 @@ let querybM = x.value ;
 let target_urlM = "https://skintifique.github.io/index.html" + "?promb=" + prombM  + "&queryb=" + querybM + "&themeb=" + themebM + "&formatb=" + formatbM + "&showb=" + showbM ;
 document.getElementById("skintyframe").src = target_urlM ;
 }
-</script>
-
-<script>
-function openSkintyModal (x) {
-// Get the modal
-let modal = document.getElementById("myModal");
-
-// Get the <span> element that closes the modal
-let span = document.getElementsByClassName("close")[0];
-
-// open the modal 
-  modal.style.display = "block";
-let y = x.id ;
-let z = y.search("Query") ;
-let t = y.search("Theme") ;
-let u = y.search("Float");
-let btnType ; 
-if (z > -1) {btnType = "Query";} else if (t > -1) {btnType = "Theme";} else if (u > -1) {btnType = "Float";}
-if (btnType == "Float") {
-  openSkintyModalFloat () ;
-  } else if (btnType == "Theme") {
-  openSkintyModalTheme (x) ;
-  } else (btnType == "Query") {
-  openSkintyModalQuery (x) ;
- }
- }
 </script>
 
 <script>
