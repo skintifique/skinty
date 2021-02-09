@@ -73,12 +73,6 @@ let u = y.search("Float");
 let btnType ; 
 if (z > -1) {btnType = "Query";} else if (t > -1) {btnType = "Theme";} else if (u > -1) {btnType = "Float";}
 if (btnType == "Float") {
-        document.getElementById("devdemo").innerHTML = "poaure" ;
- }
- }
-</script> 
-
-
   openSkintyModalFloat () ;
   } else if (btnType == "Theme") {
   openSkintyModalTheme () ;
@@ -90,6 +84,12 @@ if (btnType == "Float") {
 
 <script>
 function openSkintyModalFloat () {
+          document.getElementById("devdemo").innerHTML = "poaure" ;
+ }
+</script> 
+
+
+  
 let prombM = document.getELementById("promb").value ;
 let formatbM = "close" ;
 let showbM ;
