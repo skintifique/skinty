@@ -107,14 +107,3 @@ z-index:101;
     margin-left: auto;
     margin-right: auto ;
  }
-
-.SkinTyBtnDefault {
-  border: none;
-  background-color: inherit;
-  padding: 14px 28px;
-  cursor: pointer;
-  display: inline-block;
-}
-
-/* On mouse-over */
-.SkinTyBtnDefault:hover {background: #eee;}
