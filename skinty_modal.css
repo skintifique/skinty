@@ -109,9 +109,12 @@ z-index:101;
  }
 
 .SkinTyBtnDefault {
-border: none;
+  border: none;
   background-color: inherit;
   padding: 14px 28px;
   cursor: pointer;
   display: inline-block;
 }
+
+/* On mouse-over */
+.SkinTyBtnDefault:hover {background: #eee;}
