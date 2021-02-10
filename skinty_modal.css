@@ -108,16 +108,3 @@ z-index:101;
     margin-right: auto ;
  }
 
-/* The SkinTy default Button */
-.SkinTyBtnDefault {
-  background-color: white;
-  border: white;
-  border-radius: 30px;
-  color: black;
-  padding: 5px 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 14px;
-  outline: none;
-}
