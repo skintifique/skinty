@@ -85,6 +85,7 @@
 	border-radius:50px;
 	text-align:center;
         font-size:30px;
+	border: 2px solid ;
 	border-color: rgba(84,161,183,1);
         z-index:100;
 }
