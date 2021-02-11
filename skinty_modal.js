@@ -123,3 +123,24 @@ let modal = document.getElementById("myModal");
     modal.style.display = "none";
   }
 }
+
+// For the buttons underneath the SkinTy window
+function liveAgent () {
+document.getElementById("skintyframe").src = "https://skintifique.github.io/zendesk-widget.html" ;
+}
+
+function flamingo () {
+document.getElementById("skintyframe").src = "https://flam3.goodbarber.app" ;
+}
+
+function skintyPage () {
+document.getElementById("skintyframe").src = "https://skintifique.github.io/index.html" ;
+}
+
+function welcomeOffer () {
+document.getElementById("skintyframe").src = "https://www.skintifique.me/welcome-offer/" ;
+}
+
+function callUs () {
+document.getElementById("skintyframe").src = "https://skintifique.github.io/call_us.html" ;
+}
