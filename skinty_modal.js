@@ -138,7 +138,7 @@ document.getElementById("skintyframe").src = "https://skintifique.github.io/inde
 }
 
 function welcomeOffer () {
-document.getElementById("skintyframe").src = "https://www.skintifique.me/welcome-offer/" ;
+document.getElementById("skintyframe").src = "https://www.skintifique.me/welcome-offer/?noshowforskinty" ;
 }
 
 function callUs () {
