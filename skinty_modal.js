@@ -29,6 +29,12 @@ let span = document.getElementsByClassName("close")[0];
 
 // open the modal 
   modal.style.display = "block";
+  
+// increment the modal open counter
+ let totalModalCount = document.getElementById("totalModalCounter").value ;
+  document.getElementById("totalModalCounter").value = totalModalCount + 1 ;
+  
+// select the type of call to the src 
 let y = x.id ;
 let z = y.search("Query") ;
 let t = y.search("Theme") ;
