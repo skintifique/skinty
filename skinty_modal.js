@@ -32,7 +32,7 @@ let span = document.getElementsByClassName("close")[0];
   
 // increment the modal open counter
  let totalModalCount = document.getElementById("totalModalCounter").value ;
-  document.getElementById("totalModalCounter").value = totalModalCount + 1 ;
+  document.getElementById("totalModalCounter").value = (totalModalCount + 1).valueOf() ;
   
 // select the type of call to the src 
 let y = x.id ;
