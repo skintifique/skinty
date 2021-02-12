@@ -58,6 +58,8 @@ let floatingBtn_kwds = document.getElementById("floatingBtn_kwds").value ;
     themebM = "eczema" ;
     } else if (url.includes("dermatit") && floatingBtn_kwds.includes("dermatit")) {
     themebM = "eczema" ;
+    } else if (url.includes("dyshidrosis") && floatingBtn_kwds.includes("dyshidrosis")) {
+    themebM = "eczema" ;
     } else if (url.includes("psoriasis") && floatingBtn_kwds.includes("psoriasis")) {
     themebM = "psoriasis"
     } else if (url.includes("allergy") && floatingBtn_kwds.includes("allergy")) {
