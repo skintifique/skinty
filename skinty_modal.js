@@ -1,3 +1,75 @@
+// For the SkinTy modal on exit
+
+let exitIntent ;
+window.document.body.onmouseover = function() {detectNoExitIntent(event);};
+window.document.body.onmouseleave = function() {detectExitIntent(event)};
+
+function detectExitIntent(event) {
+  let cX = event.clientX;
+  let cY = event.clientY;
+  if ((cX < 350) && (cY < 20)) {
+  exitIntent = "1" ;
+  } else if (cY >= 20) {
+  exitIntent = "0" ;
+  } else {
+  exitIntent = "0" ;
+  }
+triggerOnExit () ;
+}
+
+function detectNoExitIntent(event) {
+  let exitIntent = "0" ;
+triggerOnExit () ;
+}
+
+
+let urlForConditions = window.location.href ;
+let urlContains ;
+let if_url_contains = document.getElementById("if_url_contains").value ;
+if (if_url_contains == "-") {
+urlContains = "1" ;
+} else if (urlForConditions.includes(if_url_contains) > -1) {
+urlContains = "1" ;
+} else {
+urlContains = "0" ;
+}
+
+let urlForConditions2 = window.location.href ;
+let urlDoesNotContain ;
+let if_url_not_contain = document.getElementById("if_url_does_not_contain").value ;
+if (if_url_not_contain == "-") {
+urlDoesNotContain = "1" ;
+} else if (urlForConditions2.includes(if_url_not_contain) < 0) {
+urlDoesNotContain = "0" ;
+} else {
+urlDoesNotContain = "1" ;
+}
+
+function triggerOnExit () {
+let allConditions ;
+let exitRef ;
+let showOnExit = document.getElementById("show_on_exit").value ;
+let exitModalCounter = document.getElementById("exitModalCounter").value ;
+let ifSkintyViews = document.getElementById("if_skinty_views_less_than").value ;
+let totalModalCounter = document.getElementById("totalModalCounter").value ;
+if ((exitModalCounter == "0") &&
+    (showOnExit == "yes") &&
+    (exitIntent == "1") &&
+    (urlContains == "1") &&
+    (urlDoesNotContain == "1") &&
+    (totalModalCounter < ifSkintyViews)) {
+allConditions = "1" ;
+} else {
+allConditions = "0" ;
+}
+if (allConditions == "1") {
+document.getElementById("exitModalCounter").value = "1" ;
+exitRef = document.getElementById("exitTheme") ;
+openSkintyModal(exitRef) ;
+}
+}
+
+<!-- END FOR EXIT POPUP -->  
 
 let floatingBtn_display = document.getElementById("floatingBtn_display").value ;
 let this_page_url = window.location.href ;
@@ -121,79 +193,6 @@ let modal = document.getElementById("myModal");
     modal.style.display = "none";
   }
 }
-
-// For the SkinTy modal on exit
-
-let exitIntent ;
-window.document.body.onmouseover = function() {detectNoExitIntent(event);};
-window.document.body.onmouseleave = function() {detectExitIntent(event)};
-
-function detectExitIntent(event) {
-  let cX = event.clientX;
-  let cY = event.clientY;
-  if ((cX < 350) && (cY < 20)) {
-  exitIntent = "1" ;
-  } else if (cY >= 20) {
-  exitIntent = "0" ;
-  } else {
-  exitIntent = "0" ;
-  }
-triggerOnExit () ;
-}
-
-function detectNoExitIntent(event) {
-  let exitIntent = "0" ;
-triggerOnExit () ;
-}
-
-
-let urlForConditions = window.location.href ;
-let urlContains ;
-let if_url_contains = document.getElementById("if_url_contains").value ;
-if (if_url_contains == "-") {
-urlContains = "1" ;
-} else if (urlForConditions.includes(if_url_contains) > -1) {
-urlContains = "1" ;
-} else {
-urlContains = "0" ;
-}
-
-let urlForConditions2 = window.location.href ;
-let urlDoesNotContain ;
-let if_url_not_contain = document.getElementById("if_url_does_not_contain").value ;
-if (if_url_not_contain == "-") {
-urlDoesNotContain = "1" ;
-} else if (urlForConditions2.includes(if_url_not_contain) < 0) {
-urlDoesNotContain = "0" ;
-} else {
-urlDoesNotContain = "1" ;
-}
-
-function triggerOnExit () {
-let allConditions ;
-let exitRef ;
-let showOnExit = document.getElementById("show_on_exit").value ;
-let exitModalCounter = document.getElementById("exitModalCounter").value ;
-let ifSkintyViews = document.getElementById("if_skinty_views_less_than").value ;
-let totalModalCounter = document.getElementById("totalModalCounter").value ;
-if ((exitModalCounter == "0") &&
-    (showOnExit == "yes") &&
-    (exitIntent == "1") &&
-    (urlContains == "1") &&
-    (urlDoesNotContain == "1") &&
-    (totalModalCounter < ifSkintyViews)) {
-allConditions = "1" ;
-} else {
-allConditions = "0" ;
-}
-if (allConditions == "1") {
-document.getElementById("exitModalCounter").value = "1" ;
-exitRef = document.getElementById("exitTheme") ;
-openSkintyModal(exitRef) ;
-}
-}
-
-<!-- END FOR EXIT POPUP -->  
 
 // For the buttons underneath the SkinTy window
 function liveAgent () {
