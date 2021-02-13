@@ -11,14 +11,10 @@ document.getElementById("ModalBtnFloat").style.display = "block" ;
 document.getElementById("ModalBtnFloat").style.display ="none" ;
 }
 
-
-
 let windowwidth = window.innerWidth;
 if (windowwidth < 500) {
 document.getElementById("divSkintyFrame").className ="divSkintyForIframe" ;
 }
-
-
 
 function openSkintyModal (x) {
 // Get the modal
@@ -49,8 +45,6 @@ if (btnType == "Float") {
   openSkintyModalQuery (x)
  }
  }
-
-
 
 function openSkintyModalFloat () {
 let prombM = document.getElementById("promb").value ;
@@ -89,7 +83,6 @@ document.getElementById("skintyframe").src = target_urlM ;
 }
 
 
-
 function openSkintyModalTheme (x) {
 let prombM = document.getElementById("promb").value ;
 let formatbM = "open" ;
@@ -99,7 +92,6 @@ let querybM = "" ;
 let target_urlM = "https://skintifique.github.io/index.html" + "?promb=" + prombM  + "&queryb=" + querybM + "&themeb=" + themebM + "&formatb=" + formatbM + "&showb=" + showbM ;
 document.getElementById("skintyframe").src = target_urlM ;
 }
-
 
 
 function openSkintyModalQuery (x) {
@@ -113,14 +105,12 @@ document.getElementById("skintyframe").src = target_urlM ;
 }
 
 
-
 function closeSkintyModal() {
 // Get the modal
 let modal = document.getElementById("myModal");
 // When the user clicks on <span> (x), close the modal
   modal.style.display = "none";
 }
-
 
 
 // When the user clicks anywhere outside of the modal, close it
@@ -131,6 +121,79 @@ let modal = document.getElementById("myModal");
     modal.style.display = "none";
   }
 }
+
+// For the SkinTy modal on exit
+
+let exitIntent ;
+window.document.body.onmouseover = function() {detectNoExitIntent(event);};
+window.document.body.onmouseleave = function() {detectExitIntent(event)};
+
+function detectExitIntent(event) {
+  let cX = event.clientX;
+  let cY = event.clientY;
+  if ((cX < 350) && (cY < 20)) {
+  exitIntent = "1" ;
+  } else if (cY >= 20) {
+  exitIntent = "0" ;
+  } else {
+  exitIntent = "0" ;
+  }
+triggerOnExit () ;
+}
+
+function detectNoExitIntent(event) {
+  let exitIntent = "0" ;
+triggerOnExit () ;
+}
+
+
+let urlForConditions = window.location.href ;
+let urlContains ;
+let if_url_contains = document.getElementById("if_url_contains").value ;
+if (if_url_contains == "-") {
+urlContains = "1" ;
+} else if (urlForConditions.includes(if_url_contains) > -1) {
+urlContains = "1" ;
+} else {
+urlContains = "0" ;
+}
+
+let urlForConditions2 = window.location.href ;
+let urlDoesNotContain ;
+let if_url_not_contain = document.getElementById("if_url_does_not_contain").value ;
+if (if_url_not_contain == "-") {
+urlDoesNotContain = "1" ;
+} else if (urlForConditions2.includes(if_url_not_contain) < 0) {
+urlDoesNotContain = "0" ;
+} else {
+urlDoesNotContain = "1" ;
+}
+
+function triggerOnExit () {
+let allConditions ;
+let exitRef ;
+let showOnExit = document.getElementById("show_on_exit").value ;
+let exitModalCounter = document.getElementById("exitModalCounter").value ;
+let ifSkintyViews = document.getElementById("if_skinty_views_less_than").value ;
+let totalModalCounter = document.getElementById("totalModalCounter").value ;
+if ((exitModalCounter == "0") &&
+    (showOnExit == "yes") &&
+    (exitIntent == "1") &&
+    (urlContains == "1") &&
+    (urlDoesNotContain == "1") &&
+    (totalModalCounter < ifSkintyViews)) {
+allConditions = "1" ;
+} else {
+allConditions = "0" ;
+}
+if (allConditions == "1") {
+document.getElementById("exitModalCounter").value = "1" ;
+exitRef = document.getElementById("exitTheme") ;
+openSkintyModal(exitRef) ;
+}
+}
+
+<!-- END FOR EXIT POPUP -->  
 
 // For the buttons underneath the SkinTy window
 function liveAgent () {
