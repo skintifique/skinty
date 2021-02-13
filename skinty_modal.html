@@ -5,6 +5,7 @@
 <link rel="stylesheet" href="https://skintifique.github.io/skinty/skinty_modal.css">
 </head>
 <body>
+
 <!-- inputs to provide when deploying the file -->  
 <!-- floatingBtn_display defines which pages display the floating btn: if "all": all pages, if keyword "xxx": only the pages where the url contains "xxx". -->  
 <!-- At the present time, only one keyword is possible (e.g.: "Skintifique"). If no input is provided, the floating button will be displayed on all pages, by default -->  
@@ -32,6 +33,7 @@
 <input hidden id="if_url_contains" value="-"></input>
 <input hidden id="if_url_does_not_contain" value=""></input>
 <input hidden id="if_skinty_views_less_than" value="1"></input>
+<input hidden id="if_views_in_session_less_than" value="3"></input>
 <!-- the exit popup will also not show if the visitor has already seen it on the page -->
 
 <input hidden id="exitModalCounter" value="0"></input>
@@ -68,7 +70,7 @@
   </div>
 </div>
 
-<script src="https://skintifique.github.io/skinty/skinty_modal.js"></script>
+<script src="skintymodal2.js"></script>
 
 </body>
 </html>
