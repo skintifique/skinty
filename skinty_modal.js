@@ -54,8 +54,9 @@ if ((showOnExit == "yes") &&
     (urlDoesNotContain == "1")) {
     let urlForConditions3 = window.location.href ;
     let testOnOrderPage = urlForConditions3.includes("multi-shipping") ;
+    let testOnOrderPage1 = urlForConditions3.includes("/order") ;
     let exitOnOrderPageCounter = document.getElementById("exitOnOrderPageCounter").value ;
-    if ((testOnOrderPage) && (exitOnOrderPageCounter == "0")) {
+    if ((exitOnOrderPageCounter == "0") && ((testOnOrderPage) || (testOnOrderPage1))) {
         document.getElementById("exitOnOrderPageCounter").value = "1" ;
         exitRef = document.getElementById("exitWithCartTheme") ;
       openSkintyModal(exitRef) ;
@@ -75,19 +76,6 @@ if ((showOnExit == "yes") &&
        }
   }
   }
-  
-<!-- code just below probably not needed anymore -->
-function selectSkintyExit () {
-  let urlForConditions3 = window.location.href ;
-  let testOnOrderPage = urlForConditions3.includes("multi-shipping") ;
-  if (testOnOrderPage) {
-    exitRef = document.getElementById("exitWithCartTheme") ;
-  } else {
-    document.getElementById("exitModalCounter").value = "1" ;
-    exitRef = document.getElementById("exitTheme") ;
-  }
-openSkintyModal(exitRef) ;
-}
   
 <!-- END FOR EXIT POPUP -->  
 
