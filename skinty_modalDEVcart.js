@@ -55,7 +55,7 @@ if ((showOnExit == "yes") &&
     let urlForConditions3 = window.location.href ;
     let testOnOrderPage = urlForConditions3.includes("multi-shipping") ;
     let exitOnOrderPageCounter = document.getElementById("exitOnOrderPageCounter").value ;
-    if (testOnOrderPage) && (exitOnOrderPageCounter == "0") {
+    if ((testOnOrderPage) && (exitOnOrderPageCounter == "0")) {
         document.getElementById("exitOnOrderPageCounter").value = "1" ;
         exitRef = document.getElementById("exitWithCartTheme") ;
       openSkintyModal(exitRef) ;
