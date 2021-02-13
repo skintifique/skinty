@@ -2,7 +2,6 @@
 
 // identify device type
 
-let url = window.location.href ;
 let deviceType ;
 let windowwidth = window.innerWidth;
 if (windowwidth < 500) {
@@ -36,9 +35,10 @@ function detectNoExitIntent(event) {
 triggerOnExit () ;
 }
   
-} else if (deviceType == "mobile") {
-body.addEventListener("scroll",function(){myScrollSpeedFunction()});
-}
+} 
+
+if (deviceType == "mobile") {
+body.addEventListener("scroll",function(){myScrollSpeedFunction();});
 
 function myScrollSpeedFunction(){
      if(deviceType != "mobile") { 
@@ -72,6 +72,7 @@ function myScrollSpeedFunction(){
      return delta;
  };
  })();  
+}
 
 let urlForConditions = window.location.href ;
 let urlContains ;
