@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width-device-width, initial-scale=1">
+<link rel="stylesheet" href="https://skintifique.github.io/skinty/skinty_modal.css">
+</head>
+<body>
+
+<!-- inputs to provide when deploying the file -->  
+<!-- floatingBtn_display defines which pages display the floating btn: if "all": all pages, if keyword "xxx": only the pages where the url contains "xxx". -->  
+<!-- At the present time, only one keyword is possible (e.g.: "Skintifique"). If no input is provided, the floating button will be displayed on all pages, by default -->  
+<!-- This feature is only relevant when the module is deployed across many pages, eg through Google GTM, but SkinTy should only be displayed on some of them -->  
+<input hidden id="floatingBtn_display" value=""></input>
+  <input hidden id="promb" value="sk"></input>
+<!-- floatingBtn_themeb defines the default theme that floating SkinTy will open on (provided it is shown as specified with floatingBtn_showb -->
+<!-- if a value is provided for floatingBtn_themeb, then it takes precedence over floatingBtn_kwds which becomes useless  --> 
+<input hidden id="floatingBtn_themeb" value=""></input>
+<input hidden id="floatingBtn_kwds" value="eczema,dermatitis,maternity,pregnant,allergy,psoriasis,dyshidrosis"></input>
+<!-- floatingBtn_kwds specifies whether the floating button, if displayed and clicked, will start on a page specified by the url of the page where the code is installed-->  
+<!-- floatingBtn_kwds is useless if a theme has been entered through floatingBtn_themeb -->  
+<!-- end -->  
+<br>
+<br>
+<br>
+<!-- example of a button triggering opening of SkinTy modal page, starting on a specific theme -->  
+<button id="ModalBtnTheme_1" class="SkintyBtnDefault" onclick="openSkintyModal(this)" value="allergy">When you CLICK ME, SkinTy will show up and start on the allergy page</button>
+<!-- example of a button triggering opening of SkinTy modal page, starting with a specific query -->    
+<p>lorem ipsum...<button id="ModalBtnQuery_1" class="SkintyBtnDefault" style="font-size:16px;" onclick="openSkintyModal(this)" value="Which ingredients should be avoided in skincare products?"><u>Skintifique products contain no ingredients that should be avoided in skincare products</u></button>...lorem ipsum</p> 
+<!-- end example buttons -->  
+
+<!-- html required for popup on exit-->
+<input hidden id="show_on_exit" value="yes"></input>
+<input hidden id="if_url_contains" value="-"></input>
+<input hidden id="if_url_does_not_contain" value=""></input>
+<input hidden id="if_skinty_views_less_than" value="1"></input>
+<input hidden id="if_views_in_session_less_than" value="3"></input>
+<!-- the exit popup will also not show if the visitor has already seen it on the page -->
+
+<input hidden id="exitModalCounter" value="0"></input>
+<input hidden id="totalModalCounter" value="0"></input>
+
+<button hidden id="exitTheme" value="exit"></button>
+<!-- END html required for popup on exit-->
+
+<button id="ModalBtnFloat" class="SkintyBtnFloat, float" onclick="openSkintyModal(this)" value="">
+<img class= "img.displayed" src="https://www.skintifique.me/wp-content/uploads/2021/02/chat-4-512.png"  width="30px" height="30px" />
+</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close" onclick="closeSkintyModal()">&times;</span>
+    <p>
+<div id="divSkintyFrame" class="divSkintyForIframe30">
+<iframe id="skintyframe" src="" width="100%" height="700px" style="border:none;"></iframe>
+</div>
+    </p>
+<span class="close" onclick="closeSkintyModal()">&times;</span>
+<span><center>
+  <button class="uSkinTyBtn1" onclick="welcomeOffer()">Newsletter & Welcome Offer &hearts;</button>
+<br>
+<button hidden class="uSkinTyBtn1" onclick="flamingo()">Flamingo</button>
+<a class="uSkinTyBtn1" href="mailto:skinty@skintifique.com">Email ✉︎</a>
+<button class="uSkinTyBtn1" onclick="callUs()">Call us ✆</button>
+<button class="uSkinTyBtn1" onclick="liveAgent()">Live Agent</button>
+<button class="uSkinTyBtn1" onclick="skintyPage()">SkinTy</button>
+</center></span>
+  </div>
+</div>
+
+<script src="https://skintifique.github.io/skinty/skinty_modal.js"></script>
+
+</body>
+</html>
