@@ -71,7 +71,7 @@ allConditions = "0" ;
 function selectSkintyExit () {
   let urlForConditions3 = window.location.href ;
   let testOnOrderPage = urlForConditions3.includes("multi-shipping") ;
-  if (testOnOrderPage < 0) {
+  if (testOnOrderPage > 0) {
     exitRef = document.getElementById("exitWithCartTheme") ;
   } else {
     document.getElementById("exitModalCounter").value = "1" ;
