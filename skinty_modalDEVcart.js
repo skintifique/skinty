@@ -49,7 +49,7 @@ function triggerOnExit () {
 let allConditions ;
 let exitRef ;
 let showOnExit = document.getElementById("show_on_exit").value ;
-if ((showOnExit == "yes") {
+if (showOnExit == "yes") {
     let urlForConditions3 = window.location.href ;
     let testOnOrderPage = urlForConditions3.includes("multi-shipping") ;
     if (testOnOrderPage) {
