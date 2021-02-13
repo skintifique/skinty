@@ -45,6 +45,8 @@ urlDoesNotContain = "0" ;
 urlDoesNotContain = "1" ;
 }
 
+  document.getElementById("dev").innerHTML = "bbbbb" ;
+
 function triggerOnExit () {
 let allConditions ;
 let exitRef ;
