@@ -41,7 +41,7 @@ if (deviceType == "mobile") {
 body.addEventListener("scroll",function(){myScrollSpeedFunction();});
 
 function myScrollSpeedFunction(){
-     if(deviceType != "mobile") { 
+     if(deviceType == "mobile") { 
          if(my_scroll() < -200) {
             exitIntent = "1" ;
            triggerOnExit () ;
