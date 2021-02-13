@@ -140,7 +140,6 @@ document.getElementById("ModalBtnFloat").style.display = "block" ;
 document.getElementById("ModalBtnFloat").style.display ="none" ;
 }
 
-let windowwidth = window.innerWidth;
 if (windowwidth < 500) {
 document.getElementById("divSkintyFrame").className ="divSkintyForIframe" ;
 }
