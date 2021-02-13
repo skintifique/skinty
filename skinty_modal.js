@@ -52,12 +52,15 @@ let showOnExit = document.getElementById("show_on_exit").value ;
 let exitModalCounter = document.getElementById("exitModalCounter").value ;
 let ifSkintyViews = document.getElementById("if_skinty_views_less_than").value ;
 let totalModalCounter = document.getElementById("totalModalCounter").value ;
+let sessionSkintyModalCount2 = sessionStorage.getItem("sessionSkintyModalCount") ;
+let sessionSkintyMax = document.getElementById("if_views_in_session_less_than").value ;
 if ((exitModalCounter == "0") &&
     (showOnExit == "yes") &&
     (exitIntent == "1") &&
     (urlContains == "1") &&
     (urlDoesNotContain == "1") &&
-    (totalModalCounter < ifSkintyViews)) {
+    (totalModalCounter < ifSkintyViews) &&
+    (sessionSkintyModalCount2 < sessionSkintyMax)) {
 allConditions = "1" ;
 } else {
 allConditions = "0" ;
@@ -98,9 +101,19 @@ let span = document.getElementsByClassName("close")[0];
 // open the modal 
   modal.style.display = "block";
   
-// increment the modal open counter
+// increment the modal on page counter
  let totalModalCount = document.getElementById("totalModalCounter").value ;
   document.getElementById("totalModalCounter").value = Number(totalModalCount) + 1 ;
+
+// increment the modal in session counter
+let sessionSkintyModalCount = sessionStorage.getItem("sessionSkintyModalCount") ;
+let new_sessionSkintyModalCount ;
+ if (sessionSkintyModalCount) {
+ new_sessionSkintyModalCount = Number(sessionSkintyModalCount) + 1 ;
+} else {
+ new_sessionSkintyModalCount = 0 ;
+}
+ sessionStorage.setItem("sessionSkintyModalCount", new_sessionSkintyModalCount);
   
 // select the type of call to the src 
 let y = x.id ;
