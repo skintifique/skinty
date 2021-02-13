@@ -9,7 +9,8 @@ deviceType = "mobile" ;
 } else {
 deviceType = "NOT mobile" ;
 }
-
+document.getElementById("dev1").innerHTML = deviceType ;
+                        
 // identify exit intent, device specific
 let exitIntent ;
 
