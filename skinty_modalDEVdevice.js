@@ -38,7 +38,7 @@ triggerOnExit () ;
 } 
 
 if (deviceType == "mobile") {
-body.addEventListener("scroll",function(){myScrollSpeedFunction();});
+window.addEventListener("scroll",function(){myScrollSpeedFunction();});
 
 function myScrollSpeedFunction(){
      if(deviceType == "mobile") { 
