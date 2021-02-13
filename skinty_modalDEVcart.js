@@ -48,31 +48,32 @@ urlDoesNotContain = "1" ;
 function triggerOnExit () {
 let exitRef ;
 let showOnExit = document.getElementById("show_on_exit").value ;
-if (showOnExit == "yes") {
+if ((showOnExit == "yes") &&
+    (exitIntent == "1") &&
+    (urlContains == "1") &&
+    (urlDoesNotContain == "1")) {
     let urlForConditions3 = window.location.href ;
     let testOnOrderPage = urlForConditions3.includes("multi-shipping") ;
     if (testOnOrderPage) {
         exitRef = document.getElementById("exitWithCartTheme") ;
       openSkintyModal(exitRef) ;
      } else {
-let exitModalCounter = document.getElementById("exitModalCounter").value ;
-let ifSkintyViews = document.getElementById("if_skinty_views_less_than").value ;
-let totalModalCounter = document.getElementById("totalModalCounter").value ;
-let sessionSkintyModalCount2 = sessionStorage.getItem("sessionSkintyModalCount") ;
-let sessionSkintyMax = document.getElementById("if_views_in_session_less_than").value ;
-if ((exitModalCounter == "0") &&
-    (exitIntent == "1") &&
-    (urlContains == "1") &&
-    (urlDoesNotContain == "1") &&
-    (totalModalCounter < ifSkintyViews) &&
-    (sessionSkintyModalCount2 < sessionSkintyMax)) {
-document.getElementById("exitModalCounter").value = "1" ;
-exitRef = document.getElementById("exitTheme") ;
-openSkintyModal(exitRef) ;
-}
-}
-}
-}  
+     let exitModalCounter = document.getElementById("exitModalCounter").value ;
+     let ifSkintyViews = document.getElementById("if_skinty_views_less_than").value ;
+     let totalModalCounter = document.getElementById("totalModalCounter").value ;
+     let sessionSkintyModalCount2 = sessionStorage.getItem("sessionSkintyModalCount") ;
+     let sessionSkintyMax = document.getElementById("if_views_in_session_less_than").value ;
+     if ((exitModalCounter == "0") &&
+        (totalModalCounter < ifSkintyViews) &&
+        (sessionSkintyModalCount2 < sessionSkintyMax)) {
+        document.getElementById("exitModalCounter").value = "1" ;
+        exitRef = document.getElementById("exitTheme") ;
+        openSkintyModal(exitRef) ;
+       }
+       }
+  }
+  }
+  
 <!-- code just below probably not needed anymore -->
 function selectSkintyExit () {
   let urlForConditions3 = window.location.href ;
