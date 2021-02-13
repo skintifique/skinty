@@ -32,7 +32,7 @@ triggerOnExit () ;
 }
 
 function detectNoExitIntent(event) {
-  let exitIntent = "0" ;
+  exitIntent = "0" ;
 triggerOnExit () ;
 }
   
