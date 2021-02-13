@@ -46,7 +46,6 @@ urlDoesNotContain = "1" ;
 }
 
 function triggerOnExit () {
-let allConditions ;
 let exitRef ;
 let showOnExit = document.getElementById("show_on_exit").value ;
 if (showOnExit == "yes") {
@@ -54,7 +53,7 @@ if (showOnExit == "yes") {
     let testOnOrderPage = urlForConditions3.includes("multi-shipping") ;
     if (testOnOrderPage) {
         exitRef = document.getElementById("exitWithCartTheme") ;
-        openSkintyModal(exitRef) ;
+      openSkintyModal(exitRef) ;
      } else {
 let exitModalCounter = document.getElementById("exitModalCounter").value ;
 let ifSkintyViews = document.getElementById("if_skinty_views_less_than").value ;
@@ -73,6 +72,7 @@ openSkintyModal(exitRef) ;
 }
 }
 }
+}  
 <!-- code just below probably not needed anymore -->
 function selectSkintyExit () {
   let urlForConditions3 = window.location.href ;
