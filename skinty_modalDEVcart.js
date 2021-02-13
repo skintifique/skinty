@@ -54,6 +54,7 @@ let ifSkintyViews = document.getElementById("if_skinty_views_less_than").value ;
 let totalModalCounter = document.getElementById("totalModalCounter").value ;
 let sessionSkintyModalCount2 = sessionStorage.getItem("sessionSkintyModalCount") ;
 let sessionSkintyMax = document.getElementById("if_views_in_session_less_than").value ;
+  document.getElementById("dev").innerHTML = "aaaaa" ;
 if ((exitModalCounter == "0") &&
     (showOnExit == "yes") &&
     (exitIntent == "1") &&
