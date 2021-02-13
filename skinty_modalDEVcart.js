@@ -1,3 +1,4 @@
+document.getElementById("dev").innerHTML = "bbbbb" ;
 // For the SkinTy modal on exit
 
 let exitIntent ;
@@ -44,8 +45,6 @@ urlDoesNotContain = "0" ;
 } else {
 urlDoesNotContain = "1" ;
 }
-
-  document.getElementById("dev").innerHTML = "bbbbb" ;
 
 function triggerOnExit () {
 let allConditions ;
