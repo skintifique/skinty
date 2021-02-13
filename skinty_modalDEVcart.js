@@ -62,16 +62,15 @@ if ((exitModalCounter == "0") &&
     (totalModalCounter < ifSkintyViews) &&
     (sessionSkintyModalCount2 < sessionSkintyMax)) {
 allConditions = "1" ;
+selectSkintyExit () ;
 } else {
 allConditions = "0" ;
-}
-if (allConditions == "1") {
-selectSkintyExit () ;
 }
 }
 
 function selectSkintyExit () {
-  if (urlForConditions2.includes("?multi-shipping") < 0) {
+  let urlForConditions3 = window.location.href ;
+  if (urlForConditions3.includes("multi-shipping") < 0) {
     exitRef = document.getElementById("exitWithCartTheme") ;
   } else {
     document.getElementById("exitModalCounter").value = "1" ;
