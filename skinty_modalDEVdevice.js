@@ -35,12 +35,9 @@ function detectNoExitIntent(event) {
   exitIntent = "0" ;
 triggerOnExit () ;
 }
-  
 } 
-
-if (deviceType == "mobile") {
 window.addEventListener("scroll",function(){myScrollSpeedFunction();});
-
+if (deviceType == "mobile") {
 function myScrollSpeedFunction(){
      if(deviceType == "mobile") { 
          if(my_scroll() < -200) {
