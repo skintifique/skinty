@@ -130,9 +130,12 @@
   text-decoration: none;
 }
 
+.uSkinTyBtn1:hover {
+  text-decoration: underline ;
+}	
+	
 .close:hover,
 .close:focus {
   color: #000;
-  text-decoration: underline;
   cursor: pointer;
 }
