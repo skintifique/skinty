@@ -1,6 +1,22 @@
-// For the SkinTy modal on exit
+// FOR SKINTY MODAL ON EXIT
 
+// identify device type
+
+let url = window.location.href ;
+document.getElementById("url").innerHTML = url ;
+
+let deviceType ;
+let windowwidth = window.innerWidth;
+if (windowwidth < 500) {
+deviceType = "mobile" ;
+} else {
+deviceType = "NOT mobile" ;
+}
+
+// identify exit intent, device specific
 let exitIntent ;
+
+if (deviceType == "NOT mobile") {
 window.document.body.onmouseover = function() {detectNoExitIntent(event);};
 window.document.body.onmouseleave = function() {detectExitIntent(event)};
 
@@ -21,7 +37,40 @@ function detectNoExitIntent(event) {
   let exitIntent = "0" ;
 triggerOnExit () ;
 }
+  
+} else if (deviceType == "mobile") {
+body.addEventListener("scroll",function(){myScrollSpeedFunction()});
+function myScrollSpeedFunction(){
+     if(deviceType != "mobile") { 
+         if(my_scroll() < -200) {
+            exitIntent = "1" ;
+     } else {
+       exitIntent = "0" ;
+ }
+ }
+}
 
+ let my_scroll = (function(){ //Function that checks the speed of scrolling
+ let last_position, new_position, timer, delta, delay = 50; 
+
+ function clear() {
+     last_position = null;
+     delta = 0;
+ }
+
+ clear();
+ return function(){
+     new_position = window.scrollY ;
+     if ( last_position != null ){
+         delta = new_position -  last_position;
+     }
+     last_position = new_position;
+     clearTimeout(timer);
+     timer = setTimeout(clear, delay);
+     return delta;
+ };
+ })();  
+}
 
 let urlForConditions = window.location.href ;
 let urlContains ;
