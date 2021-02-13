@@ -72,7 +72,7 @@ selectSkintyExit () ;
 
 function selectSkintyExit () {
   if (urlForConditions2.includes("?multi-shipping") < 0) {
-    exitRef = document.getElementById("exitOnOrderPageTheme") ;
+    exitRef = document.getElementById("exitWithCartTheme") ;
   } else {
     document.getElementById("exitModalCounter").value = "1" ;
     exitRef = document.getElementById("exitTheme") ;
