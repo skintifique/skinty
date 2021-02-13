@@ -1,4 +1,3 @@
-document.getElementById("dev").innerHTML = "bbbbb" ;
 // For the SkinTy modal on exit
 
 let exitIntent ;
@@ -55,7 +54,6 @@ let ifSkintyViews = document.getElementById("if_skinty_views_less_than").value ;
 let totalModalCounter = document.getElementById("totalModalCounter").value ;
 let sessionSkintyModalCount2 = sessionStorage.getItem("sessionSkintyModalCount") ;
 let sessionSkintyMax = document.getElementById("if_views_in_session_less_than").value ;
-  document.getElementById("dev").innerHTML = "aaaaa" ;
 if ((exitModalCounter == "0") &&
     (showOnExit == "yes") &&
     (exitIntent == "1") &&
@@ -71,7 +69,6 @@ allConditions = "0" ;
 }
 
 function selectSkintyExit () {
-  document.getElementById("dev").innerHTML = "poauire" ;
   let urlForConditions3 = window.location.href ;
   let testOnOrderPage = urlForConditions3.includes("multi-shipping") ;
   if (testOnOrderPage) {
