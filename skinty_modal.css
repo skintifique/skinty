@@ -133,6 +133,6 @@
 .close:hover,
 .close:focus {
   color: #000;
-  text-decoration: none;
+  text-decoration: underline;
   cursor: pointer;
 }
