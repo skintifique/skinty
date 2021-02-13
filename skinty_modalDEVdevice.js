@@ -1,5 +1,5 @@
 // FOR SKINTY MODAL ON EXIT
-
+document.getElementById("dev1").innerHTML = "aaaa" ;
 // identify device type
 
 let deviceType ;
@@ -9,7 +9,6 @@ deviceType = "mobile" ;
 } else {
 deviceType = "NOT mobile" ;
 }
-document.getElementById("dev1").innerHTML = "aaaa" ;
                         
 // identify exit intent, device specific
 let exitIntent ;
