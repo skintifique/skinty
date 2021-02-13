@@ -111,7 +111,7 @@ let new_sessionSkintyModalCount ;
  if (sessionSkintyModalCount) {
  new_sessionSkintyModalCount = Number(sessionSkintyModalCount) + 1 ;
 } else {
- new_sessionSkintyModalCount = 0 ;
+ new_sessionSkintyModalCount = 1 ;
 }
  sessionStorage.setItem("sessionSkintyModalCount", new_sessionSkintyModalCount);
   
