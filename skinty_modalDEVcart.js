@@ -66,12 +66,20 @@ allConditions = "1" ;
 allConditions = "0" ;
 }
 if (allConditions == "1") {
-document.getElementById("exitModalCounter").value = "1" ;
-exitRef = document.getElementById("exitTheme") ;
-openSkintyModal(exitRef) ;
+selectSkintyExit () ;
 }
 }
 
+function selectSkintyExit () {
+  if (urlForConditions2.includes("?multi-shipping") < 0) {
+    exitRef = document.getElementById("exitOnOrderPageTheme") ;
+  } else {
+    document.getElementById("exitModalCounter").value = "1" ;
+    exitRef = document.getElementById("exitTheme") ;
+  }
+openSkintyModal(exitRef) ;
+}
+  
 <!-- END FOR EXIT POPUP -->  
 
 let floatingBtn_display = document.getElementById("floatingBtn_display").value ;
