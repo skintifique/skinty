@@ -1,3 +1,6 @@
+let urltest = document.referrer;
+document.getElementById("devtest").innerHTML = urltest ;
+
 // FOR SKINTY MODAL ON EXIT
 
 // identify device type
