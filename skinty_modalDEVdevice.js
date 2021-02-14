@@ -1,5 +1,5 @@
 // FOR SKINTY MODAL ON EXIT
-document.getElementById("dev1").innerHTML = "aaaa" ;
+
 // identify device type
 
 let deviceType ;
@@ -9,13 +9,24 @@ deviceType = "mobile" ;
 } else {
 deviceType = "NOT mobile" ;
 }
-                        
+                    
 // identify exit intent, device specific
 let exitIntent ;
 
+window.document.body.onmouseover = function() {
+if (deviceType == "NOT mobile") { 
+detectNoExitIntent(event);
+}
+};
+
+window.document.body.onmouseleave = function() {
 if (deviceType == "NOT mobile") {
-window.document.body.onmouseover = function() {detectNoExitIntent(event);};
-window.document.body.onmouseleave = function() {detectExitIntent(event)};
+detectExitIntent(event);
+}
+};
+
+window.addEventListener("scroll",function(){myScrollSpeedFunction();});
+
 
 function detectExitIntent(event) {
   let cX = event.clientX;
@@ -34,10 +45,7 @@ function detectNoExitIntent(event) {
   exitIntent = "0" ;
 triggerOnExit () ;
 }
-} 
 
-window.addEventListener("scroll",function(){myScrollSpeedFunction();});
-if (deviceType == "mobile") {
 function myScrollSpeedFunction(){
      if(deviceType == "mobile") { 
          if(my_scroll() < -200) {
@@ -70,8 +78,7 @@ function myScrollSpeedFunction(){
      return delta;
  };
  })();  
-}
-
+ 
 let urlForConditions = window.location.href ;
 let urlContains ;
 let if_url_contains = document.getElementById("if_url_contains").value ;
@@ -125,7 +132,7 @@ if ((showOnExit == "yes") &&
        }
   }
   }
-  
+
 <!-- END FOR EXIT POPUP -->  
 
 let floatingBtn_display = document.getElementById("floatingBtn_display").value ;
@@ -139,7 +146,7 @@ document.getElementById("ModalBtnFloat").style.display = "block" ;
 } else {
 document.getElementById("ModalBtnFloat").style.display ="none" ;
 }
-
+ 
 if (windowwidth < 500) {
 document.getElementById("divSkintyFrame").className ="divSkintyForIframe" ;
 }
