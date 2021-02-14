@@ -1,4 +1,4 @@
-let urltest = document.referrer;
+let urltest = window.location.href ;
 document.getElementById("fordev").innerHTML = urltest ;
 
 // FOR SKINTY MODAL ON EXIT
