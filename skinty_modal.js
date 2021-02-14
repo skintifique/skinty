@@ -1,8 +1,32 @@
-// For the SkinTy modal on exit
+// FOR SKINTY MODAL ON EXIT
 
+// identify device type
+
+let deviceType ;
+let windowwidth = window.innerWidth;
+if (windowwidth < 500) {
+deviceType = "mobile" ;
+} else {
+deviceType = "NOT mobile" ;
+}
+                    
+// identify exit intent, device specific
 let exitIntent ;
-window.document.body.onmouseover = function() {detectNoExitIntent(event);};
-window.document.body.onmouseleave = function() {detectExitIntent(event)};
+
+window.document.body.onmouseover = function() {
+if (deviceType == "NOT mobile") { 
+detectNoExitIntent(event);
+}
+};
+
+window.document.body.onmouseleave = function() {
+if (deviceType == "NOT mobile") {
+detectExitIntent(event);
+}
+};
+
+window.addEventListener("scroll",function(){myScrollSpeedFunction();});
+
 
 function detectExitIntent(event) {
   let cX = event.clientX;
@@ -18,11 +42,43 @@ triggerOnExit () ;
 }
 
 function detectNoExitIntent(event) {
-  let exitIntent = "0" ;
+  exitIntent = "0" ;
 triggerOnExit () ;
 }
 
+function myScrollSpeedFunction(){
+     if(deviceType == "mobile") { 
+         if(my_scroll() < -20) {
+            exitIntent = "1" ;
+           triggerOnExit () ;
+     } else {
+       exitIntent = "0" ;
+       triggerOnExit () ;
+ }
+ }
+}
 
+ let my_scroll = (function(){ //Function that checks the speed of scrolling
+ let last_position, new_position, timer, delta, delay = 50; 
+
+ function clear() {
+     last_position = null;
+     delta = 0;
+ }
+
+ clear();
+ return function(){
+     new_position = window.scrollY ;
+     if ( last_position != null ){
+         delta = new_position -  last_position;
+     }
+     last_position = new_position;
+     clearTimeout(timer);
+     timer = setTimeout(clear, delay);
+     return delta;
+ };
+ })();  
+ 
 let urlForConditions = window.location.href ;
 let urlContains ;
 let if_url_contains = document.getElementById("if_url_contains").value ;
@@ -76,7 +132,7 @@ if ((showOnExit == "yes") &&
        }
   }
   }
-  
+
 <!-- END FOR EXIT POPUP -->  
 
 let floatingBtn_display = document.getElementById("floatingBtn_display").value ;
@@ -90,8 +146,7 @@ document.getElementById("ModalBtnFloat").style.display = "block" ;
 } else {
 document.getElementById("ModalBtnFloat").style.display ="none" ;
 }
-
-let windowwidth = window.innerWidth;
+ 
 if (windowwidth < 500) {
 document.getElementById("divSkintyFrame").className ="divSkintyForIframe" ;
 }
