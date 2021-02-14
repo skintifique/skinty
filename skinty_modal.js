@@ -1,5 +1,5 @@
 let urltest = document.referrer;
-document.getElementById("devtest").innerHTML = urltest ;
+document.getElementById("fordev").innerHTML = urltest ;
 
 // FOR SKINTY MODAL ON EXIT
 
