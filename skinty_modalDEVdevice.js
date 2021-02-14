@@ -48,7 +48,7 @@ triggerOnExit () ;
 
 function myScrollSpeedFunction(){
      if(deviceType == "mobile") { 
-         if(my_scroll() < -200) {
+         if(my_scroll() < -50) {
             exitIntent = "1" ;
            triggerOnExit () ;
      } else {
