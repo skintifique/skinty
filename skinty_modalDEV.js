@@ -10,10 +10,10 @@ async function supportsWebp() {
 
 (async () => {
   if(await supportsWebp()) {
-   document.getElementById("exitTheme").innerHTML = "exit_webp";
+   document.getElementById("exitTheme").value = "exit_webp";
   }
   else {
-   document.getElementById("exitTheme").innerHTML = "exit"; 
+   document.getElementById("exitTheme").value = "exit"; 
   }
 })();
 
