@@ -1,7 +1,5 @@
 // IDENTIFY IF BROWSER SUPPORTS WEBP (FOR GIF FILES IN SKINTY)
 
-let supportWebp ;
-
 async function supportsWebp() {
   if (!self.createImageBitmap) return false;
   
@@ -12,10 +10,10 @@ async function supportsWebp() {
 
 (async () => {
   if(await supportsWebp()) {
-   document.getElementById("exitTheme").value = "exit_webp";
+   document.getElementById("exitTheme").innerHTML = "exit_webp";
   }
   else {
-   document.getElementById("exitTheme").value = "exit"; 
+   document.getElementById("exitTheme").innerHTML = "exit"; 
   }
 })();
 
