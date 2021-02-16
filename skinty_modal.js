@@ -10,11 +10,11 @@ async function supportsWebp() {
 
 (async () => {
   if(await supportsWebp()) {
-   document.getElementById("exitTheme").value = "exit";
+   document.getElementById("exitTheme").value = "exit_webp";
   }
   else {
  <!-- set value below to exit if there is a default SkinTy page when using webp formated images -->
-   document.getElementById("exitTheme").value = "exit"; 
+   document.getElementById("exitTheme").value = "exit_webp"; 
   }
 })();
 
