@@ -1,22 +1,22 @@
 // IDENTIFY IF BROWSER SUPPORTS WEBP (FOR GIF FILES IN SKINTY)
-
-async function supportsWebp() {
-  if (!self.createImageBitmap) return false;
+// CURRENTLY NOT IN USE
+//async function supportsWebp() {
+//  if (!self.createImageBitmap) return false;
   
-  const webpData = 'data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=';
-  const blob = await fetch(webpData).then(r => r.blob());
-  return createImageBitmap(blob).then(() => true, () => false);
-}
+//  const webpData = 'data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=';
+//  const blob = await fetch(webpData).then(r => r.blob());
+//  return createImageBitmap(blob).then(() => true, () => false);
+//}
 
-(async () => {
-  if(await supportsWebp()) {
-   document.getElementById("exitTheme").value = "exit_webp";
-  }
-  else {
- <!-- set value below to exit if there is a default SkinTy page when using webp formated images -->
-   document.getElementById("exitTheme").value = "exit_webp"; 
-  }
-})();
+//(async () => {
+//  if(await supportsWebp()) {
+//   document.getElementById("exitTheme").value = "exit_webp";
+//  }
+//  else {
+// <!-- set value below to exit if there is a default SkinTy page when using webp formated images -->
+//   document.getElementById("exitTheme").value = "exit_webp"; 
+//  }
+//})();
 
 
 // FOR SKINTY MODAL ON EXIT
