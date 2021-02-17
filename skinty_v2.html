@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+/* Popup container - can be anything you want */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 2px ;
+  background-color: rgba(45,133,154,1) ;
+  border-radius: 30px;
+  color: white ;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: rgba(45,133,154,1);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 8px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -180px;
+  margin-right: 20px ;
+  border: 2px solid rgba(45,133,154,1);
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+.inside_popup {
+  border: 2px solid rgba(45,133,154,1);
+  border-radius: 20px;
+  background: white;
+  margin-left : auto ;
+  margin-right : auto ;
+  width: 90%;
+  height: 40px;
+  margin-top: auto ;
+  margin-bottom:auto ;
+}
+
+.inside_popup:hover {
+  text-decoration: underline ;
+}
+/* For chat popup */
+.popupchat {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 2px ;
+  background-color: white ;
+  border-radius: 30px;
+  color: white ;
+}
+
+/* The actual popup */
+.popupchat .chat {
+  visibility: hidden;
+  width: 380px;
+  background-color: white;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 0px 0px;
+  position: absolute;
+  z-index: 2;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -20px;
+  margin-right: 20px ;
+  margin-bottom: -85px ;
+  border: 2px solid rgba(45,133,154,1);
+}
+
+
+/* Toggle this class - hide and show the chat popup */
+.popupchat .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+
+/* For modal and inside modal */
+.divSkintyForIframe {
+  display : block;
+  margin-left : auto ;
+  margin-right : auto ;
+  width = 30% ;
+  min-width : 320px;
+  max-width : 500px; 
+  background-color: rgba(242,242,242,1);
+  border: "none" ;
+  border-radius: 30px;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+
+.divSkintyForIframe30 {
+  display : block;
+  margin-left : auto ;
+  margin-right : auto ;
+  width = 30% ;
+  min-width : 320px;
+  max-width : 500px; 
+  background-color: rgba(242,242,242,1);
+  border: 2px solid rgba(45,133,154,1) ;
+  border-radius: 30px;
+  color: black;
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 99999999; /* Sit on top */
+  padding-top: 0px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color:;
+  margin: auto;
+  padding: 0px;
+  border: 0px solid #888;
+  width: 40%;
+  min-width : 370px;
+  max-width : 520px
+}
+
+/* The Close Button */
+.close {
+  color: black;
+  float: right;
+  font-size: 48px;
+  font-weight: normal;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* The SkinTy float Button */
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:80px;
+	right:20px;
+	background-color:rgba(45,133,154,1);
+	color:none ;
+	border-radius:50px;
+	text-align:center;
+        font-size:30px;
+	border: 2px solid ;
+	border-color: rgba(84,161,183,1);
+        z-index:100;
+}
+
+.SkinTyBtnFloat {
+  background-color: rgba(45,133,154,1);
+  border: none;
+  border-radius: 30px;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+}
+
+.img.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto ;
+    background-color : transparent ;
+ }
+
+.SkintyBtnDefault {
+  border: none;
+  background-color: inherit;
+  padding: 14px 28px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* On mouse-over */
+.SkintyBtnDefault:hover {background: #eee;}
+
+.uSkinTyBtn1 {
+  color: black;
+  float: auto;
+  font-size: 14px;
+  font-weight: normal;
+  border: 1px solid rgba(242,242,242,1) ;
+  border-radius: 10px;
+  background-color: white;
+  text-decoration: none;
+}
+
+.uSkinTyBtn1:hover {
+  text-decoration: underline ;
+}	
+	
+.close:hover,
+.close:focus {
+  color: #000;
+  cursor: pointer;
+}
+</style>
+</head>
+<body style="text-align:center">
+
+<h2>Popup</h2>
+<!-- inputs to provide when deploying the file -->  
+<!-- floatingBtn_display defines which pages display the floating btn: if "all": all pages, if keyword "xxx": only the pages where the url contains "xxx". -->  
+<!-- At the present time, only one keyword is possible (e.g.: "Skintifique"). If no input is provided, the floating button will be displayed on all pages, by default -->  
+<!-- This feature is only relevant when the module is deployed across many pages, eg through Google GTM, but SkinTy should only be displayed on some of them -->  
+<input hidden id="floatingBtn_display" value=""></input>
+  <input hidden id="promb" value="sk"></input>
+<!-- floatingBtn_themeb defines the default theme that floating SkinTy will open on (provided it is shown as specified with floatingBtn_showb -->
+<!-- if a value is provided for floatingBtn_themeb, then it takes precedence over floatingBtn_kwds which becomes useless  --> 
+<input hidden id="floatingBtn_themeb" value=""></input>
+<input hidden id="floatingBtn_kwds" value="eczema,dermatitis,maternity,pregnant,allergy,psoriasis,dyshidrosis"></input>
+<!-- floatingBtn_kwds specifies whether the floating button, if displayed and clicked, will start on a page specified by the url of the page where the code is installed-->  
+<!-- floatingBtn_kwds is useless if a theme has been entered through floatingBtn_themeb -->  
+<!-- end -->  
+<br>
+<br>
+<br>
+<!-- example of a button triggering opening of SkinTy modal page, starting on a specific theme -->  
+<button id="ModalBtnTheme_1" class="SkintyBtnDefault" onclick="openSkintyModal(this)" value="allergy">When you CLICK ME, SkinTy will show up and start on the allergy page</button>
+<!-- example of a button triggering opening of SkinTy modal page, starting with a specific query -->    
+<p>lorem ipsum...<button id="ModalBtnQuery_1" class="SkintyBtnDefault" style="font-size:16px;" onclick="openSkintyModal(this)" value="Which ingredients should be avoided in skincare products?"><u>Skintifique products contain no ingredients that should be avoided in skincare products</u></button>...lorem ipsum</p> 
+<!-- end example buttons --> 
+<!-- for tests -->
+<p id="fordev">-</p>
+<!-- end for tests --> 
+
+<!-- html required for popup on exit-->
+<input hidden id="show_on_exit" value="yes"></input>
+<input hidden id="if_url_contains" value="-"></input>
+<input hidden id="if_url_does_not_contain" value=""></input>
+<input hidden id="if_skinty_views_less_than" value="1"></input>
+<input hidden id="if_views_in_session_less_than" value="3"></input>
+<!-- the exit popup will also not show if the visitor has already seen it on the page -->
+
+<input hidden id="exitModalCounter" value="0"></input>
+<input hidden id="totalModalCounter" value="0"></input>
+<input hidden id="exitOnOrderPageCounter" value="0"></input>
+
+<button hidden id="exitTheme" value="exit"></button>
+<button hidden id="exitWithCartTheme" value="exit_with_cart"></button>
+<!-- END html required for popup on exit-->
+
+<br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+<div>
+<div class="popup float" onclick="openHelpPopup()"><img inline height="25px" src="https://media.giphy.com/media/l0MYSOnaOKyWPTf0c/giphy.gif">
+  <span class="popuptext" id="myPopup">
+  <button id="PopUpBtnChat"class="inside_popup" onclick="openChatPopup()">Live chat<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZThfQupnUwVdPGyB5WLSrZehQ7eqcovSzRA&usqp=CAU" height="20px"></button>
+  <button hidden id="ModalBtnUrl1" class="inside_popup" onclick="openSkintyModal(this)" value="https://skintifique.github.io/zendesk-widget.html">Live agent inside SkinTy window</a></button>
+  <button id="ModalBtnFloat" class="inside_popup" onclick="openSkintyModal(this)" value="">SkinTy<img class= "img.displayed" src="https://media.giphy.com/media/l0MYSOnaOKyWPTf0c/giphy.gif"  width="20px" height="20px">
+</button>
+  <button id="ModalBtnUrl" class="inside_popup" value="https://www.skintifique.me/newsletter?nsfs" onclick="openSkintyModal(this)">Welcome Offer ❤️ </button>
+  <button id="ModalBtnUrl" class="inside_popup" value="https://skintifique.github.io/call_us.html" onclick="openSkintyModal(this)">Call us ✆</button>
+  <button class="inside_popup" height="20px"><a href="mailto:skinty@skintifique.com" target="_blank" style="text-decoration:none; color:black;">eMail us ✉︎</a></button>
+    </span>
+ </div>
+  </div>
+  <br>
+
+
+<div class="popupchat" >
+  <span class="chat" id="chatPopup">
+    <a style="color:black; font:12px;" class="close" onclick="closeChatPopup()">&times;</a>
+    <iframe src="https://skintifique.github.io/zendesk-widget.html" height="500px" width="375px" style="border:none;"></iframe>
+    <a style="color:black; font:12px;" class="close" onclick="closeChatPopup()">&times;</a>
+    </span>
+ </div>
+
+
+<script>
+// When the user clicks on div, open the popup
+function openHelpPopup() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+
+}
+</script>
+
+<script>
+// When the user clicks on chat button, open the chat popup
+function openChatPopup() {
+  var popup = document.getElementById("chatPopup");
+  popup.classList.add("show");
+}
+</script>
+
+<script>
+function closeChatPopup() {
+  var popup = document.getElementById("chatPopup");
+  popup.classList.remove("show");
+}
+</script>
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close" onclick="closeSkintyModal()">&times;</span>
+    <p>
+<div id="divSkintyFrame" class="divSkintyForIframe30">
+<iframe id="skintyframe" src="" width="100%" height="700px" style="border:none;"></iframe>
+</div>
+    </p>
+<span class="close" onclick="closeSkintyModal()">&times;</span>
+<span><center>
+  <button class="uSkinTyBtn1" onclick="welcomeOffer()">Newsletter & Welcome Offer &hearts;</button>
+<br>
+<button hidden class="uSkinTyBtn1" onclick="flamingo()">Flamingo</button>
+  <button class="uSkinTyBtn1"><a href="mailto:skinty@skintifique.com" style="text-decoration:none;">Email us ✉︎</a></button>
+<button class="uSkinTyBtn1" onclick="callUs()">Call us ✆</button>
+<button class="uSkinTyBtn1" onclick="liveAgent()">Live Agent</button>
+<button class="uSkinTyBtn1" onclick="skintyPage()">SkinTy</button>
+<br>
+<br>
+</center></span>
+  </div>
+</div>
+
+<script>
+function showChatInIframe () {
+    let PopUpBtnChat = document.getElementById("myPopup") ;
+	let iframeChat = document.createElement("iframe"); 
+    iframeChat.id = "iframeChat" ;
+    iframeChat.class = "iframeChatClass" ;
+	iframeChat.src = "https://skintifique.github.io/zendesk-widget.html" ;
+    iframeChat.height = "600px" ;
+    iframeChat.width = "370px" ;
+    document.myPopup.appendChild(iframeChat);
+    }
+</script>
+
+<script src="https://skintifique.github.io/skinty/skinty_modalDEV.js"></script>
+
+</body>
+</html>
