@@ -1,22 +1,22 @@
 // IDENTIFY IF BROWSER SUPPORTS WEBP (FOR GIF FILES IN SKINTY)
-
-async function supportsWebp() {
-  if (!self.createImageBitmap) return false;
+// CURRENTLY NOT IN USE
+//async function supportsWebp() {
+//  if (!self.createImageBitmap) return false;
   
-  const webpData = 'data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=';
-  const blob = await fetch(webpData).then(r => r.blob());
-  return createImageBitmap(blob).then(() => true, () => false);
-}
+//  const webpData = 'data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=';
+//  const blob = await fetch(webpData).then(r => r.blob());
+//  return createImageBitmap(blob).then(() => true, () => false);
+//}
 
-(async () => {
-  if(await supportsWebp()) {
-   document.getElementById("exitTheme").value = "exit_webp";
-  }
-  else {
-   document.getElementById("exitTheme").value = "exit"; 
-  }
-})();
-
+//(async () => {
+//  if(await supportsWebp()) {
+//   document.getElementById("exitTheme").value = "exit_webp";
+//  }
+//  else {
+// <!-- set value below to exit if there is a default SkinTy page when using webp formated images -->
+//   document.getElementById("exitTheme").value = "exit_webp"; 
+//  }
+//})();
 
 
 // FOR SKINTY MODAL ON EXIT
@@ -156,8 +156,6 @@ if ((showOnExit == "yes") &&
 
 <!-- END FOR EXIT POPUP -->  
 
-// FOR BUTTONS
-
 let floatingBtn_display = document.getElementById("floatingBtn_display").value ;
 let this_page_url = window.location.href ;
 if (floatingBtn_display == "all") {
@@ -203,14 +201,17 @@ let y = x.id ;
 let z = y.search("Query") ;
 let t = y.search("Theme") ;
 let u = y.search("Float");
+let v = y.search("Url") ;
 let btnType ; 
-if (z > -1) {btnType = "Query";} else if (t > -1) {btnType = "Theme";} else if (u > -1) {btnType = "Float";}
+if (z > -1) {btnType = "Query";} else if (t > -1) {btnType = "Theme";} else if (u > -1) {btnType = "Float";} else if (v > -1) {btnType = "Url";}
 if (btnType == "Float") {
   openSkintyModalFloat ()
   } else if (btnType == "Theme") {
   openSkintyModalTheme (x)
   } else if (btnType == "Query") {
   openSkintyModalQuery (x)
+  } else if (btnType == "Url") {
+  openSkintyModalUrl (x)
  }
  }
 
@@ -271,6 +272,12 @@ let querybM = x.value ;
 let target_urlM = "https://skintifique.github.io/index.html" + "?promb=" + prombM  + "&queryb=" + querybM + "&themeb=" + themebM + "&formatb=" + formatbM + "&showb=" + showbM ;
 document.getElementById("skintyframe").src = target_urlM ;
 }
+
+function openSkintyModalUrl (x) {
+let target_urlM = x.value ;
+document.getElementById("skintyframe").src = target_urlM ;
+}
+
 
 
 function closeSkintyModal() {
