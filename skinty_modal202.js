@@ -168,7 +168,11 @@ document.getElementById("ModalBtnFloat").style.display = "block" ;
 document.getElementById("ModalBtnFloat").style.display ="none" ;
 }
  
-if (windowwidth < 500) {
+// if (windowwidth < 500) {
+// document.getElementById("divSkintyFrame").className ="divSkintyForIframe" ;
+//}
+
+if (deviceType == "mobile") {
 document.getElementById("divSkintyFrame").className ="divSkintyForIframe" ;
 }
 
