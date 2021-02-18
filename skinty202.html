@@ -457,7 +457,7 @@ function openHelpPopup() {
 
 <script>
 // When the user clicks on chat button, open the chat popup
-function openChatPopup() {
+function openChatPopupINITIAL() {
   let deviceType ;
 let windowwidth = window.innerWidth;
 if (windowwidth < 500) {
@@ -467,6 +467,20 @@ if (windowwidth < 500) {
 } else {
   deviceType = "NOT mobile" ;
   var popup = document.getElementById("chatPopup");
+  popup.classList.add("show");
+  }
+}
+</script>
+
+<script>
+// When the user clicks on chat button, open the chat popup
+function openChatPopup() {
+if (deviceType = "mobile") {
+  deviceType = "mobile" ;
+  let x = document.getElementById("PopUpBtnChatUrl") ;
+  openSkintyModal(x) ;
+} else {
+  let popup = document.getElementById("chatPopup");
   popup.classList.add("show");
   }
 }
