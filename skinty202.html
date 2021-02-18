@@ -445,53 +445,6 @@
     </span>
  </div>
 
-
-<script>
-// When the user clicks on div, open the popup
-function openHelpPopup() {
-  var popup = document.getElementById("myPopup");
-  popup.classList.toggle("show");
-
-}
-</script>
-
-<script>
-// When the user clicks on chat button, open the chat popup
-function openChatPopupINITIAL() {
-  let deviceType ;
-let windowwidth = window.innerWidth;
-if (windowwidth < 500) {
-  deviceType = "mobile" ;
-  let x = document.getElementById("PopUpBtnChatUrl") ;
-  openSkintyModal(x) ;
-} else {
-  deviceType = "NOT mobile" ;
-  var popup = document.getElementById("chatPopup");
-  popup.classList.add("show");
-  }
-}
-</script>
-
-<script>
-// When the user clicks on chat button, open the chat popup
-function openChatPopup() {
-if (deviceType = "mobile") {
-  deviceType = "mobile" ;
-  let x = document.getElementById("PopUpBtnChatUrl") ;
-  openSkintyModal(x) ;
-} else {
-  let popup = document.getElementById("chatPopup");
-  popup.classList.add("show");
-  }
-}
-</script>
-
-<script>
-function closeChatPopup() {
-  var popup = document.getElementById("chatPopup");
-  popup.classList.remove("show");
-}
-</script>
 <!-- END html required for help buttons  -->
 
 <!-- The Modal -->
