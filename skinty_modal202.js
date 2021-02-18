@@ -155,6 +155,8 @@ if ((showOnExit == "yes") &&
   }
 
 <!-- END FOR EXIT POPUP -->  
+  
+<!-- display floating button and identification deviceType -->  
 
 let floatingBtn_display = document.getElementById("floatingBtn_display").value ;
 let this_page_url = window.location.href ;
@@ -167,14 +169,59 @@ document.getElementById("ModalBtnFloat").style.display = "block" ;
 } else {
 document.getElementById("ModalBtnFloat").style.display ="none" ;
 }
- 
-// if (windowwidth < 500) {
-// document.getElementById("divSkintyFrame").className ="divSkintyForIframe" ;
-//}
 
 if (deviceType == "mobile") {
 document.getElementById("divSkintyFrame").className ="divSkintyForIframe" ;
 }
+
+<script>
+// When the user clicks on floating button (help button) div, open the popup
+function openHelpPopup() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+
+}
+</script>
+
+<script>
+// When the user clicks on chat button, open the chat popup
+function openChatPopupINITIAL() {
+  let deviceType ;
+let windowwidth = window.innerWidth;
+if (windowwidth < 500) {
+  deviceType = "mobile" ;
+  let x = document.getElementById("PopUpBtnChatUrl") ;
+  openSkintyModal(x) ;
+} else {
+  deviceType = "NOT mobile" ;
+  var popup = document.getElementById("chatPopup");
+  popup.classList.add("show");
+  }
+}
+</script>
+
+<script>
+// When the user clicks on chat button, open the chat popup
+function openChatPopup() {
+if (deviceType = "mobile") {
+  deviceType = "mobile" ;
+  let x = document.getElementById("PopUpBtnChatUrl") ;
+  openSkintyModal(x) ;
+} else {
+  let popup = document.getElementById("chatPopup");
+  popup.classList.add("show");
+  }
+}
+</script>
+
+<script>
+function closeChatPopup() {
+  var popup = document.getElementById("chatPopup");
+  popup.classList.remove("show");
+}
+</script>
+
+<!-- END display floating button and identification deviceType -->  
 
 function openSkintyModal (x) {
 // Get the modal
