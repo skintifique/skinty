@@ -174,16 +174,13 @@ if (deviceType == "mobile") {
 document.getElementById("divSkintyFrame").className ="divSkintyForIframe" ;
 }
 
-<script>
 // When the user clicks on floating button (help button) div, open the popup
 function openHelpPopup() {
   var popup = document.getElementById("myPopup");
   popup.classList.toggle("show");
 
 }
-</script>
 
-<script>
 // When the user clicks on chat button, open the chat popup
 function openChatPopupINITIAL() {
   let deviceType ;
@@ -198,9 +195,7 @@ if (windowwidth < 500) {
   popup.classList.add("show");
   }
 }
-</script>
 
-<script>
 // When the user clicks on chat button, open the chat popup
 function openChatPopup() {
 if (deviceType = "mobile") {
@@ -212,14 +207,11 @@ if (deviceType = "mobile") {
   popup.classList.add("show");
   }
 }
-</script>
 
-<script>
 function closeChatPopup() {
   var popup = document.getElementById("chatPopup");
   popup.classList.remove("show");
 }
-</script>
 
 <!-- END display floating button and identification deviceType -->  
 
