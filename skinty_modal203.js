@@ -249,14 +249,12 @@ if ((today != "6") && (today != "0")) {
   document.getElementById("ModalBtnUrl3").style.display = "none" ;
    document.getElementById("callUsBtnInModal").style.display = "block" ;
    document.getElementById("chatBtnInModal").style.display = "block" ;
-   document.getElementById("fbBtnInModal").style.display = "none" ;
   } else {
   document.getElementById("PopUpBtnChatUrl").style.display = "none" ;
   document.getElementById("ModalBtnUrl2").style.display = "none" ;
     document.getElementById("ModalBtnUrl3").style.display = "block" ;
     document.getElementById("callUsBtnInModal").style.display = "none" ;
     document.getElementById("chatBtnInModal").style.display = "none" ;
-    document.getElementById("fbBtnInModal").style.display = "block" ;
   } 
 } 
   
