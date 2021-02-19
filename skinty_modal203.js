@@ -178,23 +178,80 @@ document.getElementById("divSkintyFrame").className ="divSkintyForIframe" ;
 function openHelpPopup() {
   var popup = document.getElementById("myPopup");
   popup.classList.toggle("show");
-
+  showAvailableBtns() ;
 }
+<!-- END display floating button and identification deviceType -->  
+  
+<!-- display buttons inside floating button pop-up -->  
 
-// When the user clicks on chat button, open the chat popup
-function openChatPopupINITIAL() {
-  let deviceType ;
-let windowwidth = window.innerWidth;
-if (windowwidth < 500) {
-  deviceType = "mobile" ;
-  let x = document.getElementById("PopUpBtnChatUrl") ;
-  openSkintyModal(x) ;
-} else {
-  deviceType = "NOT mobile" ;
-  var popup = document.getElementById("chatPopup");
-  popup.classList.add("show");
+function showAvailableBtns() {
+  let availability ;
+let start_available1 = "09:00" ;
+let dateUTC_start1 = new Date("2021-01-01T" + start_available1 + "Z") ;
+let hour_start1 = dateUTC_start1.getUTCHours();
+let end_available1 = "12:00" ;
+let dateUTC_end1 = new Date("2021-01-01T" + end_available1 + "Z") ;
+let hour_end1 = dateUTC_end1.getUTCHours();
+let start_available2 = "13:00" ;
+let dateUTC_start2 = new Date("2021-01-01T" + start_available2 + "Z") ;
+let hour_start2 = dateUTC_start2.getUTCHours();
+let end_available2 = "17:00" ;
+let dateUTC_end2 = new Date("2021-01-01T" + end_available2 + "Z") ;
+let hour_end2 = dateUTC_end2.getUTCHours() ;
+let date = new Date();
+let todayD = date.getUTCDay();
+let today = todayD ;
+let hour = date.getUTCHours();
+if ((today != "6") && (today != "0")) {
+  if ((hour >= hour_start1) && (hour < hour_end1)) {
+    availability = "available" ;
+    } else if ((hour >= hour_start2) && (hour < hour_end2)) {
+    availability = "available" ;
+    } else {
+    availability = "not_available" ;
+    }
   }
-}
+  if (today == "6") {
+  let saturday = "no" ;
+  let saturday_start = "09:00" ;
+  let dateUTC_sat_start = new Date("2021-01-01T" + saturday_start + "Z") ;
+  let hour_sat_start = dateUTC_sat_start.getUTCHours();
+  let saturday_end = "17:00" ;
+  let dateUTC_sat_end = new Date("2021-01-01T" + saturday_end + "Z") ;
+  let hour_sat_end = dateUTC_sat_end.getUTCHours();  
+  if (saturday == "no") {
+  availability = "not_available" ;
+  } else if ((hour >= hour_sat_start) && (hour < hour_sat_end)) {
+  availability = "available" ; 
+  } else {
+  availability = "not_available" ;
+  } 
+   } 
+  if (today == "0") {
+  let sunday = "no" ;
+  let sunday_start = "09:00" ;
+  let dateUTC_sun_start = new Date("2021-01-01T" + sunday + "Z") ;
+  let hour_sun_start = dateUTC_sun_start.getUTCHours();
+  let sunday_end = "17:00" ;
+  let dateUTC_sun_end = new Date("2021-01-01T" + sunday_end + "Z") ;
+  let hour_sun_end = dateUTC_sun_end.getUTCHours();  
+  if (sunday == "no") {
+  availability = "not_available" ;
+  } else if ((hour >= hour_sun_start) && (hour < hour_sun_end)) {
+  availability = "available" ; 
+  } else {
+  availability = "not_available" ;
+  } 
+  } 
+ if (availability == "available") {
+  document.getElementByClass("chatAvailability").style.display = "block" ;
+  } else {
+  document.getElementById("chatAvailability").style.display = "none" ;
+  } 
+} 
+  
+  
+  
 
 // When the user clicks on chat button, open the chat popup
 function openChatPopup() {
@@ -213,7 +270,7 @@ function closeChatPopup() {
   popup.classList.remove("show");
 }
 
-<!-- END display floating button and identification deviceType -->  
+<!-- END display buttons inside floating button pop-up -->  
 
 function openSkintyModal (x) {
 // Get the modal
