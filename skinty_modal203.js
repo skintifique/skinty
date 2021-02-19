@@ -244,9 +244,11 @@ if ((today != "6") && (today != "0")) {
   } 
   } 
  if (availability == "available") {
-  document.getElementByClassName("chatAvailability").style.display = "block" ;
+  document.getElementById("PopUpBtnChatUrl").style.display = "block" ;
+  document.getElementById("ModalBtnUrl2").style.display = "block" ;
   } else {
-  document.getElementByIdName("chatAvailability").style.display = "none" ;
+  document.getElementById("PopUpBtnChatUrl").style.display = "none" ;
+  document.getElementById("ModalBtnUrl2").style.display = "none" ;
   } 
 } 
   
