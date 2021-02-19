@@ -244,9 +244,9 @@ if ((today != "6") && (today != "0")) {
   } 
   } 
  if (availability == "available") {
-  document.getElementByClass("chatAvailability").style.display = "block" ;
+  document.getElementByClassName("chatAvailability").style.display = "block" ;
   } else {
-  document.getElementById("chatAvailability").style.display = "none" ;
+  document.getElementByIdName("chatAvailability").style.display = "none" ;
   } 
 } 
   
