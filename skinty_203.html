@@ -53,6 +53,9 @@
   visibility: visible;
   -webkit-animation: fadeIn 1s;
   animation: fadeIn 1s;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform:translate3d(0,0,0);
+	transition: color 0.5s ease-in-out; 
 }
 
 /* Add animation (fade in the popup) */
@@ -219,8 +222,6 @@
 	border: 2px solid ;
         border-color: rgb(84,161,183);
         z-index:100;
-	-webkit-backface-visibility: hidden;
-	-webkit-transform:translate3d(0,0,0);
 }
 	
 .float:after {
