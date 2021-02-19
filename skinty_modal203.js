@@ -257,8 +257,7 @@ if ((today != "6") && (today != "0")) {
 
 // When the user clicks on chat button, open the chat popup
 function openChatPopup() {
-if (deviceType = "mobile") {
-  deviceType = "mobile" ;
+if (deviceType == "mobile") {
   let x = document.getElementById("PopUpBtnChatUrl") ;
   openSkintyModal(x) ;
 } else {
