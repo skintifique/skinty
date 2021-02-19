@@ -205,7 +205,7 @@
 }
 
 /* The SkinTy float Button */
-.float{
+.float {
 	position:fixed;
 	width:60px;
 	height:60px;
@@ -220,7 +220,14 @@
         border-color: rgb(84,161,183);
         z-index:100;
 	-webkit-backface-visibility: hidden;
+	-webkit-transform:translate3d(0,0,0);
 }
+	
+.float:after {
+	-webkit-backface-visibility: hidden;
+	-webkit-transform:translate3d(0,0,0);
+}
+
 
 .img.displayed {
     display: block;
