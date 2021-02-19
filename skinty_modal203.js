@@ -212,7 +212,7 @@ if ((today != "6") && (today != "0")) {
     }
   }
   if (today == "6") {
-  let saturday = "no" ;
+  let saturday = "yes" ;
   let saturday_start = "09:00" ;
   let dateUTC_sat_start = new Date("2021-01-01T" + saturday_start + "Z") ;
   let hour_sat_start = dateUTC_sat_start.getUTCHours();
@@ -228,7 +228,7 @@ if ((today != "6") && (today != "0")) {
   } 
    } 
   if (today == "0") {
-  let sunday = "no" ;
+  let sunday = "yes" ;
   let sunday_start = "09:00" ;
   let dateUTC_sun_start = new Date("2021-01-01T" + sunday + "Z") ;
   let hour_sun_start = dateUTC_sun_start.getUTCHours();
