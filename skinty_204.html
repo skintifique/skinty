@@ -222,6 +222,12 @@
   zE('webWidget', 'show');
   zE('webWidget', 'open');
   document.querySelector('#popup').style.opacity = 0;
+	 
+  zE('webWidget:on', 'close', function() {
+  zE('webWidget', 'hide');
+  document.querySelector('#myLauncher').style.opacity = 1;
+})
+	  
 };
 </script>
 <script type="text/javascript">
