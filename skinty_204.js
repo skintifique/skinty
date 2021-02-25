@@ -178,9 +178,9 @@ document.getElementById("divSkintyFrame").className ="divSkintyForIframe" ;
 function openHelpPopup() {
   var popup = document.getElementById("myPopup");
   popup.classList.toggle("show");
-  let fbMessDivDisplay = document.getElementById("fbMessengerWidgetDiv").style.display ;
-  if (fbMessDivDisplay === "block") {
-    document.getElementById("fbMessengerWidgetDiv").style.display = "none" ;
+  let fbMsgDiv = document.getElementById("fbMsgDiv").style.display ;
+  if (fbMsgDiv === "block") {
+    document.getElementById("fbMsgDiv").style.display = "none" ;
    }
   showAvailableBtns() ;
 }
