@@ -179,9 +179,9 @@ function openHelpPopup() {
   var popup = document.getElementById("myPopup");
   popup.classList.toggle("show");
 //  hideFbMessengerWidget() ;
-  let fbMessengerWidgetDivDisplay = document.getElementById("fbMessengerWidgetDiv").style.display ;
-  if (fbMessengerWidgetDivDisplay == "block") {
-    document.getElementById("fbMessengerWidgetDiv").style.display = "none" ;
+  let fbMessengerDisplay = document.getElementById("fbMessengerWidgetDiv").style.display ;
+  if (fbMessengerDisplay == "block") {
+    document.getElementById("fbMessengerWidgetDiv").style.display = "block" ;
     }
   showAvailableBtns() ;
 }
