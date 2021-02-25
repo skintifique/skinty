@@ -259,21 +259,21 @@ if ((today != "6") && (today != "0")) {
 } 
 
 
-// When the user clicks on chat button, open the chat popupOLD
-//function openChatPopup() {
-//if (deviceType == "mobile") {
-//  let x = document.getElementById("PopUpBtnChatUrl") ;
-//  openSkintyModal(x) ;
-//} else {
-//  let popup = document.getElementById("chatPopup");
-//  popup.classList.add("show");
-//  }
-//}
-//
-//function closeChatPopup() {
-//  var popup = document.getElementById("chatPopup");
-//  popup.classList.remove("show");
-//}
+// When the user clicks on chat button, open the chat popup and display FB messenger 
+function openChatPopup() {
+if (deviceType == "mobile") {
+  let x = document.getElementById("fbMessengerBtn") ;
+  openSkintyModal(x) ;
+} else {
+  let popup = document.getElementById("chatPopup");
+  popup.classList.add("show");
+  }
+}
+
+function closeChatPopup() {
+  var popup = document.getElementById("chatPopup");
+  popup.classList.remove("show");
+}
 
 <!-- END display buttons inside floating button pop-up -->  
 
