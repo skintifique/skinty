@@ -257,25 +257,23 @@ if ((today != "6") && (today != "0")) {
     document.getElementById("chatBtnInModal").style.display = "none" ;
   } 
 } 
-  
-  callUsBtnInModal
-  
 
-// When the user clicks on chat button, open the chat popup
-function openChatPopup() {
-if (deviceType == "mobile") {
-  let x = document.getElementById("PopUpBtnChatUrl") ;
-  openSkintyModal(x) ;
-} else {
-  let popup = document.getElementById("chatPopup");
-  popup.classList.add("show");
-  }
-}
 
-function closeChatPopup() {
-  var popup = document.getElementById("chatPopup");
-  popup.classList.remove("show");
-}
+// When the user clicks on chat button, open the chat popupOLD
+//function openChatPopup() {
+//if (deviceType == "mobile") {
+//  let x = document.getElementById("PopUpBtnChatUrl") ;
+//  openSkintyModal(x) ;
+//} else {
+//  let popup = document.getElementById("chatPopup");
+//  popup.classList.add("show");
+//  }
+//}
+//
+//function closeChatPopup() {
+//  var popup = document.getElementById("chatPopup");
+//  popup.classList.remove("show");
+//}
 
 <!-- END display buttons inside floating button pop-up -->  
 
