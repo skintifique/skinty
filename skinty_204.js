@@ -211,7 +211,7 @@ if ((today != "6") && (today != "0")) {
     availability = "not_available" ;
     }
   }
-		document.getElementById("devtest").innerHTML = "bbbb" ;
+		document.getElementById("devtest").innerHTML = availability ;
   if (today == "6") {
   let saturday = "yes" ;
   let saturday_start = "09:00" ;
