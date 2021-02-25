@@ -180,9 +180,7 @@ function openHelpPopup() {
   popup.classList.toggle("show");
 //  hideFbMessengerWidget() ;
   let fbMessengerDisplay = document.getElementById("fbMessengerWidgetDiv").style.display ;
-  if (fbMessengerDisplay == "block") {
-    document.getElementById("fbMessengerWidgetDiv").style.display = "inherit" ;
-    }
+  document.getElementById("fbMessengerWidgetDiv").style.display = "none" ;
   showAvailableBtns() ;
 }
 <!-- END display floating button and identification deviceType -->  
