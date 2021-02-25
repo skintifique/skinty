@@ -179,7 +179,7 @@ function openHelpPopup() {
   var popup = document.getElementById("myPopup");
   popup.classList.toggle("show");
   let fbMessDivDisplay = document.getElementById("fbMessengerWidgetDiv").style.display ;
-  if ( fbMessDivDisplay === "block") {
+  if (fbMessDivDisplay === "block") {
     document.getElementById("fbMessengerWidgetDiv").style.display = "none" ;
    }
   showAvailableBtns() ;
