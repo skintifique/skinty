@@ -178,10 +178,10 @@ document.getElementById("divSkintyFrame").className ="divSkintyForIframe" ;
 function openHelpPopup() {
   var popup = document.getElementById("myPopup");
   popup.classList.toggle("show");
-  let fbMsgDiv = document.getElementById("fbMsgDiv") ;
-  if (fbMsgDiv.style.display === "block") {
-  fbMsgDiv.style.display = "none" ;
-  }
+//let fbMsgDiv = document.getElementById("fbMsgDiv") ;
+//  if (fbMsgDiv.style.display === "block") {
+//  fbMsgDiv.style.display = "none" ;
+//  }
   showAvailableBtns() ;
 }
 <!-- END display floating button and identification deviceType -->  
