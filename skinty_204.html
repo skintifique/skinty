@@ -262,11 +262,12 @@
 </div>
 
 <script>
-
+document.getElementById("fbMessengerWidgetDiv").style.display = "none" ;
 	
-	function showFbMessengerWidget () {
-		document.getElementById("fbMessengerWidgetDiv").style.display = "block" ;
-	}
+function showFbMessengerWidget () {
+	let x = getElementById("fbMessengerWidgetDiv") ;
+	x.style.display = "block" ;
+}
 </script>
 
 <script src="https://skintifique.github.io/skinty/skinty_204.js"></script>
