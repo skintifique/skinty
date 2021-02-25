@@ -181,7 +181,7 @@ function openHelpPopup() {
 //  hideFbMessengerWidget() ;
   let fbMessengerDisplay = document.getElementById("fbMessengerWidgetDiv").style.display ;
   if (fbMessengerDisplay == "block") {
-    document.getElementById("fbMessengerWidgetDiv").style.display = "block" ;
+    document.getElementById("fbMessengerWidgetDiv").style.display = "" ;
     }
   showAvailableBtns() ;
 }
