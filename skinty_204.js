@@ -178,6 +178,12 @@ document.getElementById("divSkintyFrame").className ="divSkintyForIframe" ;
 function openHelpPopup() {
   var popup = document.getElementById("myPopup");
   popup.classList.toggle("show");
+let fbMsgDiv = document.getElementById("fbMsgDiv") ;
+  let fbMsgDivDisplay = fbMsgDiv.style.display ;
+  document.getElementById("devtest").innerHTML = fbMsgDivDisplay ;
+  if (fbMsgDiv.style.display === "block") {
+  fbMsgDiv.style.display = "none" ;
+  }	
   showAvailableBtns() ;
 }
 <!-- END display floating button and identification deviceType -->  
@@ -211,7 +217,6 @@ if ((today != "6") && (today != "0")) {
     availability = "not_available" ;
     }
   }
-		document.getElementById("devtest").innerHTML = availability ;
   if (today == "6") {
   let saturday = "yes" ;
   let saturday_start = "09:00" ;
