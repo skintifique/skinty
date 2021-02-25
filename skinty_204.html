@@ -234,9 +234,10 @@
 <!-- End of skintifique Zendesk Widget script -->
 </div>
 
-<div id="fbMessengerWidgetDiv">
 <!-- Load Facebook SDK for JavaScript -->
+<div id="fbMsgDiv">
       <div id="fb-root"></div>
+</div>
       <script>
         window.fbAsyncInit = function() {
           FB.init({
@@ -259,13 +260,13 @@
         page_id="592541754225652"
         greeting_dialog_display="show">
       </div>
-</div>
+
 
 <script>
-document.getElementById("fbMessengerWidgetDiv").style.display = "none" ;
+document.getElementById("fbMsgDiv").style.display = "none" ;
 	
 function showFbMessengerWidget () {
-	let x = getElementById("fbMessengerWidgetDiv") ;
+	let x = getElementById("fbMsgDiv") ;
 	x.style.display = "block" ;
 }
 </script>
