@@ -168,17 +168,17 @@
   <button hidden id="ModalBtnUrl" class="inside_popup" value="https://www.skintifique.me/newsletter?nsfs" onclick="openSkintyModal(this)">Welcome Offer ❤️ </button>
   <button id="ModalBtnUrl2" class="inside_popup" value="https://skintifique.github.io/call_us.html" onclick="openSkintyModal(this)">Call us ✆</button>
   <button class="inside_popup" height="20px"><a href="https://www.skintifique.me/contact-us/" target="_blank" style="text-decoration:none; color:inherit;">eMail us ✉︎</a></button>
-  <button id="ModalBtnUrl3" class="inside_popup" value="https://skintifique.github.io/fb-messenger-chat.html" onclick="openSkintyModal(this)">FB Messenger <img class= "img.displayed" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd7a8wMYjR--JBn-r5-1dcuwLgSL4zNb-rwQ&usqp=CAU"  width="15px" height="20px"></button>
+  <button id="fbMessengerBtn" class="inside_popup" value="https://skintifique.github.io/fb-messenger-chat.html" onclick="openChatPopup(this)">FB Messenger <img class= "img.displayed" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd7a8wMYjR--JBn-r5-1dcuwLgSL4zNb-rwQ&usqp=CAU"  width="15px" height="20px"></button>
   </span>
  </div>
   </div>
   <br>
 
-<!-- the code below is only required if one wants the chat to appear in a specific iframe -->
+<!-- the code below is required to display FB Messenger in a chat-type iframe -->
 <div class="popupchat" >
   <span class="chat" id="chatPopup">
     <a style="color:black; font:12px;" class="close" onclick="closeChatPopup()">&times;</a>
-    <iframe src="https://skintifique.github.io/zendesk-widget.html" height="500px" width="375px" style="border:none;"></iframe>
+    <iframe src="https://skintifique.github.io/fb-messenger-chat.html" height="500px" width="375px" style="border:none;"></iframe>
     <a style="color:black; font:12px;" class="close" onclick="closeChatPopup()">&times;</a>
     </span>
  </div>
