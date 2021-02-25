@@ -256,6 +256,7 @@ if ((today != "6") && (today != "0")) {
     document.getElementById("callUsBtnInModal").style.display = "none" ;
     document.getElementById("chatBtnInModal").style.display = "none" ;
   } 
+document.getElementById("devtest").innerHTML = availability ;
 } 
 
 // When the user clicks on FBmessenger button, show the FB messenger widget
