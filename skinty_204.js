@@ -181,7 +181,7 @@ function openHelpPopup() {
 //let fbMsgDiv = document.getElementById("fbMsgDiv") ;
  // let fbMsgDivDisplay = fbMsgDiv.style.display ;
 //  if (fbMsgDivDisplay === "block") {
-//  document.getElementById("fbMsgDiv").style.display = "none" ;
+  document.getElementById("fbMsgDiv").style.display = "none" ;
  // }
   showAvailableBtns() ;
 }
