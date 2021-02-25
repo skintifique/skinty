@@ -178,9 +178,6 @@ document.getElementById("divSkintyFrame").className ="divSkintyForIframe" ;
 function openHelpPopup() {
   var popup = document.getElementById("myPopup");
   popup.classList.toggle("show");
-//  hideFbMessengerWidget() ;
-  let fbMessengerDisplay = document.getElementById("fbMessengerWidgetDiv").style.display ;
-  document.getElementById("fbMessengerWidgetDiv").style.display = "none" ;
   showAvailableBtns() ;
 }
 <!-- END display floating button and identification deviceType -->  
