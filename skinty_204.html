@@ -258,15 +258,17 @@ zE.activate();
       }(document, 'script', 'facebook-jssdk'));</script>
 
       <!-- Your Chat Plugin code -->
-      <div hidden id="fbMessengerWidgetDiv" class="fb-customerchat"
+<div id="fbMessengerWidgetDiv" style="display:none;">
+      <div class="fb-customerchat"
         attribution="setup_tool"
         page_id="592541754225652"
         greeting_dialog_display="hide">
       </div>
+</div>
 
 <script>
 	function openFbMessengerWidget () {
-		document.getElementById("fbMessengerWidgetDiv").style.visibility = "visible" ;
+		document.getElementById("fbMessengerWidgetDiv").style.display = "block" ;
 	}
 </script>
 
