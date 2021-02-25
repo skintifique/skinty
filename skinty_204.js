@@ -178,11 +178,11 @@ document.getElementById("divSkintyFrame").className ="divSkintyForIframe" ;
 function openHelpPopup() {
   var popup = document.getElementById("myPopup");
   popup.classList.toggle("show");
-//let fbMsgDiv = document.getElementById("fbMsgDiv") ;
-//  let fbMsgDivDisplay = fbMsgDiv.style.display ;
-//  if (fbMsgDivDisplay === "block") {
+let fbMsgDiv = document.getElementById("fbMsgDiv") ;
+  let fbMsgDivDisplay = fbMsgDiv.style.display ;
+  if (fbMsgDivDisplay === "block") {
   document.getElementById("fbMsgDiv").style.display = "none" ;
-//  }
+  }
   showAvailableBtns() ;
 }
 <!-- END display floating button and identification deviceType -->  
@@ -258,9 +258,10 @@ if ((today != "6") && (today != "0")) {
 } 
 
 // When the user clicks on FBmessenger button, show the FB messenger widget
-function showFbMessengerWidget () {
+function showFbMessengerWidget (event) {
 	let x = document.getElementById("fbMsgDiv") ;
 	x.style.display = "block" ;
+	event.stopPropagation();
 	}
 
 
