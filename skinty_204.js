@@ -181,10 +181,8 @@ function openHelpPopup() {
 let fbMsgDiv = document.getElementById("fbMsgDiv") ;
   let fbMsgDivDisplay = fbMsgDiv.style.display ;
   if (fbMsgDivDisplay === "block") {
-  fbMsgDivDisplay = "none" ;
+  document.getElementById("fbMsgDiv").style.display = "none" ;
   }
-document.getElementById("devtest").innerHTML = fbMsgDivDisplay ;
-document.getElementById("fbMsgDiv").style.display = fbMsgDivDisplay ;
   showAvailableBtns() ;
 }
 <!-- END display floating button and identification deviceType -->  
