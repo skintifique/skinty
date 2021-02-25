@@ -185,6 +185,7 @@ function openHelpPopup() {
 <!-- display buttons inside floating button pop-up -->  
 
 function showAvailableBtns() {
+	document.getElementById("devtest").innerHTML = "aaaaaa" ;
   let availability ;
 let start_available1 = "09:00" ;
 let dateUTC_start1 = new Date("2021-01-01T" + start_available1 + "Z") ;
@@ -256,7 +257,6 @@ if ((today != "6") && (today != "0")) {
     document.getElementById("callUsBtnInModal").style.display = "none" ;
     document.getElementById("chatBtnInModal").style.display = "none" ;
   } 
-document.getElementById("devtest").innerHTML = availability ;
 } 
 
 // When the user clicks on FBmessenger button, show the FB messenger widget
