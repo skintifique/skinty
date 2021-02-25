@@ -181,7 +181,7 @@ function openHelpPopup() {
 //  let fbMsgDiv = document.getElementById("fbMsgDiv").style.display ;
 //  if (fbMsgDiv === "block") {
 //   document.getElementById("fbMsgDiv").style.display = "none" ;
-   }
+//   }
   showAvailableBtns() ;
 }
 <!-- END display floating button and identification deviceType -->  
