@@ -269,8 +269,11 @@ document.getElementById("fbMsgDiv").style.display = "none" ;
 function showFbMessengerWidget () {
 	let x = getElementById("fbMsgDiv") ;
 	x.style.display = "block" ;
+	callFbSdk() ;
+	}
 	
-	window.fbAsyncInit = function() {
+function callFbSdk () {
+          window.fbAsyncInit = function() {
           FB.init({
             xfbml            : true,
             version          : 'v9.0'
