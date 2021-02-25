@@ -158,7 +158,7 @@
 
 
 
-<div>
+<div id="myPopupDiv">
 <div class="popup float" onclick="openHelpPopup()"><img inline height="40px" style="padding-top:8px;" src="https://media.giphy.com/media/SUbYK8slyVWbmHc5R9/giphy.gif">
   <span class="popuptext" id="myPopup">
 	  <p style="font-size:14px; font:Raleway;">Hello 👏. How would you like to communicate?</p>	  
@@ -221,11 +221,11 @@
   function openChat() {
   zE('webWidget', 'show');
   zE('webWidget', 'open');
-  document.querySelector('#popup').style.opacity = 0;
+  document.getElementById("myPopupDiv").style.display = "none";
 	 
   zE('webWidget:on', 'close', function() {
   zE('webWidget', 'hide');
-  document.querySelector('#myLauncher').style.opacity = 1;
+  document.getElementById("myPopupDiv").style.display = "block";
 })
 	  
 };
