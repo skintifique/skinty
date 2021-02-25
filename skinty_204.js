@@ -180,7 +180,7 @@ function openHelpPopup() {
   popup.classList.toggle("show");
 let fbMsgDiv = document.getElementById("fbMsgDiv") ;
   let fbMsgDivDisplay = fbMsgDiv.style.display ;
-  document.getElementById("devtest").innerHTML = "poazeriu" ;
+  document.getElementById("devtest").innerHTML = fbMsgDivDisplay ;
   if (fbMsgDiv.style.display === "block") {
   fbMsgDiv.style.display = "none" ;
   }
