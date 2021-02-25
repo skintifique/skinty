@@ -180,10 +180,11 @@ function openHelpPopup() {
   popup.classList.toggle("show");
 let fbMsgDiv = document.getElementById("fbMsgDiv") ;
   let fbMsgDivDisplay = fbMsgDiv.style.display ;
-  document.getElementById("devtest").innerHTML = fbMsgDivDisplay ;
-  if (fbMsgDiv.style.display === "block") {
-  fbMsgDiv.style.display = "none" ;
+  if (fbMsgDivDisplay === "block") {
+  fbMsgDivDisplay = "none" ;
   }
+document.getElementById("devtest").innerHTML = fbMsgDivDisplay ;
+document.getElementById("fbMsgDiv").style.display = fbMsgDivDisplay ;
   showAvailableBtns() ;
 }
 <!-- END display floating button and identification deviceType -->  
