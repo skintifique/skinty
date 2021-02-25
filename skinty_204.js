@@ -264,8 +264,14 @@ if ((today != "6") && (today != "0")) {
   } 
 } 
 
+// When the user clicks on FBmessenger button, show the FB messenger widget
+function showFbMessengerWidget () {
+	let x = document.getElementById("fbMsgDiv") ;
+	x.style.display = "block" ;
+	}
 
-// When the user clicks on chat button, open the chat popup and display FB messenger 
+
+// When the user clicks on chat button, open the chat popup and display FB messenger (NOT IN USE)
 function openChatPopup() {
 if (deviceType == "mobile") {
   let x = document.getElementById("fbMessengerBtn") ;
