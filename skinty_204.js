@@ -185,7 +185,6 @@ function openHelpPopup() {
 <!-- display buttons inside floating button pop-up -->  
 
 function showAvailableBtns() {
-	document.getElementById("devtest").innerHTML = "aaaaaa" ;
   let availability ;
 let start_available1 = "09:00" ;
 let dateUTC_start1 = new Date("2021-01-01T" + start_available1 + "Z") ;
@@ -212,6 +211,7 @@ if ((today != "6") && (today != "0")) {
     availability = "not_available" ;
     }
   }
+		document.getElementById("devtest").innerHTML = "bbbb" ;
   if (today == "6") {
   let saturday = "yes" ;
   let saturday_start = "09:00" ;
