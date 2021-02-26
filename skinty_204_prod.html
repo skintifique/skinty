@@ -120,15 +120,15 @@
 <!-- Start of skintifique Zendesk Widget script -->
 <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=a11224ff-78c1-49da-8419-1a8006595ef5"> </script>
   <script type="text/javascript">
-  zE('webWidget', 'hide');
+  zE("webWidget", "hide");
   
   function openChat() {
-  zE('webWidget', 'show');
-  zE('webWidget', 'open');
+  zE("webWidget", "show");
+  zE("webWidget", "open");
   document.getElementById("myPopupDiv").style.display = "none";
 	 
-  zE('webWidget:on', 'close', function() {
-  zE('webWidget', 'hide');
+  zE("webWidget:on", "close", function() {
+  zE("webWidget", "hide");
   document.getElementById("myPopupDiv").style.display = "block";
 })
 	  
