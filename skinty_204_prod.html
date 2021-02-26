@@ -139,11 +139,21 @@
       }(document, "script", "facebook-jssdk"));
       </script>
       <!-- Your Chat Plugin code -->
-      <div class="fb-customerchat"
-        attribution="setup_tool"
-        page_id="592541754225652"
-        greeting_dialog_display="show">
-      </div>
+<script>
+  (function() {
+    var el = document.createElement("div");
+    el.className = "fb-customerchat";
+    el.setAttribute("page_id", "592541754225652");
+    el.setAttribute("attribution", "setup_tool");
+    el.setAttribute("greeting_dialog_display", "show");
+    document.body.appendChild(el);
+  })();
+</script>
+<!--      <div class="fb-customerchat" -->
+<!--        attribution="setup_tool"  -->
+<!--        page_id="592541754225652"  -->
+<!--        greeting_dialog_display="show">  -->
+<!--      </div>  -->
 </div>
 <script src="https://skintifique.github.io/skinty/skinty_204_prod.js"></script>
 </body>
