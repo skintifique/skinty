@@ -251,9 +251,13 @@ if ((today != "6") && (today != "0")) {
  if (availability == "available") {
   document.getElementById("openChatBtn").style.display = "block" ;
   document.getElementById("ModalBtnUrl2").style.display = "block" ;
+  document.getElementById("callUsBtnInModal").style.display = "block" ;	 
+  document.getElementById("chatBtnInModal").style.display = "block" ;	  
   } else {
   document.getElementById("openChatBtn").style.display = "none" ;
   document.getElementById("ModalBtnUrl2").style.display = "none" ;
+  document.getElementById("callUsBtnInModal").style.display = "none" ;	 
+  document.getElementById("chatBtnInModal").style.display = "none" ;		  
   } 
 } 
 
