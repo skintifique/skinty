@@ -5,7 +5,6 @@
 <link rel="stylesheet" href="https://skintifique.github.io/skinty/skinty_204_prod.css">
 </head>
 <body>
-	
 <!-- inputs to provide when deploying the file -->  
 <!-- floatingBtn_display defines which pages display the floating btn: if "all": all pages, if keyword "xxx": only the pages where the url contains "xxx". -->  
 <!-- At the present time, only one keyword is possible (e.g.: "Skintifique"). If no input is provided, the floating button will be displayed on all pages, by default -->  
@@ -27,7 +26,6 @@
 <!-- example of a button triggering opening of SkinTy modal page, starting with a specific query -->    
 <p hidden> lorem ipsum...<button id="ModalBtnQuery_1" class="SkintyBtnDefault" style="font-size:16px;" onclick="openSkintyModal(this)" value="Which ingredients should be avoided in skincare products?"><u>Skintifique products contain no ingredients that should be avoided in skincare products</u></button>...lorem ipsum</p> 
 <!-- end example buttons --> 
-
 <!-- html required for popup on exit-->
 <input hidden id="show_on_exit" value="yes"></input>
 <input hidden id="if_url_contains" value="-"></input>
@@ -35,15 +33,12 @@
 <input hidden id="if_skinty_views_less_than" value="1"></input>
 <input hidden id="if_views_in_session_less_than" value="2"></input>
 <!-- the exit popup will also not show if the visitor has already seen it on the page -->
-
 <input hidden id="exitModalCounter" value="0"></input>
 <input hidden id="totalModalCounter" value="0"></input>
 <input hidden id="exitOnOrderPageCounter" value="0"></input>
-
 <button hidden id="exitTheme" value="exit"></button>
 <button hidden id="exitWithCartTheme" value="exit_with_cart"></button>
 <!-- END html required for popup on exit-->
-
 <br>
   <br>
   <br>
@@ -57,9 +52,6 @@
   <br>
   <br>
 <!-- html required for help buttons  -->
-
-
-
 <div id="myPopupDiv">
 <div class="popup float" onclick="openHelpPopup()"><img inline height="40px" style="padding-top:8px;" src="https://media.giphy.com/media/SUbYK8slyVWbmHc5R9/giphy.gif">
   <span class="popuptext" id="myPopup">
@@ -76,7 +68,6 @@
  </div>
   </div>
   <br>
-
 <!-- the code below is required to display FB Messenger in a chat-type iframe -->
 <div class="popupchat" >
   <span class="chat" id="chatPopup">
@@ -86,12 +77,9 @@
     </span>
  </div>
 <!-- END of popupchat code -->
-
 <!-- END html required for help buttons  -->
-
 <!-- The Modal -->
 <div id="myModal" class="modal">
-
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close" onclick="closeSkintyModal()">&times;</span>
@@ -115,28 +103,23 @@
 </center></span>
   </div>
 </div>
-
 <div>
 <!-- Start of skintifique Zendesk Widget script -->
 <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=a11224ff-78c1-49da-8419-1a8006595ef5"> </script>
   <script type="text/javascript">
   zE("webWidget", "hide");
-  
   function openChat() {
   zE("webWidget", "show");
   zE("webWidget", "open");
-  document.getElementById("myPopupDiv").style.display = "none";
-	 
+  document.getElementById("myPopupDiv").style.display = "none"; 
   zE("webWidget:on", "close", function() {
   zE("webWidget", "hide");
   document.getElementById("myPopupDiv").style.display = "block";
-})
-	  
+})	  
 };
 </script>
 <!-- End of skintifique Zendesk Widget script -->
 </div>
-
 <div id="fbMsgDiv" style="display:none;">
 <!-- Load Facebook SDK for JavaScript -->
       <div id="fb-root"></div>
@@ -147,7 +130,6 @@
             version          : "v9.0"
           });
         };
-
         (function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;
@@ -156,7 +138,6 @@
         fjs.parentNode.insertBefore(js, fjs);
       }(document, "script", "facebook-jssdk"));
       </script>
-
       <!-- Your Chat Plugin code -->
       <div class="fb-customerchat"
         attribution="setup_tool"
@@ -164,9 +145,6 @@
         greeting_dialog_display="show">
       </div>
 </div>
-
-
 <script src="https://skintifique.github.io/skinty/skinty_204_prod.js"></script>
-
 </body>
 </html>
