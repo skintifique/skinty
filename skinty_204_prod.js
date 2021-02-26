@@ -194,10 +194,10 @@ function showAvailableBtns() {
 let start_available1 = "09:00" ;
 let dateUTC_start1 = new Date("2021-01-01T" + start_available1 + "Z") ;
 let hour_start1 = dateUTC_start1.getUTCHours();
-let end_available1 = "12:00" ;
+let end_available1 = "10:00" ;
 let dateUTC_end1 = new Date("2021-01-01T" + end_available1 + "Z") ;
 let hour_end1 = dateUTC_end1.getUTCHours();
-let start_available2 = "13:00" ;
+let start_available2 = "17:00" ;
 let dateUTC_start2 = new Date("2021-01-01T" + start_available2 + "Z") ;
 let hour_start2 = dateUTC_start2.getUTCHours();
 let end_available2 = "17:00" ;
@@ -217,7 +217,7 @@ if ((today != "6") && (today != "0")) {
     }
   }
   if (today == "6") {
-  let saturday = "yes" ;
+  let saturday = "no" ;
   let saturday_start = "09:00" ;
   let dateUTC_sat_start = new Date("2021-01-01T" + saturday_start + "Z") ;
   let hour_sat_start = dateUTC_sat_start.getUTCHours();
@@ -233,7 +233,7 @@ if ((today != "6") && (today != "0")) {
   } 
    } 
   if (today == "0") {
-  let sunday = "yes" ;
+  let sunday = "no" ;
   let sunday_start = "09:00" ;
   let dateUTC_sun_start = new Date("2021-01-01T" + sunday + "Z") ;
   let hour_sun_start = dateUTC_sun_start.getUTCHours();
