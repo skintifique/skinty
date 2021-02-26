@@ -252,7 +252,7 @@ if ((today != "6") && (today != "0")) {
   document.getElementById("openChatBtn").style.display = "block" ;
   document.getElementById("ModalBtnUrl2").style.display = "none" ;
   document.getElementById("callUsBtnInModal").style.display = "none" ;	 
-  document.getElementById("chatBtnInModal").style.display = "block" ;	  
+  document.getElementById("chatBtnInModal").style.display = "inline" ;	  
   } else {
   document.getElementById("openChatBtn").style.display = "none" ;
   document.getElementById("ModalBtnUrl2").style.display = "none" ;
