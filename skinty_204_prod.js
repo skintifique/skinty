@@ -328,6 +328,7 @@ if (btnType == "Float") {
   } else if (btnType == "Url") {
   openSkintyModalUrl (x)
  }
+showAvailableBtns()	
  }
 
 function openSkintyModalFloat () {
