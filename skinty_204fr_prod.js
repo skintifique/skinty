@@ -23,7 +23,7 @@
 
 //set skintypage url
 
-let skintypage_url = "skintifique.github.io/skinty/fr/";
+let skintypage_url = "https://skintifique.github.io/skinty/fr/";
 
 // identify device type
 
