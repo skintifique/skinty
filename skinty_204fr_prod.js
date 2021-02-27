@@ -431,7 +431,7 @@ document.getElementById("skintyframe").src = skintypage_url ;
 }
 
 function welcomeOffer () {
-document.getElementById("skintyframe").src = "https://www.skintifique.me/welcome-offer/?nsfs" ;
+document.getElementById("skintyframe").src = "https://www.skintifique.me/fr/offre-bienvenue/?nsfs" ;
 }
 
 function callUs () {
