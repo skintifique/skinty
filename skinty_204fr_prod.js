@@ -419,7 +419,7 @@ let modal = document.getElementById("myModal");
 
 // For the buttons underneath the SkinTy window
 function liveAgent () {
-document.getElementById("skintyframe").src = skintypage_url + "/zendesk-widget.html" ;
+document.getElementById("skintyframe").src = skintypage_url + "zendesk-widget.html" ;
 }
 
 function flamingo () {
@@ -435,5 +435,5 @@ document.getElementById("skintyframe").src = "https://www.skintifique.me/fr/offr
 }
 
 function callUs () {
-document.getElementById("skintyframe").src = skintypage_url + "/call_us.html" ;
+document.getElementById("skintyframe").src = skintypage_url + "call_us.html" ;
 }
