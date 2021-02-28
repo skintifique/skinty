@@ -25,11 +25,14 @@ document.getElementById("helpPopupBtnImg").src = "https://media.giphy.com/media/
 // url for skintypage
 let skintyPageUrl= "https://skintifique.github.io" ;
 
-// HELP CENTER POPUP TRIGGERS
-
+// HELP CENTER POPUP TRIGGERS AND PARAMETERS
+let nbHelpPopupOpen = sessionStorage.getItem("nbHelpPopupOpen");
+if (nbHelpPopupOpen != "1") {
 window.setTimeout(openHelpPopup, 4000);
 window.setTimeout(showFbMessengerWidget, 4500);
- document.getElementById("welcomeTextHelpPopup").innerHTML = "Hello! Let me know if we can help. Select 'Digital assistant' for self-help 😍 or other buttons to communicate with our advisors ❤️" ;
+}
+
+document.getElementById("welcomeTextHelpPopup").innerHTML = "Hello! Let me know if we can help. Select 'Digital assistant' for self-help 😍 or other buttons to communicate with our advisors ❤️" ;
 
 
 // FOR SKINTY MODAL ON EXIT
@@ -272,6 +275,7 @@ if ((today != "6") && (today != "0")) {
   document.getElementById("callUsBtnInModal").style.display = "none" ;	 
   document.getElementById("chatBtnInModal").style.display = "none" ;		  
   } 
+sessionStorage.setItem("nbHelpPopupOpen","1") ;
 } 
 
 // When the user clicks on FBmessenger button, show the FB messenger widget
