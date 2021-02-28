@@ -350,7 +350,7 @@ showAvailableBtns()
 
 function openSkintyModalFloat () {
 let prombM = document.getElementById("promb").value ;
-let formatbM = "open" ;
+let formatbM = "close" ;
 let showbM = "show";
 let themebM ;
 let url = window.location.href ;
@@ -387,7 +387,7 @@ document.getElementById("skintyframe").src = target_urlM ;
 
 function openSkintyModalTheme (x) {
 let prombM = document.getElementById("promb").value ;
-let formatbM = "open" ;
+let formatbM = "close" ;
 let showbM = "show" ;
 let themebM = x.value ;
 let querybM = "" ;
@@ -398,7 +398,7 @@ document.getElementById("skintyframe").src = target_urlM ;
 
 function openSkintyModalQuery (x) {
 let prombM = document.getElementById("promb").value ;
-let formatbM = "open" ;
+let formatbM = "close" ;
 let showbM = "show" ;
 let themebM = "" ;
 let querybM = x.value ;
