@@ -27,9 +27,9 @@ let skintyPageUrl= "https://skintifique.github.io" ;
 
 // HELP CENTER POPUP TRIGGERS
 
-window.setTimeout(openHelpPopup, 5000);
-window.setTimeout(showFbMessengerWidget, 5500);
-document.getElementById("welcomeTextHelpPopup").innerHTML = "Hello 👏 let me know if we can help. Select 'Digital assistant' for self-help 😎; other buttons to communicate with our advisors ❤️" ;
+window.setTimeout(openHelpPopup, 4000);
+window.setTimeout(showFbMessengerWidget, 4500);
+document.getElementById("welcomeTextHelpPopup").innerHTML = "Hello 👏 let me know if we can help. Select 'Digital assistant' for self-help 😎 or other buttons to communicate with our advisors ❤️" ;
 
 
 // FOR SKINTY MODAL ON EXIT
