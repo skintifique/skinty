@@ -20,7 +20,7 @@
 
 // SET UP SELECT PAGE PARAMETERS
 // Image in help center float btn
-document.getElementById("helpPopupBtnImg").src = "https://media.giphy.com/media/xUOrw1avEiJvQJlo76/giphy.gif";
+document.getElementById("helpPopupBtnImg").src = "https://media.giphy.com/media/26ufn24Onjz8w7NxS/giphy.gif";
 
 // HELP CENTER POPUP TRIGGERS
 
