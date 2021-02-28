@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://skintifique.github.io/skinty/skinty_204_prod.css">
+</head>
+<body>
+<!-- inputs to provide when deploying the file -->  
+<!-- floatingBtn_display defines which pages display the floating btn: if "all": all pages, if keyword "xxx": only the pages where the url contains "xxx". -->  
+<!-- At the present time, only one keyword is possible (e.g.: "Skintifique"). If no input is provided, the floating button will be displayed on all pages, by default -->  
+<!-- This feature is only relevant when the module is deployed across many pages, eg through Google GTM, but SkinTy should only be displayed on some of them -->  
+<input hidden id="floatingBtn_display" value=""></input>
+  <input hidden id="promb" value="sk"></input>
+<!-- floatingBtn_themeb defines the default theme that floating SkinTy will open on (provided it is shown as specified with floatingBtn_showb -->
+<!-- if a value is provided for floatingBtn_themeb, then it takes precedence over floatingBtn_kwds which becomes useless  --> 
+<input hidden id="floatingBtn_themeb" value=""></input>
+<input hidden id="floatingBtn_kwds" value="eczema,dermatitis,maternity,pregnant,allergy,psoriasis,dyshidrosis"></input>
+<!-- floatingBtn_kwds specifies whether the floating button, if displayed and clicked, will start on a page specified by the url of the page where the code is installed-->  
+<!-- floatingBtn_kwds is useless if a theme has been entered through floatingBtn_themeb -->  
+<!-- end -->  
+<br>
+<br>
+<br>
+<!-- example of a button triggering opening of SkinTy modal page, starting on a specific theme -->  
+<p hidden><button id="ModalBtnTheme_1" class="SkintyBtnDefault" onclick="openSkintyModal(this)" value="allergy">When you CLICK ME, SkinTy will show up and start on the allergy page</button></p>
+<!-- example of a button triggering opening of SkinTy modal page, starting with a specific query -->    
+<p hidden> lorem ipsum...<button id="ModalBtnQuery_1" class="SkintyBtnDefault" style="font-size:16px;" onclick="openSkintyModal(this)" value="Which ingredients should be avoided in skincare products?"><u>Skintifique products contain no ingredients that should be avoided in skincare products</u></button>...lorem ipsum</p> 
+<!-- end example buttons --> 
+<!-- html required for popup on exit-->
+<input hidden id="show_on_exit" value="yes"></input>
+<input hidden id="if_url_contains" value="-"></input>
+<input hidden id="if_url_does_not_contain" value=""></input>
+<input hidden id="if_skinty_views_less_than" value="1"></input>
+<input hidden id="if_views_in_session_less_than" value="2"></input>
+<!-- the exit popup will also not show if the visitor has already seen it on the page -->
+<input hidden id="exitModalCounter" value="0"></input>
+<input hidden id="totalModalCounter" value="0"></input>
+<input hidden id="exitOnOrderPageCounter" value="0"></input>
+<button hidden id="exitTheme" value="exit"></button>
+<button hidden id="exitWithCartTheme" value="exit_with_cart"></button>
+<!-- END html required for popup on exit-->
+<br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+<!-- html required for help buttons  -->
+<div id="myPopupDiv">
+<div class="popup float" onclick="openHelpPopup()"><img inline height="40px" style="padding-top:8px;" src="https://media.giphy.com/media/SUbYK8slyVWbmHc5R9/giphy.gif">
+  <span class="popuptext" id="myPopup">
+	  <p style="font-size:14px; font:Raleway;">Hello 👏. How would you like to communicate?</p>	  
+  <button id="openChatBtn"class="inside_popup" onclick="openChat()">Live chat <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZThfQupnUwVdPGyB5WLSrZehQ7eqcovSzRA&usqp=CAU" height="20px"></button>
+  <button id="ModalBtnFloat" class="inside_popup" onclick="openSkintyModal(this)" value="">Digital assistant <img class= "img.displayed" src="https://media.giphy.com/media/l0MYSOnaOKyWPTf0c/giphy.gif"  width="20px" height="20px">
+</button>
+  <button hidden id="ModalBtnUrl" class="inside_popup" value="https://www.skintifique.me/newsletter?nsfs" onclick="openSkintyModal(this)">Welcome Offer ❤️ </button>
+  <button hidden id="ModalBtnUrl2" class="inside_popup" value="https://skintifique.github.io/call_us.html" onclick="openSkintyModal(this)">Call us ✆</button>
+  <button class="inside_popup" height="20px"><a href="https://www.skintifique.me/contact-us/" target="_blank" style="text-decoration:none; color:inherit;">eMail us ✉︎</a></button>
+  <button hidden id="fbMessengerBtn" class="inside_popup" value="https://skintifique.github.io/fb-messenger-chat.html" onclick="openChatPopup()">FB Messenger <img class= "img.displayed" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd7a8wMYjR--JBn-r5-1dcuwLgSL4zNb-rwQ&usqp=CAU"  width="15px" height="20px"></button>
+    <button id="fbMessengerBtn2" class="inside_popup" onclick="showFbMessengerWidget(event)">FB Messenger <img class= "img.displayed" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA9oeWzwYqlwC5Nzl6rEMUo8JjK_72X4bbwA&usqp=CAU"  width="15px" height="15px"></button>
+   </span>
+ </div>
+  </div>
+  <br>
+<!-- the code below is required to display FB Messenger in a chat-type iframe -->
+<div class="popupchat" >
+  <span class="chat" id="chatPopup">
+    <a style="color:black; font:12px;" class="close" onclick="closeChatPopup()">&times;</a>
+    <iframe src="https://skintifique.github.io/fb-messenger-chat.html" height="500px" width="375px" style="border:none;"></iframe>
+    <a style="color:black; font:12px;" class="close" onclick="closeChatPopup()">&times;</a>
+    </span>
+ </div>
+<!-- END of popupchat code -->
+<!-- END html required for help buttons  -->
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close" onclick="closeSkintyModal()">&times;</span>
+    <p>
+<div id="divSkintyFrame" class="divSkintyForIframe30">
+<iframe id="skintyframe" src="" width="100%" height="700px" style="border:none;"></iframe>
+</div>
+    </p>
+<span class="close" onclick="closeSkintyModal()">&times;</span>
+<span><center>
+  <button class="uSkinTyBtn1" onclick="welcomeOffer()">Newsletter & Welcome Offer &hearts;</button>
+<br>
+<button class="uSkinTyBtn1"><a href="https://www.skintifique.me/contact-us/" style="text-decoration:none;color:inherit;">Email us ✉︎</a></button>
+<button id="chatBtnInModal" class="uSkinTyBtn1" onclick="liveAgent()">Live chat</button>
+<button class="uSkinTyBtn1" onclick="showFbMessengerWidget(event)">FB messenger</button>
+<button class="uSkinTyBtn1" onclick="skintyPage()">Digital assistant</button>
+<button hidden id="callUsBtnInModal" class="uSkinTyBtn1" onclick="callUs()">Call us ✆</button>
+<button hidden class="uSkinTyBtn1" onclick="flamingo()">Flamingo</button>
+<br>
+<br>
+</center></span>
+  </div>
+</div>
+<div>
+<!-- Start of skintifique Zendesk Widget script -->
+<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=a11224ff-78c1-49da-8419-1a8006595ef5"> </script>
+  <script type="text/javascript">
+  zE("webWidget", "hide");
+  function openChat() {
+  zE("webWidget", "show");
+  zE("webWidget", "open");
+  document.getElementById("myPopupDiv").style.display = "none"; 
+  zE("webWidget:on", "close", function() {
+  zE("webWidget", "hide");
+  document.getElementById("myPopupDiv").style.display = "block";
+})	  
+};
+</script>
+<!-- End of skintifique Zendesk Widget script -->
+</div>
+<div id="fbMsgDiv" style="display:none;">
+<!-- Load Facebook SDK for JavaScript -->
+      <div id="fb-root"></div>
+      <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            xfbml            : true,
+            version          : "v9.0"
+          });
+        };
+        (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, "script", "facebook-jssdk"));
+      </script>
+      <!-- Your Chat Plugin code -->
+<script>
+  (function() {
+    var el = document.createElement("div");
+    el.className = "fb-customerchat";
+    el.setAttribute("page_id", "592541754225652");
+    el.setAttribute("attribution", "setup_tool");
+    el.setAttribute("greeting_dialog_display", "show");
+    document.body.appendChild(el);
+  })();
+</script>
+<!--      <div class="fb-customerchat" -->
+<!--        attribution="setup_tool"  -->
+<!--        page_id="592541754225652"  -->
+<!--        greeting_dialog_display="show">  -->
+<!--      </div>  -->
+</div>
+<script src="https://skintifique.github.io/skinty/skinty_205_dev.js"></script>
+</body>
+</html>
