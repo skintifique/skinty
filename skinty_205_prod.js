@@ -440,7 +440,7 @@ document.getElementById("skintyframe").src = skintyPageUrl ;
 }
 
 function welcomeOffer () {
-document.getElementById("skintyframe").src = "https://www.skinitifque.me/welcome-offer/?nsfs" ;
+document.getElementById("skintyframe").src = "https://www.skintifique.me/welcome-offer/?nsfs" ;
 }
 
 function callUs () {
