@@ -18,6 +18,11 @@
 //  }
 //})();
 
+// HELP CENTER POPUP TRIGGERS
+
+window.setTimeout(openHelpPopup, 3000);
+window.setTimeout(showFbMessengerWidget, 3000);
+
 
 // FOR SKINTY MODAL ON EXIT
 
