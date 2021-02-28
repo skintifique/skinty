@@ -26,7 +26,7 @@ document.getElementById("helpPopupBtnImg").src = "https://media.giphy.com/media/
 
 window.setTimeout(openHelpPopup, 3000);
 window.setTimeout(showFbMessengerWidget, 3000);
-document.getElementById("welcomeTextHelpPopup").innerHTML = "Hello 👏 let me know if we can help. Select 'Digital assistant' for self-help 😎. Use other channels for communication with a live person ❤️" ;
+document.getElementById("welcomeTextHelpPopup").innerHTML = "Hello 👏 let me know if we can help. Select 'Digital assistant' for self-help 😎; other buttons to communicate with our advisors ❤️" ;
 
 
 // FOR SKINTY MODAL ON EXIT
