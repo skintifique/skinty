@@ -18,6 +18,10 @@
 //  }
 //})();
 
+// SET UP SELECT PAGE PARAMETERS
+// Image in help center float btn
+document.getElementById("helpPopupBtnImg").src = "https://media.giphy.com/media/3o84TQxuKTqsYEMidi/giphy.gif";
+
 // HELP CENTER POPUP TRIGGERS
 
 window.setTimeout(openHelpPopup, 3000);
