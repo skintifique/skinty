@@ -20,12 +20,13 @@
 
 // SET UP SELECT PAGE PARAMETERS
 // Image in help center float btn
-document.getElementById("helpPopupBtnImg").src = "https://media.giphy.com/media/26ufn24Onjz8w7NxS/giphy.gif";
+document.getElementById("helpPopupBtnImg").src = "https://media.giphy.com/media/SUbYK8slyVWbmHc5R9/giphy.gif";
+// potential alternative gif: https://media.giphy.com/media/26ufn24Onjz8w7NxS/giphy.gif
 
 // HELP CENTER POPUP TRIGGERS
 
-window.setTimeout(openHelpPopup, 3000);
-window.setTimeout(showFbMessengerWidget, 3000);
+window.setTimeout(openHelpPopup, 5000);
+window.setTimeout(showFbMessengerWidget, 5500);
 document.getElementById("welcomeTextHelpPopup").innerHTML = "Hello 👏 let me know if we can help. Select 'Digital assistant' for self-help 😎; other buttons to communicate with our advisors ❤️" ;
 
 
