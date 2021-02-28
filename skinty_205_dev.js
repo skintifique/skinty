@@ -22,6 +22,7 @@
 
 window.setTimeout(openHelpPopup, 3000);
 window.setTimeout(showFbMessengerWidget, 3000);
+document.getElementById("welcomeTextHelpPopup").innerHTML = "Hello 👏 let me know if we can help. Select 'Digital Assistant' if you do NOT want to speak with a real person 😎" ;
 
 
 // FOR SKINTY MODAL ON EXIT
