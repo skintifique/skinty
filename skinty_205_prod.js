@@ -20,8 +20,10 @@
 
 // SET UP SELECT PAGE PARAMETERS
 // Image in help center float btn
-document.getElementById("helpPopupBtnImg").src = "https://media.giphy.com/media/SUbYK8slyVWbmHc5R9/giphy.gif";
+document.getElementById("helpPopupBtnImg").src = "https://media.giphy.com/media/SUbYK8slyVWbmHc5R9/giphy.gif" ;
 // potential alternative gif: https://media.giphy.com/media/26ufn24Onjz8w7NxS/giphy.gif
+// url for skintypage
+let skintyPageUrl= "https://skintifique.github.io" ;
 
 // HELP CENTER POPUP TRIGGERS
 
@@ -374,7 +376,7 @@ let floatingBtn_kwds = document.getElementById("floatingBtn_kwds").value ;
    } else {
     themebM = "default" ;
    }
-let target_urlM = "https://skintifique.github.io/index.html" + "?promb=" + prombM  + "&queryb=" + "&themeb=" + themebM + "&formatb=" + formatbM + "&showb=" + showbM ;
+let target_urlM = skintyPageUrl + "?promb=" + prombM  + "&queryb=" + "&themeb=" + themebM + "&formatb=" + formatbM + "&showb=" + showbM ;
 document.getElementById("skintyframe").src = target_urlM ;
 }
 
@@ -385,7 +387,7 @@ let formatbM = "open" ;
 let showbM = "show" ;
 let themebM = x.value ;
 let querybM = "" ;
-let target_urlM = "https://skintifique.github.io/index.html" + "?promb=" + prombM  + "&queryb=" + querybM + "&themeb=" + themebM + "&formatb=" + formatbM + "&showb=" + showbM ;
+let target_urlM = skintyPageUrl + "?promb=" + prombM  + "&queryb=" + querybM + "&themeb=" + themebM + "&formatb=" + formatbM + "&showb=" + showbM ;
 document.getElementById("skintyframe").src = target_urlM ;
 }
 
@@ -396,7 +398,7 @@ let formatbM = "open" ;
 let showbM = "show" ;
 let themebM = "" ;
 let querybM = x.value ;
-let target_urlM = "https://skintifique.github.io/index.html" + "?promb=" + prombM  + "&queryb=" + querybM + "&themeb=" + themebM + "&formatb=" + formatbM + "&showb=" + showbM ;
+let target_urlM = skintyPageUrl + "?promb=" + prombM  + "&queryb=" + querybM + "&themeb=" + themebM + "&formatb=" + formatbM + "&showb=" + showbM ;
 document.getElementById("skintyframe").src = target_urlM ;
 }
 
@@ -426,7 +428,7 @@ let modal = document.getElementById("myModal");
 
 // For the buttons underneath the SkinTy window
 function liveAgent () {
-document.getElementById("skintyframe").src = "https://skintifique.github.io/zendesk-widget.html" ;
+document.getElementById("skintyframe").src = skintyPageUrl + "/zendesk-widget.html" ;
 }
 
 function flamingo () {
@@ -434,13 +436,13 @@ document.getElementById("skintyframe").src = "https://flam3.goodbarber.app" ;
 }
 
 function skintyPage () {
-document.getElementById("skintyframe").src = "https://skintifique.github.io/index.html" ;
+document.getElementById("skintyframe").src = skintyPageUrl ;
 }
 
 function welcomeOffer () {
-document.getElementById("skintyframe").src = "https://www.skintifique.me/welcome-offer/?nsfs" ;
+document.getElementById("skintyframe").src = skintyPageUrl + "/welcome-offer/?nsfs" ;
 }
 
 function callUs () {
-document.getElementById("skintyframe").src = "https://skintifique.github.io/call_us.html" ;
+document.getElementById("skintyframe").src = skintyPageUrl + "/call_us.html" ;
 }
