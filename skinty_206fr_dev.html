@@ -73,7 +73,38 @@
   <button class="inside_popup" height="20px"><a href="https://www.skintifique.me/fr/contactez-nous/" target="_blank" style="text-decoration:none; color:inherit;">eMail ✉︎</a></button>
   <button hidden id="fbMessengerBtn" class="inside_popup" value="https://skintifique.github.io/fb-messenger-chat.html" onclick="openChatPopup()">FB Messenger <img class= "img.displayed" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd7a8wMYjR--JBn-r5-1dcuwLgSL4zNb-rwQ&usqp=CAU"  width="15px" height="20px"></button>
   <button id="fbMessengerBtn2" class="inside_popup" onclick="showFbMessengerWidget(event)">FB Messenger <img class= "img.displayed" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA9oeWzwYqlwC5Nzl6rEMUo8JjK_72X4bbwA&usqp=CAU"  width="15px" height="15px"></button>
-	  <a id="fbMessengerBtn2TEST" /a>
+<div id="fbMsgDiv" style="display:none;">
+<!-- Load Facebook SDK for JavaScript -->
+      <div id="fb-root"></div>
+      <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            xfbml            : true,
+            version          : "v10.0"
+          });
+        };
+        (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "https://connect.facebook.net/fr_FR/sdk/xfbml.customerchat.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, "script", "facebook-jssdk"));
+      </script>
+      <!-- Your Chat Plugin code -->	
+<script>
+  (function () {
+    var el = document.createElement("div");
+    el.className = "fb-customerchat";
+    el.setAttribute("page_id", "636605739766089");
+    el.setAttribute("attribution", "setup_tool");
+    el.setAttribute("greeting_dialog_display","show");
+    el.setAttribute("logged_in_greeting", "Bonjour! Comment puis-je vous aider?");
+    el.setAttribute("logged_out_greeting", "Bonjour! Comment puis-je vous aider?");
+    document.getElementById("fbMessengerBtn2").appendChild(el);
+  })();
+</script>
+</div>
 	</span>
  </div>
   </div>
@@ -140,38 +171,7 @@
 </script>
 <!-- End of skintifique Zendesk Widget script -->
 </div>
-<div id="fbMsgDiv" style="display:none;">>
-<!-- Load Facebook SDK for JavaScript -->
-      <div id="fb-root"></div>
-      <script>
-        window.fbAsyncInit = function() {
-          FB.init({
-            xfbml            : true,
-            version          : "v10.0"
-          });
-        };
-        (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "https://connect.facebook.net/fr_FR/sdk/xfbml.customerchat.js";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, "script", "facebook-jssdk"));
-      </script>
-      <!-- Your Chat Plugin code -->	
-<script>
-  (function () {
-    var el = document.createElement("div");
-    el.className = "fb-customerchat";
-    el.setAttribute("page_id", "636605739766089");
-    el.setAttribute("attribution", "setup_tool");
-    el.setAttribute("greeting_dialog_display","show");
-    el.setAttribute("logged_in_greeting", "Bonjour! Comment puis-je vous aider?");
-    el.setAttribute("logged_out_greeting", "Bonjour! Comment puis-je vous aider?");
-    document.getElementById("fbMessengerBtn2").appendChild(el);
-  })();
-</script>
-</div>
+
 <script src="https://skintifique.github.io/skinty/skinty_206fr_dev.js"></script>
 </body>
 </html>
