@@ -276,6 +276,7 @@ if ((today != "6") && (today != "0")) {
   document.getElementById("chatBtnInModal").style.display = "none" ;		  
   } 
 sessionStorage.setItem("nbHelpPopupOpen","1") ;
+showFbMessengerWidget(event) ;	
 } 
 
 // When the user clicks on FBmessenger button, show the FB messenger widget
