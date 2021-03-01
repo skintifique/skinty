@@ -138,7 +138,7 @@
         window.fbAsyncInit = function() {
           FB.init({
             xfbml            : true,
-            version          : "v10.0"
+            version          : "v9.0"
           });
         };
         (function(d, s, id) {
@@ -156,6 +156,7 @@
     el.className = "fb-customerchat";
     el.setAttribute("page_id", "636605739766089");
     el.setAttribute("attribution", "setup_tool");
+    el.setAttribute("greeting_dialog_display","show");
     el.setAttribute("logged_in_greeting", "Bonjour! Comment puis-je vous aider?");
     el.setAttribute("logged_out_greeting", "Bonjour! Comment puis-je vous aider?");
     document.body.appendChild(el);
