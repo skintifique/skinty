@@ -280,8 +280,8 @@ sessionStorage.setItem("nbHelpPopupOpen","1") ;
 
 // When the user clicks on FBmessenger button, show the FB messenger widget
 function showFbMessengerWidget (event) {
-	let x = document.getElementById("fb-root") ;
-	x.style.visibility = "visible" ;
+	let x = document.getElementById("fbMsgDiv") ;
+	x.style.display = "block" ;
 	event.stopPropagation();
 	}
 
