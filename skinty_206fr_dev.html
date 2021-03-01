@@ -65,8 +65,10 @@
   <button hidden id="ModalBtnUrl2" class="inside_popup" value="https://skintifique.github.io/fr/call_us.html" onclick="openSkintyModal(this)">Appelez-nous ✆</button>
   <button class="inside_popup" height="20px"><a href="https://www.skintifique.me/fr/contactez-nous/" target="_blank" style="text-decoration:none; color:inherit;">eMail ✉︎</a></button>
   <button hidden id="fbMessengerBtn" class="inside_popup" value="https://skintifique.github.io/fb-messenger-chat.html" onclick="openChatPopup()">FB Messenger <img class= "img.displayed" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd7a8wMYjR--JBn-r5-1dcuwLgSL4zNb-rwQ&usqp=CAU"  width="15px" height="20px"></button>
-    <button id="fbMessengerBtn2" class="inside_popup" onclick="showFbMessengerWidget(event)">FB Messenger <img class= "img.displayed" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA9oeWzwYqlwC5Nzl6rEMUo8JjK_72X4bbwA&usqp=CAU"  width="15px" height="15px"></button>
-   </span>
+    <button id="fbMessengerBtn2" class="inside_popup">FB Messenger <div id="fbMsgDiv" style="display:block;"></div></button>
+  <button hidden id="fbMessengerBtnINITIAL" class="inside_popup" onclick="showFbMessengerWidget(event)">FB Messenger</div><img class= "img.displayed" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA9oeWzwYqlwC5Nzl6rEMUo8JjK_72X4bbwA&usqp=CAU"  width="15px" height="15px"></button>
+   
+	</span>
  </div>
   </div>
   <br>
@@ -132,7 +134,7 @@
 </script>
 <!-- End of skintifique Zendesk Widget script -->
 </div>
-<div id="fbMsgDiv" style="display:block;"></div>
+
 <!-- Load Facebook SDK for JavaScript -->
       <div id="fb-root"></div>
       <script>
