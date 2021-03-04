@@ -68,7 +68,7 @@ window.addEventListener("scroll",function(){myScrollSpeedFunction();});
 function detectExitIntent(event) {
   let cX = event.clientX;
   let cY = event.clientY;
-  if ((cX < 350) && (cY < 20)) {
+  if ((cX < 2000) && (cY < 20)) {
   exitIntent = "1" ;
   } else if (cY >= 20) {
   exitIntent = "0" ;
