@@ -152,7 +152,7 @@ if ((showOnExit == "yes") &&
     if ((exitOnOrderPageCounter == "0") && ((testOnOrderPage) || (testOnOrderPage1))) {
         document.getElementById("exitOnOrderPageCounter").value = "1" ;
         exitRef = document.getElementById("exitWithCartTheme") ;
-      openSkintyModal(exitRef) ;
+     // openSkintyModal(exitRef) ; putting on hold Skinty exit on order page
      } else {
      let exitModalCounter = document.getElementById("exitModalCounter").value ;
      let ifSkintyViews = document.getElementById("if_skinty_views_less_than").value ;
