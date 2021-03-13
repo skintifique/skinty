@@ -23,7 +23,7 @@ let go_to_amz_input = document.getElementById("go_to_amz_input") ;
 let amz_asin ;
 let go_to_amz_input_value = go_to_amz_input.value ;
 if (go_to_amz_input_value == "dysh_pack") {
-	amz_asin = "aaaaa" ;
+	amz_asin = "B071DH3ZMP" ;
 	} else {
 	amz_asin = "bbbbb" ;
 	}
