@@ -62,8 +62,7 @@ detectExitIntent(event);
 }
 };
 
-//INACTIVATE SKINTY POPUP ON EXIT
-//window.addEventListener("scroll",function(){myScrollSpeedFunction();});
+window.addEventListener("scroll",function(){myScrollSpeedFunction();});
 
 
 function detectExitIntent(event) {
@@ -139,6 +138,7 @@ urlDoesNotContain = "0" ;
 urlDoesNotContain = "1" ;
 }
 
+//INACTIVATE SKINTY POPUP ON EXIT
 function triggerOnExit () {
 let exitRef ;
 let showOnExit = document.getElementById("show_on_exit").value ;
@@ -165,7 +165,7 @@ if ((showOnExit == "yes") &&
         (sessionSkintyModalCount2 < sessionSkintyMax)) {
         document.getElementById("exitModalCounter").value = "1" ;
         exitRef = document.getElementById("exitTheme") ;
-        openSkintyModal(exitRef) ;
+   //     openSkintyModal(exitRef) ;
        }
        }
   }
