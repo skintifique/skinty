@@ -25,17 +25,16 @@ go_to_amz_btn.addEventListener("click",go_to_amz);
 function go_to_amz () {
 let url_params = new URLSearchParams(document.location.search.substring(1));
 let skaid = url_params.get("skaid");
-if !(skaid) {
-let skaid2 = sessionStorage.getItem("skaid") ;	
-if !(skaid2) {
-	find_amz_onetag("skintifique0-20");
-	} else {
-	find_amz_onetag(skaid2);
-	}
-} else {
+if (skaid) {
 	sessionStorage.setItem("skaid");
 	find_amz_onetag(skaid);
-}
+} else {
+let skaid2 = sessionStorage.getItem("skaid") ;	
+if (skaid2) {
+	find_amz_onetag(skaid2);
+	} else {
+	find_amz_onetag("skintifique0-20");
+	}
 }	
 
 function find_amz_onetag (x) {
