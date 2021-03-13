@@ -20,22 +20,35 @@
 
 // IDENTIFY SKAID AND AMZ_ONETAG AND TARGET AMZ_URL
 let go_to_amz_btn = document.getElementById("go_to_amz_btn") ;
-let product_asin = document.getElementById("product_asin").value ;
+go_to_amz_btn.addEventListener("click",go_to_amz);
+
+function go_to_amz () {
 let url_params = new URLSearchParams(document.location.search.substring(1));
 let skaid = url_params.get("skaid");
-let amz_onetag ;
 if !(skaid) {
-amz_onetag = "skintifique0-20";
-} else {	
-sessionStorage.setItem("skaid");
-	if (skaid == "skintifique0-20") {
-	amz_onetag = "skintifique0-20";
+let skaid2 = sessionStorage.getItem("skaid") ;	
+if !(skaid2) {
+	find_amz_onetag("skintifique0-20");
 	} else {
-amz_onetag = "skintifique0-20";
+	find_amz_onetag(skaid2);
 	}
+} else {
+	sessionStorage.setItem("skaid");
+	find_amz_onetag(skaid);
+}
+}	
+
+function find_amz_onetag (x) {
+let product_asin = document.getElementById("product_asin").value ;
+let amz_onetag ;
+if (x == "skintifique0-20") {
+amz_onetag = "skintifique0-20";
+} else {
+amz_onetag = "skintifique0-20";
 }
 let amz_url = "https://www.amazon.com/dp/" + product_asin + "/?tag=" + amz_onetag ;
-go_to_amz_btn.addEventListener("click",function(){window.open(amz_url);});
+window.open(amz_url) ;
+}
 
 // END OF SECTION "IDENTIFY SKAID AND AMZ_ONETAG AND TARGET AMZ_URL"
 
