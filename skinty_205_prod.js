@@ -18,17 +18,17 @@
 //  }
 //})();
 
-let go_to_amz_btn = document.getElementById("go_to_amz_btn") ;
-let go_to_amz_input = document.getElementById("go_to_amz_input") ;
-let amz_asin ;
-let go_to_amz_input_value = go_to_amz_input.value ;
-if (go_to_amz_input_value == "dysh_pack") {
-	amz_asin = "aaaaa" ;
-	} else {
-	amz_asin = "bbbbb" ;
-	}
-let amz_url = "https://www.amazon.com/" + amz_asin ;
-go_to_amz_btn.addEventListener("click",function(){window.open(amz_url);});
+//let go_to_amz_btn = document.getElementById("go_to_amz_btn") ;
+//let go_to_amz_input = document.getElementById("go_to_amz_input") ;
+//let amz_asin ;
+//let go_to_amz_input_value = go_to_amz_input.value ;
+//if (go_to_amz_input_value == "dysh_pack") {
+//	amz_asin = "aaaaa" ;
+//	} else {
+//	amz_asin = "bbbbb" ;
+//	}
+//let amz_url = "https://www.amazon.com/" + amz_asin ;
+//go_to_amz_btn.addEventListener("click",function(){window.open(amz_url);});
 
 // SET UP SELECT PAGE PARAMETERS
 // Image in help center float btn
@@ -150,7 +150,6 @@ urlDoesNotContain = "0" ;
 urlDoesNotContain = "1" ;
 }
 
-//INACTIVATE SKINTY POPUP ON EXIT
 function triggerOnExit () {
 let exitRef ;
 let showOnExit = document.getElementById("show_on_exit").value ;
@@ -165,7 +164,6 @@ if ((showOnExit == "yes") &&
     if ((exitOnOrderPageCounter == "0") && ((testOnOrderPage) || (testOnOrderPage1))) {
         document.getElementById("exitOnOrderPageCounter").value = "1" ;
         exitRef = document.getElementById("exitWithCartTheme") ;
-     // openSkintyModal(exitRef) ; putting on hold Skinty exit on order page
      } else {
      let exitModalCounter = document.getElementById("exitModalCounter").value ;
      let ifSkintyViews = document.getElementById("if_skinty_views_less_than").value ;
