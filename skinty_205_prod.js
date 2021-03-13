@@ -62,7 +62,8 @@ detectExitIntent(event);
 }
 };
 
-window.addEventListener("scroll",function(){myScrollSpeedFunction();});
+//INACTIVATE SKINTY POPUP ON EXIT
+//window.addEventListener("scroll",function(){myScrollSpeedFunction();});
 
 
 function detectExitIntent(event) {
