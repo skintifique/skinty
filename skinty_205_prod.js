@@ -22,7 +22,9 @@
 let go_to_amz_btn = document.getElementById("go_to_amz_btn") ;
 let product_asin = document.getElementById("product_asin").value ;
 let urlForAffiliates = window.location.href ;
-let skaid = urlForAffiliates.urlSearchParams.get("skaid") ;
+let url_params = new URLSearchParams(urlForAffiliates.search.substring(1));
+let skaid = url_params.get("skaid");
+let amz_onetag ;
 if !(skaid) {
 amz_onetag = "skintifique0-20";
 } else {	
