@@ -21,7 +21,8 @@
 let go_to_amz_btn = document.getElementById("go_to_amz_btn") ;
 let go_to_amz_input = document.getElementById("go_to_amz_input") ;
 let amz_asin ;
-if (go_to_amz_input.value == "dysh_pack") {
+let go_to_amz_input_value = go_to_amz_input.value ;
+if (go_to_amz_input_value == "dysh_pack") {
 	amz_asin = "aaaaa" ;
 	} else {
 	amz_asin = "bbbbb" ;
