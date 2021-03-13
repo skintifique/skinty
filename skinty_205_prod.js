@@ -18,17 +18,25 @@
 //  }
 //})();
 
+// IDENTIFY SKAID AND AMZ_ONETAG AND TARGET AMZ_URL
 let go_to_amz_btn = document.getElementById("go_to_amz_btn") ;
-let go_to_amz_input = document.getElementById("go_to_amz_input") ;
-let amz_asin ;
-let go_to_amz_input_value = go_to_amz_input.value ;
-if (go_to_amz_input_value == "dysh_pack") {
-	amz_asin = "B071DH3ZMP" ;
+let product_asin = document.getElementById("product_asin").value ;
+let urlForAffiliates = window.location.href ;
+let skaid = urlForAffiliates.urlSearchParams.get("skaid") ;
+if !(skaid) {
+amz_onetag = "skintifique0-20";
+} else {	
+sessionStorage.setItem("skaid");
+	if (skaid == "skintifique0-20") {
+	amz_onetag = "skintifique0-20";
 	} else {
-	amz_asin = "bbbbb" ;
+amz_onetag = "skintifique0-20";
 	}
-let amz_url = "https://www.amazon.com/dp/" + amz_asin ;
+}
+let amz_url = "https://www.amazon.com/dp/" + product_asin + "/?tag=" + amz_onetag ;
 go_to_amz_btn.addEventListener("click",function(){window.open(amz_url);});
+
+// END OF SECTION "IDENTIFY SKAID AND AMZ_ONETAG AND TARGET AMZ_URL"
 
 // SET UP SELECT PAGE PARAMETERS
 // Image in help center float btn
