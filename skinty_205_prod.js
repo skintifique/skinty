@@ -18,17 +18,17 @@
 //  }
 //})();
 
-//let go_to_amz_btn = document.getElementById("go_to_amz_btn") ;
-//let go_to_amz_input = document.getElementById("go_to_amz_input") ;
-//let amz_asin ;
-//let go_to_amz_input_value = go_to_amz_input.value ;
-//if (go_to_amz_input_value == "dysh_pack") {
-//	amz_asin = "aaaaa" ;
-//	} else {
-//	amz_asin = "bbbbb" ;
-//	}
-//let amz_url = "https://www.amazon.com/" + amz_asin ;
-//go_to_amz_btn.addEventListener("click",function(){window.open(amz_url);});
+let go_to_amz_btn = document.getElementById("go_to_amz_btn") ;
+let go_to_amz_input = document.getElementById("go_to_amz_input") ;
+let amz_asin ;
+let go_to_amz_input_value = go_to_amz_input.value ;
+if (go_to_amz_input_value == "dysh_pack") {
+	amz_asin = "aaaaa" ;
+	} else {
+	amz_asin = "bbbbb" ;
+	}
+let amz_url = "https://www.amazon.com/" + amz_asin ;
+go_to_amz_btn.addEventListener("click",function(){window.open(amz_url);});
 
 // SET UP SELECT PAGE PARAMETERS
 // Image in help center float btn
