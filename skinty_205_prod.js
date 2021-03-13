@@ -27,7 +27,7 @@ if (go_to_amz_input_value == "dysh_pack") {
 	} else {
 	amz_asin = "bbbbb" ;
 	}
-let amz_url = "https://www.amazon.com/" + amz_asin ;
+let amz_url = "https://www.amazon.com/dp/" + amz_asin ;
 go_to_amz_btn.addEventListener("click",function(){window.open(amz_url);});
 
 // SET UP SELECT PAGE PARAMETERS
