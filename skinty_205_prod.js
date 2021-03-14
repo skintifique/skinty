@@ -44,9 +44,9 @@ amz_onetag = "skintifique0-20";
 amz_onetag = "skintifique0-20";
 }
 let amz_url = "https://www.amazon.com/dp/" + product_asin + "/?tag=" + amz_onetag ;
-window.open(amz_url) ;
+document.getElementById("go_to_amz_btn").href = amz_url ;
 }
-
+//window.open(amz_url) ;
 
 // END OF SECTION "IDENTIFY SKAID AND AMZ_ONETAG AND TARGET AMZ_URL"
 
