@@ -23,7 +23,7 @@ let go_to_amz_btn = document.getElementById("go_to_amz_btn") ;
 go_to_amz_btn.addEventListener("click",go_to_amz);
 
 function go_to_amz () {
-let url_params = new URLSearchParams(window.location.search.substring(1));
+const url_params = new URLSearchParams(window.location.search);
 let skaid = url_params.get("skaid");
 if (skaid) {
 	sessionStorage.setItem("skaid");
