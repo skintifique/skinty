@@ -23,8 +23,8 @@
 // document.getElementById("helpPopupBtnImg").src = "https://media.giphy.com/media/L0rdnflIRAngVsDpxJ/giphy.gif" ;
 // potential alternative gif: https://media.giphy.com/media/l0MYSOnaOKyWPTf0c/giphy.gif, https://media.giphy.com/media/SUbYK8slyVWbmHc5R9/giphy.gif, https://media.giphy.com/media/26ufn24Onjz8w7NxS/giphy.gif, https://media.giphy.com/media/l0MYSOnaOKyWPTf0c/giphy.gif
 // url for skintypage
-//let skintyPageUrl= "https://skintifique.github.io" ;
-let skintyPageUrl= "https://new.skintifique.me/" ;
+let skintyPageUrl= "https://skintifique.github.io" ;
+//let skintyPageUrl= "https://new.skintifique.me/" ;
 
 // HELP CENTER POPUP TRIGGERS AND PARAMETERS
 let nbHelpPopupOpen = sessionStorage.getItem("nbHelpPopupOpen");
