@@ -18,7 +18,8 @@
 //  }
 //})();
 
-// IDENTIFY SKAID AND AMZ_ONETAG AND TARGET AMZ_URL	
+// IDENTIFY SKAID AND AMZ_ONETAG AND TARGET AMZ_URL
+<script>
 document.getElementById("go_to_amz_btn").addEventListener("click",function() {
 const url_params = new URLSearchParams(window.location.search);
 let skaid = url_params.get("skaid");
@@ -36,20 +37,26 @@ if (skaid2) {
 });
 
 function find_amz_onetag (x) {
-let product_asin = document.getElementById("product_asin").value ;	
+let product_asin_elmt = document.getElementById("product_asin") ;
+let product_asin ;
+if (!product_asin_elmt) { 
+	product_asin = "unavailable" ;
+    document.getElementById("go_to_amz_dev").innerHTML = "unavailable" ;	
+    } else {
+    product_asin = product_asin_elmt.value ;
+    }
 let amz_onetag ;
-let amz_url ;
 if (x == "skintifique0-20") {
 amz_onetag = "skintifique0-20";
 } else {
 amz_onetag = "skintifique0-20";
 }
-if (product_asin) {
-	amz_url = "https://www.amazon.com/dp/" + product_asin + "/?tag=" + amz_onetag ;
-	} else {
-	document.getElementById("go_to_amz_dev").innerHTML ="missing element" ;
+let amz_url ;
+if (product_asin == "unavailable") { 
 	amz_url = "https://www.amazon.com/s?k=skintifique&tag=" + amz_onetag ;
-	}
+    } else {
+	amz_url = "https://www.amazon.com/dp/" + product_asin + "/?tag=" + amz_onetag ;
+	}	
 document.getElementById("go_to_amz_btn").href = amz_url ;
 }
 
