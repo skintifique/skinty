@@ -19,7 +19,6 @@
 //})();
 
 // IDENTIFY SKAID AND AMZ_ONETAG AND TARGET AMZ_URL
-<script>
 document.getElementById("go_to_amz_btn").addEventListener("click",function() {
 const url_params = new URLSearchParams(window.location.search);
 let skaid = url_params.get("skaid");
