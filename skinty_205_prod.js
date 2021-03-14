@@ -41,7 +41,6 @@ let product_asin_elmt = document.getElementById("product_asin") ;
 let product_asin ;
 if (!product_asin_elmt) { 
 	product_asin = "unavailable" ;
-    document.getElementById("go_to_amz_dev").innerHTML = "unavailable" ;	
     } else {
     product_asin = product_asin_elmt.value ;
     }
