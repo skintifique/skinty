@@ -47,6 +47,7 @@ amz_onetag = "skintifique0-20";
 if (product_asin) {
 	amz_url = "https://www.amazon.com/dp/" + product_asin + "/?tag=" + amz_onetag ;
 	} else {
+	document.getElementById("go_to_amz_dev").innerHTML ="missing element" ;
 	amz_url = "https://www.amazon.com/s?k=skintifique&tag=" + amz_onetag ;
 	}
 document.getElementById("go_to_amz_btn").href = amz_url ;
