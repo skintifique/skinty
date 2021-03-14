@@ -18,11 +18,8 @@
 //  }
 //})();
 
-// IDENTIFY SKAID AND AMZ_ONETAG AND TARGET AMZ_URL
-let go_to_amz_btn = document.getElementById("go_to_amz_btn") ;
-go_to_amz_btn.addEventListener("click",go_to_amz);
-
-function go_to_amz () {
+// IDENTIFY SKAID AND AMZ_ONETAG AND TARGET AMZ_URL	
+document.getElementById("go_to_amz_btn").addEventListener("click",function() {
 const url_params = new URLSearchParams(window.location.search);
 let skaid = url_params.get("skaid");
 if (skaid) {
@@ -35,9 +32,11 @@ if (skaid2) {
 	} else {
 	find_amz_onetag("skintifique0-20");
 	}
-}	
+}
+});
 
 function find_amz_onetag (x) {
+document.getElementById("demotest").innerHTML = "oparue";
 let product_asin = document.getElementById("product_asin").value ;
 let amz_onetag ;
 if (x == "skintifique0-20") {
@@ -48,6 +47,7 @@ amz_onetag = "skintifique0-20";
 let amz_url = "https://www.amazon.com/dp/" + product_asin + "/?tag=" + amz_onetag ;
 window.open(amz_url) ;
 }
+
 
 // END OF SECTION "IDENTIFY SKAID AND AMZ_ONETAG AND TARGET AMZ_URL"
 
