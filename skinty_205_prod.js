@@ -26,7 +26,7 @@ function go_to_amz () {
 const url_params = new URLSearchParams(window.location.search);
 let skaid = url_params.get("skaid");
 if (skaid) {
-	sessionStorage.setItem("skaid");
+	sessionStorage.setItem("skaid",skaid);
 	find_amz_onetag(skaid);
 } else {
 let skaid2 = sessionStorage.getItem("skaid") ;	
