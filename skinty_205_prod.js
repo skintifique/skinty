@@ -36,17 +36,21 @@ if (skaid2) {
 });
 
 function find_amz_onetag (x) {
-let product_asin = document.getElementById("product_asin").value ;
+let product_asin = document.getElementById("product_asin").value ;	
 let amz_onetag ;
+let amz_url ;
 if (x == "skintifique0-20") {
 amz_onetag = "skintifique0-20";
 } else {
 amz_onetag = "skintifique0-20";
 }
-let amz_url = "https://www.amazon.com/dp/" + product_asin + "/?tag=" + amz_onetag ;
+if (product_asin) {
+	amz_url = "https://www.amazon.com/dp/" + product_asin + "/?tag=" + amz_onetag ;
+	} else {
+	amz_url = "https://www.amazon.com/s?k=skintifique" + "/?tag=" + amz_onetag ;
+	}
 document.getElementById("go_to_amz_btn").href = amz_url ;
 }
-//window.open(amz_url) ;
 
 // END OF SECTION "IDENTIFY SKAID AND AMZ_ONETAG AND TARGET AMZ_URL"
 
