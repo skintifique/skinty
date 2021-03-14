@@ -36,7 +36,6 @@ if (skaid2) {
 });
 
 function find_amz_onetag (x) {
-document.getElementById("demotest").innerHTML = "oparue";
 let product_asin = document.getElementById("product_asin").value ;
 let amz_onetag ;
 if (x == "skintifique0-20") {
