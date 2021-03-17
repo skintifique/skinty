@@ -169,7 +169,7 @@
 }
 
 /* The Modal (background) */
-.modal {
+.modalSkinty {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 99999999; /* Sit on top */
@@ -184,7 +184,7 @@
 }
 
 /* Modal Content */
-.modal-content {
+.modal-contentSkinty {
   background-color:;
   margin: auto;
   padding: 0px;
