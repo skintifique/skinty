@@ -29,20 +29,18 @@ let skintyPageUrl= "https://skintifique.github.io" ;
 // HELP CENTER POPUP TRIGGERS AND PARAMETERS
 let skintySessionPage = sessionStorage.getItem("skintySessionPage") ;
 let floatingBtnPopUp_displayPage = document.getElementById("floatingBtnPopUp_displayPage").value ;
-if !(skintySessionPage) {
-	skintySessionPage = 1 ;
-	sessionStorage.setItem("skintySessionPage","1") ;	
+let skintySessionPage_updated ;
+if (skintySessionPage) {
+	skintySessionPage_updated = parseInt(skintySessionPage) + 1 ;
 } else {
-	let skintySessionPage_updated = skintySessionPage + 1 ;
-	sessionStorage.setItem("skintySessionPage",skintySessionPage_updated) ;
+	skintySessionPage_updated = 1 ;
+	skintySessionPage = 1 ;
 }	
-
-if (skintySessionPage >= floatingBtnPopUp_displayPage) {
+sessionStorage.setItem("skintySessionPage",skintySessionPage_updated) ;
 let nbHelpPopupOpen = sessionStorage.getItem("nbHelpPopupOpen");
-if (nbHelpPopupOpen != "1") {
+if ((nbHelpPopupOpen != "1") && (skintySessionPage >= floatingBtnPopUp_displayPage)) {
 window.setTimeout(openHelpPopup, 4000);
 window.setTimeout(showFbMessengerWidget, 4500);
-}
 }
 
 document.getElementById("welcomeTextHelpPopup").innerHTML = "Hello! How can we can help? Select 'Digital assistant' for self-help 😍 " ;
