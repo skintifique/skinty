@@ -34,7 +34,7 @@ if (skintySessionPage) {
 	skintySessionPage_updated = parseInt(skintySessionPage) + 1 ;
 } else {
 	skintySessionPage_updated = 1 ;
-	skintySessionPage = 1 ;
+	skintySessionPage = "1" ;
 }	
 sessionStorage.setItem("skintySessionPage",skintySessionPage_updated) ;
 let nbHelpPopupOpen = sessionStorage.getItem("nbHelpPopupOpen");
