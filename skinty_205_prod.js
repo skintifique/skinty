@@ -27,10 +27,22 @@ let skintyPageUrl= "https://skintifique.github.io" ;
 //let skintyPageUrl= "https://new.skintifique.me/" ;
 
 // HELP CENTER POPUP TRIGGERS AND PARAMETERS
+let skintySessionPage = sessionStorage.getItem("skintySessionPage") ;
+let floatingBtnPopUp_displayPage = document.getElementById("floatingBtnPopUp_displayPage").value ;
+if !(skintySessionPage) {
+	skintySessionPage = 1 ;
+	sessionStorage.setItem("skintySessionPage","1") ;	
+} else {
+	let skintySessionPage_updated = skintySessionPage + 1 ;
+	sessionStorage.setItem("skintySessionPage",skintySessionPage_updated) ;
+}	
+
+if (skintySessionPage >= floatingBtnPopUp_displayPage) {
 let nbHelpPopupOpen = sessionStorage.getItem("nbHelpPopupOpen");
 if (nbHelpPopupOpen != "1") {
 window.setTimeout(openHelpPopup, 4000);
 window.setTimeout(showFbMessengerWidget, 4500);
+}
 }
 
 document.getElementById("welcomeTextHelpPopup").innerHTML = "Hello! How can we can help? Select 'Digital assistant' for self-help 😍 " ;
