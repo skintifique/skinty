@@ -484,7 +484,6 @@ function callUs () {
 document.getElementById("skintyframe").src = skintyPageUrl + "/call_us.html" ;
 }
 
-<div>
 //<!-- Start of skintifique Zendesk Widget script -->
 //<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=a11224ff-78c1-49da-8419-1a8006595ef5"> </script>
 //<script type="text/javascript">
@@ -493,13 +492,15 @@ document.getElementById("skintyframe").src = skintyPageUrl + "/call_us.html" ;
 <!-- End of skintifique Zendesk Widget script -->
 	
 <!-- Start of skintifique Zendesk Widget script -->
-<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=a11224ff-78c1-49da-8419-1a8006595ef5"> </script>
-  <script type="text/javascript">
-  zE('webWidget', 'setLocale', 'en_us');
-  zE("webWidget", "hide");
-  </script>
-  <script>	
+//<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=a11224ff-78c1-49da-8419-1a8006595ef5"> </script>
+//  <script type="text/javascript">
+//  zE('webWidget', 'setLocale', 'en_us');
+//  zE("webWidget", "hide");
+//  </script>
+	
   function openChat() {
+ document.getElementById("ze-snippet").src = "https://static.zdassets.com/ekr/snippet.js?key=a11224ff-78c1-49da-8419-1a8006595ef5" ;
+	  
   let current_url = window.location.href ;	  
   let lang ;
   if (current_url.includes("/fr/")) {
@@ -516,6 +517,5 @@ document.getElementById("skintyframe").src = skintyPageUrl + "/call_us.html" ;
   document.getElementById("myPopupDiv").style.display = "block";
 })	  
 };
-</script>
 <!-- End of skintifique Zendesk Widget script -->
-</div>
+
