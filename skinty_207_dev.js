@@ -483,3 +483,39 @@ document.getElementById("skintyframe").src = "https://new.skintifique.me/en/welc
 function callUs () {
 document.getElementById("skintyframe").src = skintyPageUrl + "/call_us.html" ;
 }
+
+<div>
+//<!-- Start of skintifique Zendesk Widget script -->
+//<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=a11224ff-78c1-49da-8419-1a8006595ef5"> </script>
+//<script type="text/javascript">
+//  zE('webWidget', 'setLocale', 'en_us');
+// </script>
+<!-- End of skintifique Zendesk Widget script -->
+	
+<!-- Start of skintifique Zendesk Widget script -->
+<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=a11224ff-78c1-49da-8419-1a8006595ef5"> </script>
+  <script type="text/javascript">
+  zE('webWidget', 'setLocale', 'en_us');
+  zE("webWidget", "hide");
+  </script>
+  <script>	
+  function openChat() {
+  let current_url = window.location.href ;	  
+  let lang ;
+  if (current_url.includes("/fr/")) {
+	  lang = "fr";
+   } else {	  
+	   lang = "en_us" ;
+  }	   
+  zE('webWidget', 'setLocale', lang);	  
+  zE("webWidget", "show");
+  zE("webWidget", "open");
+  document.getElementById("myPopupDiv").style.display = "none"; 
+  zE("webWidget:on", "close", function() {
+  zE("webWidget", "hide");
+  document.getElementById("myPopupDiv").style.display = "block";
+})	  
+};
+</script>
+<!-- End of skintifique Zendesk Widget script -->
+</div>
