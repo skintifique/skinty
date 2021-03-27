@@ -292,6 +292,30 @@ function showFbMessengerWidget (event) {
 	let x = document.getElementById("fbMsgDiv") ;
 	x.style.display = "block" ;
 	event.stopPropagation();
+	
+	        window.fbAsyncInit = function() {
+          FB.init({
+            xfbml            : true,
+            version          : "v9.0"
+          });
+        };
+        (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, "script", "facebook-jssdk"));
+
+  (function() {
+    var el = document.createElement("div");
+    el.className = "fb-customerchat";
+    el.setAttribute("page_id", "592541754225652");
+    el.setAttribute("attribution", "setup_tool");
+    el.setAttribute("greeting_dialog_display", "hide");
+    document.body.appendChild(el);
+  })();
+	
 	}
 
 
@@ -459,27 +483,3 @@ document.getElementById("skintyframe").src = "https://new.skintifique.me/en/welc
 function callUs () {
 document.getElementById("skintyframe").src = skintyPageUrl + "/call_us.html" ;
 }
-
- 
-        window.fbAsyncInit = function() {
-          FB.init({
-            xfbml            : true,
-            version          : "v9.0"
-          });
-        };
-        (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, "script", "facebook-jssdk"));
-
-  (function() {
-    var el = document.createElement("div");
-    el.className = "fb-customerchat";
-    el.setAttribute("page_id", "592541754225652");
-    el.setAttribute("attribution", "setup_tool");
-    el.setAttribute("greeting_dialog_display", "hide");
-    document.body.appendChild(el);
-  })();
