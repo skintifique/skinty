@@ -503,7 +503,7 @@ let script = document.createElement("script");
 script.setAttribute("type", "text/javascript");
 script.setAttribute("id", "ze-snippet");
 script.setAttribute("src", "https://static.zdassets.com/ekr/snippet.js?key=a11224ff-78c1-49da-8419-1a8006595ef5");
-script.setAttribute("webWidget", "open");
+script.innerHTML = "zE('webWidget', 'open') ;" ;
 let divZendesk = document.getElementById("divZendesk") ;
 divZendesk.appendChild(script);	
 	  
