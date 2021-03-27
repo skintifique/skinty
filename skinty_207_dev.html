@@ -59,7 +59,7 @@
   <br>
 <!-- html required for help buttons  -->
 <div id="myPopupDiv">
-<div class="popup float" onclick="openHelpPopup()"><img id="helpPopupBtnImg" class="helpPopupBtnImg" src="https://media.giphy.com/media/L0rdnflIRAngVsDpxJ/giphy.gif">
+<div id="helpPopupBtnFloat" class="popup float" onclick="openHelpPopup()"><img id="helpPopupBtnImg" class="helpPopupBtnImg" src="https://media.giphy.com/media/L0rdnflIRAngVsDpxJ/giphy.gif">
   <span class="popuptext" id="myPopup">
 	  <p style="font-size:14px;text-align:right;">&times;</p>
 	  <p id="welcomeTextHelpPopup" style="font-size:14px; font:Raleway;">Hello 👏. How would you like to communicate?</p>	  
@@ -145,10 +145,19 @@
 </script>
 <!-- End of skintifique Zendesk Widget script -->
 </div>
+<p id="demotest">demotest</p>
 <div id="fbMsgDiv" style="display:none;">
 <!-- Load Facebook SDK for JavaScript -->
       <div id="fb-root"></div>
       <script>
+document.getElementById("helpPopupBtnFloat").addEventListener("click", testfunction);
+	</script>    
+	<script>    
+	function testfunction () {
+		document.getElementById("demotest").innerHTLM = "aaaa" ;
+		}
+	</script> 
+	<script>      
         window.fbAsyncInit = function() {
           FB.init({
             xfbml            : true,
