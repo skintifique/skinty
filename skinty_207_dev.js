@@ -461,11 +461,6 @@ document.getElementById("skintyframe").src = skintyPageUrl + "/call_us.html" ;
 }
 
  
-	function testfunction () {
-		document.getElementById("demotest").innerHTLM = "aaaa" ;
-		}
-	</script> 
-	<script>      
         window.fbAsyncInit = function() {
           FB.init({
             xfbml            : true,
