@@ -145,44 +145,11 @@
 </script>
 <!-- End of skintifique Zendesk Widget script -->
 </div>
-<p id="demotest">demotest</p>
+<p id="demotest">demotest2</p>
 <div id="fbMsgDiv" style="display:none;">
 <!-- Load Facebook SDK for JavaScript -->
       <div id="fb-root"></div>
-      <script>
-document.getElementById("helpPopupBtnFloat").addEventListener("click", testfunction);
-	</script>    
-	<script>    
-	function testfunction () {
-		document.getElementById("demotest").innerHTLM = "aaaa" ;
-		}
-	</script> 
-	<script>      
-        window.fbAsyncInit = function() {
-          FB.init({
-            xfbml            : true,
-            version          : "v9.0"
-          });
-        };
-        (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, "script", "facebook-jssdk"));
-      </script>
-      <!-- Your Chat Plugin code -->
-<script>
-  (function() {
-    var el = document.createElement("div");
-    el.className = "fb-customerchat";
-    el.setAttribute("page_id", "592541754225652");
-    el.setAttribute("attribution", "setup_tool");
-    el.setAttribute("greeting_dialog_display", "hide");
-    document.body.appendChild(el);
-  })();
-</script>
+
 </div>
 <script src="https://skintifique.github.io/skinty/skinty_207_dev.js"></script>
 </body>
