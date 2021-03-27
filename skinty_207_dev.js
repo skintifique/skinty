@@ -499,7 +499,11 @@ document.getElementById("skintyframe").src = skintyPageUrl + "/call_us.html" ;
 //  </script>
 	
   function openChat() {
- document.getElementById("ze-snippet").src = "https://static.zdassets.com/ekr/snippet.js?key=a11224ff-78c1-49da-8419-1a8006595ef5" ;
+let script = document.createElement("script");
+script.setAttribute("type", "text/javascript");
+script.setAttribute("id", "ze-snippet");
+script.setAttribute("src", "https://static.zdassets.com/ekr/snippet.js?key=a11224ff-78c1-49da-8419-1a8006595ef5");
+document.head.appendChild(script);	
 	  
   let current_url = window.location.href ;	  
   let lang ;
