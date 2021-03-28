@@ -233,8 +233,6 @@ function openHelpPopup() {
     document.body.appendChild(el);
   })();
 	
-zE("webWidget","hide")
-	
 (function() {
 let script1 = document.createElement("script");
 script1.setAttribute("id", "ze-snippet");
