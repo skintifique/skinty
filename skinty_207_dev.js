@@ -242,7 +242,7 @@ pZendesk.appendChild(script1);
 
  })();
 	
-setTimeout(function(){zE("webWidget","hide");}, 4000);
+setTimeout(function(){zE("webWidget","hide");}, 2000);
 	
 }
 	
