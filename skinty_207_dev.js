@@ -258,11 +258,11 @@ if ((today != "6") && (today != "0")) {
   } 
    } 
   if (today == "0") {
-  let sunday = "no" ;
-  let sunday_start = "09:00" ;
+  let sunday = "yes" ;
+  let sunday_start = "02:00" ;
   let dateUTC_sun_start = new Date("2021-01-01T" + sunday + "Z") ;
   let hour_sun_start = dateUTC_sun_start.getUTCHours();
-  let sunday_end = "17:00" ;
+  let sunday_end = "20:00" ;
   let dateUTC_sun_end = new Date("2021-01-01T" + sunday_end + "Z") ;
   let hour_sun_end = dateUTC_sun_end.getUTCHours();  
   if (sunday == "no") {
