@@ -240,16 +240,10 @@ script1.setAttribute("src", "https://static.zdassets.com/ekr/snippet.js?key=a112
 let pZendesk = document.getElementById("pZendesk") ;
 pZendesk.appendChild(script1);
 
-hideZeWidget () ;
  })();
 	
 }
 	
-function hideZeWidget () {
-	zE("webWidget", "hide");
-	 }
-		
-
 <!-- END display floating button and identification deviceType -->  
   
 <!-- display buttons inside floating button pop-up -->  
