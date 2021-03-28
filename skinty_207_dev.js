@@ -232,12 +232,14 @@ function openHelpPopup() {
     el.setAttribute("greeting_dialog_display", "hide");
     document.body.appendChild(el);
   })();
-	
+
+ (function() {
 let script = document.createElement("script");
 script.setAttribute("id", "ze-snippet");
 script.setAttribute("src", "https://static.zdassets.com/ekr/snippet.js?key=a11224ff-78c1-49da-8419-1a8006595ef5");
 let pZendesk = document.getElementById("pZendesk") ;
 pZendesk.appendChild(script);
+ })();
 
 }
 
