@@ -240,12 +240,13 @@ script1.setAttribute("src", "https://static.zdassets.com/ekr/snippet.js?key=a112
 let pZendesk = document.getElementById("pZendesk") ;
 pZendesk.appendChild(script1);
  })();
+
+hideZendeskWidget () ;
+}
 	
-(function() {
+function hideZendeskWidget() {
   zE("webWidget", "hide");
   document.getElementById("myPopupDiv").style.display = "block";
-})();	  
-
 }
 	
 
