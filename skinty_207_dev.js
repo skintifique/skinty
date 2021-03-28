@@ -233,6 +233,17 @@ function openHelpPopup() {
     document.body.appendChild(el);
   })();
 	
+(function() {
+let script1 = document.createElement("script");
+script1.setAttribute("id", "ze-snippet");
+script1.setAttribute("src", "https://static.zdassets.com/ekr/snippet.js?key=a11224ff-78c1-49da-8419-1a8006595ef5");
+let pZendesk = document.getElementById("pZendesk") ;
+pZendesk.appendChild(script1);
+
+ })();
+	
+setTimeout(function(){zE("webWidget","hide");}, 4000);
+	
 }
 	
 <!-- END display floating button and identification deviceType -->  
@@ -500,14 +511,6 @@ document.getElementById("skintyframe").src = skintyPageUrl + "/call_us.html" ;
 //  </script>
 	
   function openChat() {
-(function() {
-let script1 = document.createElement("script");
-script1.setAttribute("id", "ze-snippet");
-script1.setAttribute("src", "https://static.zdassets.com/ekr/snippet.js?key=a11224ff-78c1-49da-8419-1a8006595ef5");
-let pZendesk = document.getElementById("pZendesk") ;
-pZendesk.appendChild(script1);
-
- })();
 	
   let current_url = window.location.href ;	  
   let lang ;
