@@ -238,10 +238,8 @@ script.setAttribute("type", "text/javascript");
 script.setAttribute("id", "ze-snippet");
 script.setAttribute("src", "https://static.zdassets.com/ekr/snippet.js?key=a11224ff-78c1-49da-8419-1a8006595ef5");
 let pZendesk = document.getElementById("pZendesk") ;
-let divZendesk = document.getElementById("divZendesk") ;
-pZendesk.appendChild(script);	
-zE("webWidget", "hide");
-divZendesk.style.visibility = "hide" ;
+pZendesk.appendChild(script);
+
 }
 <!-- END display floating button and identification deviceType -->  
   
@@ -515,8 +513,7 @@ document.getElementById("skintyframe").src = skintyPageUrl + "/call_us.html" ;
    } else {	  
 	   lang = "en_us" ;
   }
-  let divZendesk = document.getElementById("divZendesk") ;	
-  divZendesk.style.visibility = "visible" ;
+  
   zE('webWidget', 'setLocale', lang);	  
   zE("webWidget", "show");
   zE("webWidget", "open");
