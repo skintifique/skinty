@@ -201,15 +201,6 @@ document.getElementById("divSkintyFrame").className ="divSkintyForIframe" ;
 
 // When the user clicks on floating button (help button) div, open the popup
 function openHelpPopup() {
-  var popup = document.getElementById("myPopup");
-  popup.classList.toggle("show");
-//let fbMsgDiv = document.getElementById("fbMsgDiv") ;
- // let fbMsgDivDisplay = fbMsgDiv.style.display ;
-//  if (fbMsgDivDisplay === "block") {
-  document.getElementById("fbMsgDiv").style.display = "none" ;
- // }
-  showAvailableBtns() ;
-	
           window.fbAsyncInit = function() {
           FB.init({
             xfbml            : true,
@@ -241,6 +232,15 @@ let pZendesk = document.getElementById("pZendesk") ;
 pZendesk.appendChild(script1);
 
  })();
+	
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+//let fbMsgDiv = document.getElementById("fbMsgDiv") ;
+ // let fbMsgDivDisplay = fbMsgDiv.style.display ;
+//  if (fbMsgDivDisplay === "block") {
+  document.getElementById("fbMsgDiv").style.display = "none" ;
+ // }
+  showAvailableBtns() ;
 	
 }
 	
