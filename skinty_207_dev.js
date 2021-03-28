@@ -240,8 +240,8 @@ script.setAttribute("src", "https://static.zdassets.com/ekr/snippet.js?key=a1122
 let pZendesk = document.getElementById("pZendesk") ;
 let divZendesk = document.getElementById("divZendesk") ;
 pZendesk.appendChild(script);	
-divZendesk.style.display = "none" ;
 zE("webWidget", "hide");
+divZendesk.style.visibility = "hide" ;
 }
 <!-- END display floating button and identification deviceType -->  
   
@@ -516,7 +516,7 @@ document.getElementById("skintyframe").src = skintyPageUrl + "/call_us.html" ;
 	   lang = "en_us" ;
   }
   let divZendesk = document.getElementById("divZendesk") ;	
-  divZendesk.style.display = "block" ;
+  divZendesk.style.visibility = "visible" ;
   zE('webWidget', 'setLocale', lang);	  
   zE("webWidget", "show");
   zE("webWidget", "open");
