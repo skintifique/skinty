@@ -239,11 +239,10 @@ script.setAttribute("id", "ze-snippet");
 script.setAttribute("src", "https://static.zdassets.com/ekr/snippet.js?key=a11224ff-78c1-49da-8419-1a8006595ef5");
 let pZendesk = document.getElementById("pZendesk") ;
 pZendesk.appendChild(script);
-	
-zE("webWidget", "setLocale", "en_us");
-zE("webWidget", "hide");
 
 }
+
+zE('webWidget', 'hide');
 <!-- END display floating button and identification deviceType -->  
   
 <!-- display buttons inside floating button pop-up -->  
