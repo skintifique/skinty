@@ -240,12 +240,14 @@ script.setAttribute("src", "https://static.zdassets.com/ekr/snippet.js?key=a1122
 let pZendesk = document.getElementById("pZendesk") ;
 pZendesk.appendChild(script);
  })();
-
- (function() {
-zE("webWidget", "hide");
- })();
 	
+hideZendeskWidget () ;
 }
+
+function hideZendeskWidget () {
+zE("webWidget", "hide");
+ }
+	
 
 <!-- END display floating button and identification deviceType -->  
   
