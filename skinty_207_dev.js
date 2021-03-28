@@ -241,6 +241,10 @@ let pZendesk = document.getElementById("pZendesk") ;
 pZendesk.appendChild(script);
  })();
 
+ (function() {
+zE("webWidget", "hide");
+ })();
+	
 }
 
 <!-- END display floating button and identification deviceType -->  
