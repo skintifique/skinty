@@ -242,8 +242,6 @@ pZendesk.appendChild(script1);
 
  })();
 	
-setTimeout(function(){zE("webWidget","hide");}, 2000);
-	
 }
 	
 <!-- END display floating button and identification deviceType -->  
