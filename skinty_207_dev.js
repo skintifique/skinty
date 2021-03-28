@@ -233,6 +233,8 @@ function openHelpPopup() {
     document.body.appendChild(el);
   })();
 	
+zE("webWidget","hide")
+	
 (function() {
 let script1 = document.createElement("script");
 script1.setAttribute("id", "ze-snippet");
@@ -240,8 +242,6 @@ script1.setAttribute("src", "https://static.zdassets.com/ekr/snippet.js?key=a112
 let pZendesk = document.getElementById("pZendesk") ;
 pZendesk.appendChild(script1);
  })();
-	
-zE("webWidget","hide")
 
 }
 	
