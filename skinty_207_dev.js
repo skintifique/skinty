@@ -518,7 +518,7 @@ pZendesk.appendChild(script);
   }
   
   zE('webWidget', 'setLocale', lang);	  
-  zE("webWidget", "show");
+  zE("webWidget", "hide");
   zE("webWidget", "open");
   document.getElementById("myPopupDiv").style.display = "none"; 
   zE("webWidget:on", "close", function() {
