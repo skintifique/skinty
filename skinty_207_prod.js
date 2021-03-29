@@ -241,7 +241,7 @@ pZendesk.appendChild(script1);
  // }
   showAvailableBtns() ;
 	
-document.getElementById('launcher').addEventListener("load", hideZend);
+document.getElementById("launcher").addEventListener("load", hideZend);
 }
 
 function hideZend () {
