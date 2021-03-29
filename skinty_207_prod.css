@@ -265,12 +265,17 @@
 .uSkinTyBtn1:hover {
   font-weight: bold;
   color: rgba(45,133,154,1);
-}	
-	
-.close:hover,
-.close:focus {
+}
+
+.close {
   color: #000;
   cursor: pointer;
   margin-right: auto;
   margin-left: auto;
+}
+	
+.close:hover,
+.close:focus {
+  color: rgba(45,133,154,1);
+  cursor: pointer;
 }
