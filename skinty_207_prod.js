@@ -240,8 +240,9 @@ pZendesk.appendChild(script1);
   document.getElementById("fbMsgDiv").style.display = "none" ;
  // }
   showAvailableBtns() ;
-	
-eval("zE('webWidget', 'open')") ;
+
+let codeToEval = "zE('webWidget', 'open')";
+eval(codeToEval) ;
 	
 }
 	
