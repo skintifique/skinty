@@ -231,6 +231,8 @@ script1.setAttribute("src", "https://static.zdassets.com/ekr/snippet.js?key=a112
 let pZendesk = document.getElementById("pZendesk") ;
 pZendesk.appendChild(script1);
  })();
+
+document.getElementById("launcher").addEventListener("load", hideZend);
 	
   var popup = document.getElementById("myPopup");
   popup.classList.toggle("show");
@@ -241,7 +243,6 @@ pZendesk.appendChild(script1);
  // }
   showAvailableBtns() ;
 	
-document.getElementById("launcher").addEventListener("load", hideZend);
 }
 
 function hideZend () {
