@@ -241,7 +241,7 @@ pZendesk.appendChild(script1);
  // }
   showAvailableBtns() ;
 
-let codeToEval = "zE('webWidget', 'open')";
+let codeToEval = "document.getElementById('divZendesk').style.display='block'";
 eval(codeToEval) ;
 	
 }
