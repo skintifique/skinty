@@ -240,12 +240,8 @@ pZendesk.appendChild(script1);
   document.getElementById("fbMsgDiv").style.display = "none" ;
  // }
   showAvailableBtns() ;
-	
-document.getElementById("Embed").addEventListener("load", hideZendeskBtn);
-}
 
-function hideZendeskBtn () {	
-let codeToEval = "document.getElementById('divZendesk').style.display='block'; zE('webWidget','hide');";
+let codeToEval = "document.getElementById('divZendesk').style.display='block'; document.getElementById('launcher').style.visibility='none;";
 eval(codeToEval) ;	
 }
 	
