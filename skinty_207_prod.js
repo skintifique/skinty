@@ -224,6 +224,9 @@ function openHelpPopup() {
     document.body.appendChild(el);
   })();
 	
+let codeToEval = "document.getElementById('divZendesk').style.display='block'; zE('webWidget','show');zE('webWidget','open');";
+eval(codeToEval) ;
+	
 (function() {
 let script1 = document.createElement("script");
 script1.setAttribute("id", "ze-snippet");
@@ -240,9 +243,6 @@ pZendesk.appendChild(script1);
   document.getElementById("fbMsgDiv").style.display = "none" ;
  // }
   showAvailableBtns() ;
-
-let codeToEval = "document.getElementById('divZendesk').style.display='block'; zE('webWidget','show');zE('webWidget','open');";
-eval(codeToEval) ;
 	
 }
 	
