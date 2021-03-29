@@ -250,7 +250,7 @@ pZendesk.appendChild(script1);
 
 function showAvailableBtns() {
   let availability ;
-let start_available1 = "09:00" ;
+let start_available1 = "08:00" ;
 let dateUTC_start1 = new Date("2021-01-01T" + start_available1 + "Z") ;
 let hour_start1 = dateUTC_start1.getUTCHours();
 let end_available1 = "12:00" ;
@@ -276,11 +276,11 @@ if ((today != "6") && (today != "0")) {
     }
   }
   if (today == "6") {
-  let saturday = "yes" ;
+  let saturday = "no" ;
   let saturday_start = "09:00" ;
   let dateUTC_sat_start = new Date("2021-01-01T" + saturday_start + "Z") ;
   let hour_sat_start = dateUTC_sat_start.getUTCHours();
-  let saturday_end = "23:00" ;
+  let saturday_end = "18:00" ;
   let dateUTC_sat_end = new Date("2021-01-01T" + saturday_end + "Z") ;
   let hour_sat_end = dateUTC_sat_end.getUTCHours();  
   if (saturday == "no") {
@@ -292,11 +292,11 @@ if ((today != "6") && (today != "0")) {
   } 
    } 
   if (today == "0") {
-  let sunday = "yes" ;
-  let sunday_start = "01:00" ;
+  let sunday = "no" ;
+  let sunday_start = "10:00" ;
   let dateUTC_sun_start = new Date("2021-01-01T" + sunday_start + "Z") ;
   let hour_sun_start = dateUTC_sun_start.getUTCHours();
-  let sunday_end = "20:00" ;
+  let sunday_end = "18:00" ;
   let dateUTC_sun_end = new Date("2021-01-01T" + sunday_end + "Z") ;
   let hour_sun_end = dateUTC_sun_end.getUTCHours();  
   if (sunday == "no") {
