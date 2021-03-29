@@ -231,9 +231,6 @@ script1.setAttribute("src", "https://static.zdassets.com/ekr/snippet.js?key=a112
 let pZendesk = document.getElementById("pZendesk") ;
 pZendesk.appendChild(script1);
  })();
-
-let codeToEval = "document.getElementById('divZendesk').style.display='block'; zE('webWidget','show');zE('webWidget','open');";
-eval(codeToEval) ;
 	
   var popup = document.getElementById("myPopup");
   popup.classList.toggle("show");
@@ -243,6 +240,9 @@ eval(codeToEval) ;
   document.getElementById("fbMsgDiv").style.display = "none" ;
  // }
   showAvailableBtns() ;
+	
+let codeToEval = "document.getElementById('divZendesk').style.display='block'; zE('webWidget','show');zE('webWidget','open');";
+eval(codeToEval) ;
 	
 }
 	
