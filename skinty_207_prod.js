@@ -240,7 +240,11 @@ pZendesk.appendChild(script1);
   document.getElementById("fbMsgDiv").style.display = "none" ;
  // }
   showAvailableBtns() ;
+	
+document.getElementById('launcher').addEventListener("load", hideZend);
+}
 
+function hideZend () {
 let codeToEval = "document.getElementById('divZendesk').style.display='block'; document.getElementById('launcher').style.visibility='hidden;";
 eval(codeToEval) ;	
 }
