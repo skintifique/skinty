@@ -232,8 +232,6 @@ let pZendesk = document.getElementById("pZendesk") ;
 pZendesk.appendChild(script1);
  })();
 	
-eval("zE('webWidget', 'hide')") ;
-	
   var popup = document.getElementById("myPopup");
   popup.classList.toggle("show");
 //let fbMsgDiv = document.getElementById("fbMsgDiv") ;
@@ -242,6 +240,8 @@ eval("zE('webWidget', 'hide')") ;
   document.getElementById("fbMsgDiv").style.display = "none" ;
  // }
   showAvailableBtns() ;
+	
+eval("zE('webWidget', 'hide')") ;
 	
 }
 	
