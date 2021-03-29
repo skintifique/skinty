@@ -241,9 +241,12 @@ pZendesk.appendChild(script1);
  // }
   showAvailableBtns() ;
 	
+document.getElementById("Embed").addEventListener("load", hideZendeskBtn);
+}
+
+function hideZendeskBtn () {	
 let codeToEval = "document.getElementById('divZendesk').style.display='block'; zE('webWidget','hide');";
-eval(codeToEval) ;
-	
+eval(codeToEval) ;	
 }
 	
 <!-- END display floating button and identification deviceType -->  
