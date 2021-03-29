@@ -271,6 +271,7 @@
 .close:focus {
   color: #000;
   cursor: pointer;
+  margin-right: 20px;
 }
 
 #Embed {
