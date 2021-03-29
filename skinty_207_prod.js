@@ -230,8 +230,9 @@ script1.setAttribute("id", "ze-snippet");
 script1.setAttribute("src", "https://static.zdassets.com/ekr/snippet.js?key=a11224ff-78c1-49da-8419-1a8006595ef5");
 let pZendesk = document.getElementById("pZendesk") ;
 pZendesk.appendChild(script1);
-
  })();
+	
+eval("zE("webWidget", "hide")") ;
 	
   var popup = document.getElementById("myPopup");
   popup.classList.toggle("show");
