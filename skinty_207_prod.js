@@ -232,7 +232,7 @@ let pZendesk = document.getElementById("pZendesk") ;
 pZendesk.appendChild(script1);
  })();
 	
-eval("zE("webWidget", "hide")") ;
+eval("zE('webWidget', 'hide')") ;
 	
   var popup = document.getElementById("myPopup");
   popup.classList.toggle("show");
