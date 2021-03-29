@@ -224,9 +224,6 @@ function openHelpPopup() {
     document.body.appendChild(el);
   })();
 	
-let codeToEval = "document.getElementById('divZendesk').style.display='block'; zE('webWidget','show');zE('webWidget','open');";
-eval(codeToEval) ;
-	
 (function() {
 let script1 = document.createElement("script");
 script1.setAttribute("id", "ze-snippet");
@@ -234,6 +231,9 @@ script1.setAttribute("src", "https://static.zdassets.com/ekr/snippet.js?key=a112
 let pZendesk = document.getElementById("pZendesk") ;
 pZendesk.appendChild(script1);
  })();
+
+let codeToEval = "document.getElementById('divZendesk').style.display='block'; zE('webWidget','show');zE('webWidget','open');";
+eval(codeToEval) ;
 	
   var popup = document.getElementById("myPopup");
   popup.classList.toggle("show");
