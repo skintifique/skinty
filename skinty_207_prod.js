@@ -246,9 +246,18 @@ setTimeout(function(){ hideZend(); }, 2500);
 }
 
 function hideZend () {
+let launcher = document.getElementById('launcher') ;
+if (launcher) {
 let codeToEval = "document.getElementById('divZendesk').style.display='block'; document.getElementById('launcher').style.display='none';";
 eval(codeToEval) ;	
-}
+} else {
+setTimeout(function(){ hideZend(); }, 50);
+}	
+
+//function hideZend () {
+//let codeToEval = "document.getElementById('divZendesk').style.display='block'; document.getElementById('launcher').style.display='none';";
+//eval(codeToEval) ;	
+//}
 	
 <!-- END display floating button and identification deviceType -->  
   
