@@ -253,11 +253,6 @@ launcher.style.display="none";
 setTimeout(function(){ hideZend(); }, 20);
 }	
 }
-
-//function hideZend () {
-//let codeToEval = "document.getElementById('divZendesk').style.display='block'; document.getElementById('launcher').style.display='none';";
-//eval(codeToEval) ;	
-//}
 	
 <!-- END display floating button and identification deviceType -->  
   
@@ -265,7 +260,7 @@ setTimeout(function(){ hideZend(); }, 20);
 
 function showAvailableBtns() {
   let availability ;
-let start_available1 = "00:01" ;
+let start_available1 = "09:00" ;
 let dateUTC_start1 = new Date("2021-01-01T" + start_available1 + "Z") ;
 let hour_start1 = dateUTC_start1.getUTCHours();
 let end_available1 = "11:00" ;
@@ -274,7 +269,7 @@ let hour_end1 = dateUTC_end1.getUTCHours();
 let start_available2 = "12:00" ;
 let dateUTC_start2 = new Date("2021-01-01T" + start_available2 + "Z") ;
 let hour_start2 = dateUTC_start2.getUTCHours();
-let end_available2 = "23:59" ;
+let end_available2 = "18:00" ;
 let dateUTC_end2 = new Date("2021-01-01T" + end_available2 + "Z") ;
 let hour_end2 = dateUTC_end2.getUTCHours() ;
 let date = new Date();
