@@ -248,8 +248,7 @@ setTimeout(function(){ hideZend(); }, 500);
 function hideZend () {
 let launcher = document.getElementById("launcher") ;
 if (launcher) {
-let codeToEval = "document.getElementById('divZendesk').style.display='block'; document.getElementById('launcher').style.display='none';";
-eval(codeToEval) ;	
+launcher.style.display="none";	
 } else {
 setTimeout(function(){ hideZend(); }, 20);
 }	
