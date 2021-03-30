@@ -232,7 +232,7 @@ let pZendesk = document.getElementById("pZendesk") ;
 pZendesk.appendChild(script1);
  })();
 
-setTimeout(function(){ hideZend(); }, 2500);
+setTimeout(function(){ hideZend(); }, 2000);
 	
   var popup = document.getElementById("myPopup");
   popup.classList.toggle("show");
@@ -251,7 +251,7 @@ if (launcher) {
 let codeToEval = "document.getElementById('divZendesk').style.display='block'; document.getElementById('launcher').style.display='none';";
 eval(codeToEval) ;	
 } else {
-setTimeout(function(){ hideZend(); }, 10);
+setTimeout(function(){ hideZend(); }, 20);
 }	
 }
 
