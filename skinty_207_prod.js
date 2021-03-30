@@ -232,7 +232,7 @@ let pZendesk = document.getElementById("pZendesk") ;
 pZendesk.appendChild(script1);
  })();
 
-setTimeout(function(){ hideZend(); }, 3000);
+setTimeout(function(){ hideZend(); }, 2500);
 	
   var popup = document.getElementById("myPopup");
   popup.classList.toggle("show");
