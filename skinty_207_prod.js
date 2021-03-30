@@ -251,7 +251,7 @@ if (launcher) {
 let codeToEval = "document.getElementById('divZendesk').style.display='block'; document.getElementById('launcher').style.display='none';";
 eval(codeToEval) ;	
 } else {
-setTimeout(function(){ hideZend(); }, 20);
+setTimeout(function(){ hideZend(); }, 10);
 }	
 }
 
