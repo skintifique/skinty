@@ -81,11 +81,6 @@
 <p> poazieruzeo </p>
 <p> poazieruzeo </p>
 <p> poazieruzeo </p>
- <script>
-function myFunction() {
-  setTimeout(function(){ alert("Hello"); }, 3000);
-}
-</script>
   <script>
   setTimeout(function(){ 
 let script1 = document.createElement("script");
@@ -93,16 +88,21 @@ script1.setAttribute("id", "ze-snippet");
 script1.setAttribute("src", "https://static.zdassets.com/ekr/snippet.js?key=a11224ff-78c1-49da-8419-1a8006595ef5");
 let pZendesk = document.getElementById("pZendesk") ;
 pZendesk.appendChild(script1);   
-
-document.getElementById("testdemo").innerHTML = "oimLoaded" ;
+   
   }, 3000);
 </script>
-    
-   
+ 
+   <script>
+  setTimeout(function(){ 
 let script1 = document.createElement("script");
 script1.setAttribute("data-account", "92941");
 script1.setAttribute("data-user", "82612");
 script1.setAttribute("src", "https://a.omappapi.com/app/js/api.min.js");
 let pZendesk = document.getElementById("pZendesk") ;
 pZendesk.appendChild(script1);
+
+document.getElementById("testdemo").innerHTML = "oimLoaded" ;
+  }, 4000);
+</script>
+   
 </body> 
