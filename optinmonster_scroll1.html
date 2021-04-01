@@ -1,3 +1,5 @@
+<body onscroll="callOptinMonster()">
+
 <p> poazieruzeo </p>
 <p> poazieruzeo </p>
 <p> poazieruzeo </p>
@@ -80,12 +82,13 @@
 <p> poazieruzeo </p>
 <p id="pZendesk">pZendesk</p>
 <script>
-document.body.addEventListener("scroll",function() {
+function callOptinMonster() {
 let script1 = document.createElement("script");
 script1.setAttribute("data-account", "92941");
 script1.setAttribute("data-user", "82612");
 script1.setAttribute("src", "https://a.omappapi.com/app/js/api.min.js");
 let pZendesk = document.getElementById("pZendesk") ;
 pZendesk.appendChild(script1);
- }) ;
+ }
 </script>                            
+</body>
