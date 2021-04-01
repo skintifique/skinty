@@ -83,6 +83,8 @@
 <p> poazieruzeo </p>
 <script>
 function callOptinMonster() {
+ let x = document.getElementById("testdemo").innerHTLM ;
+ if (x != "oimLoaded") {
  (function () {
 let script1 = document.createElement("script");
 script1.setAttribute("data-account", "92941");
@@ -92,7 +94,8 @@ let pZendesk = document.getElementById("pZendesk") ;
 pZendesk.appendChild(script1);
    })();
  
-document.getElementById("testdemo").innerHTML = "bbb" ;
+document.getElementById("testdemo").innerHTML = "oimLoaded" ;
  }
+  }
 </script>                            
 </body>
