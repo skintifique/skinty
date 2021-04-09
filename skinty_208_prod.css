@@ -71,7 +71,7 @@
 }
 
 .inside_popup {
-  border: 2px solid grey;
+  border: 1px solid grey;
   border-radius: 20px;
   background: white;
   margin-left : auto ;
