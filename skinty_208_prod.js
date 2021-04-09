@@ -42,7 +42,7 @@ window.setTimeout(openHelpPopup, 4000);
 window.setTimeout(showFbMessengerWidget, 4500);
 }
 
-document.getElementById("welcomeTextHelpPopup").innerHTML = "Hello! How can we can help? Select 😍 for self-help" ;
+document.getElementById("welcomeTextHelpPopup").innerHTML = "Hello! How can we help? Select 😍 for self-help" ;
 
 
 // FOR SKINTY MODAL ON EXIT
