@@ -21,7 +21,6 @@
 // SET UP SELECT PAGE PARAMETERS
 // Image in help center float btn
 // document.getElementById("helpPopupBtnImg").src = "https://media.giphy.com/media/L0rdnflIRAngVsDpxJ/giphy.mp4" ;
-// potential alternative gif: https://media.giphy.com/media/l0MYSOnaOKyWPTf0c/giphy.gif, https://media.giphy.com/media/SUbYK8slyVWbmHc5R9/giphy.gif, https://media.giphy.com/media/26ufn24Onjz8w7NxS/giphy.gif, https://media.giphy.com/media/l0MYSOnaOKyWPTf0c/giphy.gif
 // url for skintypage
 let skintyPageUrl= "https://skintifique.github.io" ;
 //let skintyPageUrl= "https://new.skintifique.me/" ;
@@ -497,10 +496,10 @@ document.getElementById("skintyframe").src = skintyPageUrl ;
 }
 
 function welcomeOffer () {
-document.getElementById("skintyframe").src = "https://creator.us.uneeq.io/try/57ae3416-f8f7-4fae-aec1-d5c34fa749cc" ;
+document.getElementById("skintyframe").src = "https://new.skintifique.me/en/welcome-offer/?nsfs" ;
 }
 
-//<!-- https://new.skintifique.me/en/welcome-offer/?nsfs-->//
+//<!-- url to Uneeq 202107 test https://creator.us.uneeq.io/try/57ae3416-f8f7-4fae-aec1-d5c34fa749cc-->//
 
 function callUs () {
 document.getElementById("skintyframe").src = skintyPageUrl + "/call_us.html" ;
