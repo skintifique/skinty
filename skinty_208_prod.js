@@ -365,9 +365,9 @@ if (x_class === "openInSkintyModal") {
  } else if (x_class === "openHelpPopup") {
   openHelpPopup() ;
 } else if (x_class === "openAccordion") {
-document.getElementById("dev1").innerHTML = "Element clicked4" ;
-//let x_value = x.value ;
-//let classToOpen = x_value ;
+let x_value = x.value ;
+let classToOpen = x_value ;
+document.getElementById("dev1").innerHTML = classToOpen ;
 //let elementToHide = document.getElementByClassName(classToOpen)[0] ;
 //elementToHide.style.display = "none" ;
 }	
