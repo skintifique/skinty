@@ -368,7 +368,8 @@ document.getElementById("dev1").innerHTML = "Element clicked4";
 } else if (x_class === "openAccordion")}
 let x_id = x.id ;
 let classToOpen = x_id ;
-document.getElementByClassName(classToOpen).style.display = "none" ;
+let elementToHide = document.getElementByClassName(classToOpen)[0];
+elementToHide.style.display = "none" ;
 }	
 });
 
