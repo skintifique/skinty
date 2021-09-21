@@ -24,7 +24,7 @@
 /* The actual popup */
 .popup .popuptext {
   visibility: hidden;
-  width: 200px;
+  width: 250px;
   background-color: #9aa7ad;
   color: black;
   text-align: center;
