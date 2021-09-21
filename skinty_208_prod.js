@@ -362,7 +362,8 @@ let x_class = x.className ;
 if (x_class === "openInSkintyModal") {
   document.getElementById("dev1").innerHTML = "Element clicked3";
   openSkintyModal(x) ;
- }  
+ } else if (x_class === "openHelpPopup") {
+  openHelpPopup()	 
 });
 
 
