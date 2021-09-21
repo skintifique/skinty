@@ -365,12 +365,17 @@ if (x_class === "openInSkintyModal") {
  } else if (x_class === "openHelpPopup") {
   openHelpPopup() ;
 } else if (x_class === "openAccordion") {
+//document.getElementById("dev1").innerHTML = "test4" ;
 let x_value = x.value ;
 let classToOpen = x_value ;
-let elementsToHide = document.getElementsByClassName(classToOpen)[0] ;
-document.getElementById("dev1").innerHTML = "test3" ;
-elementsToHide.style.display = "none" ;
-}	
+//let elementsToHide = document.getElementsByClassName(classToOpen)[0] ;
+//document.getElementById("dev1").innerHTML = "test3" ;
+//elementsToHide.style.display = "none" ;
+let elementsToHide = document.getElementsByClassName(classToOpen) ;
+for (let i = 0; i < elementsToHide.length; i++) {
+     elementsToHide[i].style.display = "none";
+     }
+}
 });
 
 
