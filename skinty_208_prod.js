@@ -357,11 +357,10 @@ function closeChatPopup() {
 <!-- END display buttons inside floating button pop-up -->  
 
 document.addEventListener("click", function(){
-  document.getElementById("dev1").innerHTML = "Element clicked";
 let x = event.target ;
 let x_class = x.className ;
-if (x_class == "openInSkintyModal") {
-  document.getElementById("dev1").innerHTML = "Element clicked2";
+if (x_class === "openInSkintyModal") {
+  document.getElementById("dev1").innerHTML = "Element clicked3";
   openSkintyModal(x) ;
  }  
 });
