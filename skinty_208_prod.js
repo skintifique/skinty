@@ -364,7 +364,8 @@ if (x_class === "openInSkintyModal") {
   openSkintyModal(x) ;
  } else if (x_class === "openHelpPopup") {
 document.getElementById("dev1").innerHTML = "Element clicked4";
-  openHelpPopup() ;	 
+  openHelpPopup() ;
+}
 });
 
 
