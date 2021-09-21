@@ -363,9 +363,9 @@ if (x_class === "openInSkintyModal") {
   document.getElementById("dev1").innerHTML = "Element clicked3";
   openSkintyModal(x) ;
  } else if (x_class === "openHelpPopup") {
-document.getElementById("dev1").innerHTML = "Element clicked4";
   openHelpPopup() ;
-} else if (x_class === "openAccordion")}
+} else if (x_class === "openAccordion"){
+document.getElementById("dev1").innerHTML = "Element clicked4";
 let x_id = x.id ;
 let classToOpen = x_id ;
 let elementToHide = document.getElementByClassName(classToOpen)[0];
