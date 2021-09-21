@@ -364,11 +364,11 @@ if (x_class === "openInSkintyModal") {
   openSkintyModal(x) ;
  } else if (x_class === "openHelpPopup") {
   openHelpPopup() ;
-} else if (x_class === "openAccordion"){
-document.getElementById("dev1").innerHTML = "Element clicked4";
-let x_id = x.id ;
-let classToOpen = x_id ;
-let elementToHide = document.getElementByClassName(classToOpen)[0];
+} else if (x_class === "openAccordion") {
+document.getElementById("dev1").innerHTML = "Element clicked4" ;
+let x_value = x.value ;
+let classToOpen = x_value ;
+let elementToHide = document.getElementByClassName(classToOpen)[0] ;
 elementToHide.style.display = "none" ;
 }	
 });
