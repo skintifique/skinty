@@ -367,9 +367,9 @@ if (x_class === "openInSkintyModal") {
 } else if (x_class === "openAccordion") {
 let x_value = x.value ;
 let classToOpen = x_value ;
+let elementsToHide = document.getElementsByClassName(classToOpen)[0] ;
 document.getElementById("dev1").innerHTML = "test2" ;
-let elementToHide = document.getElementByClassName(classToOpen)[1] ;
-elementToHide.style.display = "none" ;
+elementsToHide.style.display = "none" ;
 }	
 });
 
