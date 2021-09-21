@@ -365,7 +365,11 @@ if (x_class === "openInSkintyModal") {
  } else if (x_class === "openHelpPopup") {
 document.getElementById("dev1").innerHTML = "Element clicked4";
   openHelpPopup() ;
-}
+} else if (x_class === "openAccordion")}
+let x_id = x.id ;
+let classToOpen = x_id ;
+document.getElementByClass(classToOpen).style.display = "none" ;
+}	
 });
 
 
