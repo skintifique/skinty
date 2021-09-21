@@ -358,10 +358,11 @@ function closeChatPopup() {
 
 document.addEventListener("click", function(){
   document.getElementById("dev1").innerHTML = "Element clicked";
-let trigger_element = event.target ;
-let trigger_element_class = clicked_element.className ;
-if (trigger_element_class == "openInSkintyModal") {
-  openSkintyModal(trigger_element) ;
+let x = event.target ;
+let x_class = x.className ;
+if (x_class == "openInSkintyModal") {
+  document.getElementById("dev1").innerHTML = "Element clicked2";
+  openSkintyModal(x) ;
  }  
 });
 
