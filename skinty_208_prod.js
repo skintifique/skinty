@@ -368,7 +368,7 @@ if (x_class === "openInSkintyModal") {
 let x_value = x.value ;
 let classToOpen = x_value ;
 let elementsToHide = document.getElementsByClassName(classToOpen)[0] ;
-document.getElementById("dev1").innerHTML = "test2" ;
+document.getElementById("dev1").innerHTML = "test3" ;
 elementsToHide.style.display = "none" ;
 }	
 });
