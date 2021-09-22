@@ -204,6 +204,7 @@ if ((showOnExit == "yes") &&
 
 let floatingBtn_display = document.getElementById("floatingBtn_display").value ;
 let this_page_url = window.location.href ;
+if (show_digital_assistant == "yes") {
 if (floatingBtn_display == "all") {
 document.getElementById("ModalBtnFloat").style.display = "block" ;
 } else if (this_page_url.includes(floatingBtn_display)) {
@@ -213,7 +214,9 @@ document.getElementById("ModalBtnFloat").style.display = "block" ;
 } else {
 document.getElementById("ModalBtnFloat").style.display ="none" ;
 }
-
+}
+//the above code does not apply if show_digital_assistant has been set to "no": see Localisation code above
+	
 if (deviceType == "mobile") {
 document.getElementById("divSkintyFrame").className ="divSkintyForIframe" ;
 }
