@@ -47,13 +47,13 @@ let welcomeTextHelpPopup ;
 let showOnExit ;
 if (pageUrl.includes("/fr/")) {
 welcomeTextHelpPopup = document.getElementById("text_for_welcomeTextHelpPopupFR").value ;
-showOnExit = document.getElementById("show_on_exitFR").value ;
+show_on_exit = document.getElementById("show_on_exitFR").value ;
 } else {
 welcomeTextHelpPopup = document.getElementById("text_for_welcomeTextHelpPopupEN").value ;
-showOnExit = document.getElementById("show_on_exitEN").value ;
+show_on_exit = document.getElementById("show_on_exitEN").value ;
 }	
 document.getElementById("welcomeTextHelpPopup").innerHTML = welcomeTextHelpPopup ;
-document.getElementById("show_on_exit").innerHTML = showOnExit ;
+document.getElementById("show_on_exit").innerHTML = show_on_exit ;
 // END OF LOCALISATION
 
 
@@ -162,7 +162,7 @@ urlDoesNotContain = "1" ;
 
 function triggerOnExit () {
 let exitRef ;
-let showOnExit = document.getElementById("show_on_exit").value ;
+let showOnExit = show_on_exit ;
 if ((showOnExit == "yes") &&
     (exitIntent == "1") &&
     (urlContains == "1") &&
