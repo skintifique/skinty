@@ -46,11 +46,11 @@ let pageUrl = window.location.href ;
 let welcomeTextHelpPopup ;
 let showOnExit ;
 if (pageUrl.includes("/fr/")) {
-welcomeTextHelpPopup = document.getElementById("text_for_welcomeTextHelpPopupFR").innerText ;
-showOnExit = document.getElementById("show_on_exitFR").innerText ;
+welcomeTextHelpPopup = document.getElementById("text_for_welcomeTextHelpPopupFR").value ;
+showOnExit = document.getElementById("show_on_exitFR").value ;
 } else {
-welcomeTextHelpPopup = document.getElementById("text_for_welcomeTextHelpPopupEN").innerText ;
-showOnExit = document.getElementById("show_on_exitEN").innerText ;
+welcomeTextHelpPopup = document.getElementById("text_for_welcomeTextHelpPopupEN").value ;
+showOnExit = document.getElementById("show_on_exitEN").value ;
 }	
 document.getElementById("welcomeTextHelpPopup").innerHTML = welcomeTextHelpPopup ;
 document.getElementById("show_on_exit").innerHTML = showOnExit ;
