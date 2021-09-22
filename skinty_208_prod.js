@@ -41,25 +41,21 @@ window.setTimeout(openHelpPopup, 4000);
 window.setTimeout(showFbMessengerWidget, 4500);
 }
 
-// LOCALISATION INSIDE HELP POPUP
+// LOCALISATION
 let pageUrl = window.location.href ;
 let welcomeTextHelpPopup ;
-if (pageUrl.includes("/fr/")) {
-welcomeTextHelpPopup = document.getElementById("text_for_welcomeTextHelpPopupFR").innerText ;
-} else {
-welcomeTextHelpPopup = document.getElementById("text_for_welcomeTextHelpPopupEN").innerText ;
-}	
-document.getElementById("welcomeTextHelpPopup").innerHTML = welcomeTextHelpPopup ;
-// END OF LOCALISATION INSIDE HELP POPUP
-// LOCALISATION SHOW ON EXIT
 let showOnExit ;
 if (pageUrl.includes("/fr/")) {
+welcomeTextHelpPopup = document.getElementById("text_for_welcomeTextHelpPopupFR").innerText ;
 showOnExit = document.getElementById("show_on_exitFR").innerText ;
 } else {
+welcomeTextHelpPopup = document.getElementById("text_for_welcomeTextHelpPopupEN").innerText ;
 showOnExit = document.getElementById("show_on_exitEN").innerText ;
 }	
+document.getElementById("welcomeTextHelpPopup").innerHTML = welcomeTextHelpPopup ;
 document.getElementById("show_on_exit").innerHTML = showOnExit ;
-// END OF LOCALISATION SHOW ON EXIT
+// END OF LOCALISATION
+
 
 // FOR SKINTY MODAL ON EXIT
 
