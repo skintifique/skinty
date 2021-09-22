@@ -55,7 +55,7 @@ show_on_exit = document.getElementById("show_on_exitEN").value ;
 show_digital_assistant = document.getElementById("show_digital_assistantEN").value ;
 }	
 document.getElementById("welcomeTextHelpPopup").innerHTML = welcomeTextHelpPopup ;
-if (show_digital_assistant === "no") {
+if (show_digital_assistant == "no") {
 document.getElementById("skinTyBtnInModal").style.display = "none";
 document.getElementById("ModalBtnFloat").style.display = "none";
 }
