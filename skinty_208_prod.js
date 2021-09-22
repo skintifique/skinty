@@ -42,7 +42,7 @@ window.setTimeout(showFbMessengerWidget, 4500);
 }
 
 // LOCALISATION INSIDE HELP POPUP
-let pageUrl = window.session.href ;
+let pageUrl = window.location.href ;
 let welcomeTextHelpPopup ;
 if (pageUrl.includes("/fr/")) {
 welcomeTextHelpPopup = document.getElementById("text_for_welcomeTextHelpPopupFR").innerHTML ;
