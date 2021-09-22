@@ -377,6 +377,7 @@ for (let i = 0; i < elementsToHide.length; i++) {
      elementsToHide[i].style.display = "block";
      }
 }
+}
 });
 
 
