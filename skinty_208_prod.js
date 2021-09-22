@@ -51,6 +51,15 @@ welcomeTextHelpPopup = document.getElementById("text_for_welcomeTextHelpPopupEN"
 }	
 document.getElementById("welcomeTextHelpPopup").innerHTML = welcomeTextHelpPopup ;
 // END OF LOCALISATION INSIDE HELP POPUP
+// LOCALISATION SHOW ON EXIT
+let showOnExit ;
+if (pageUrl.includes("/fr/")) {
+showOnExit = document.getElementById("show_on_exitFR").innerText ;
+} else {
+showOnExit = document.getElementById("show_on_exitEN").innerText ;
+}	
+document.getElementById("show_on_exit").innerHTML = showOnExit ;
+// END OF LOCALISATION SHOW ON EXIT
 
 // FOR SKINTY MODAL ON EXIT
 
