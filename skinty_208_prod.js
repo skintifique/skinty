@@ -48,12 +48,14 @@ let showOnExit ;
 if (pageUrl.includes("/fr/")) {
 welcomeTextHelpPopup = document.getElementById("text_for_welcomeTextHelpPopupFR").value ;
 show_on_exit = document.getElementById("show_on_exitFR").value ;
+show_digital_assistant = document.getElementById("show_digital_assistantFR").value ;	
 } else {
 welcomeTextHelpPopup = document.getElementById("text_for_welcomeTextHelpPopupEN").value ;
 show_on_exit = document.getElementById("show_on_exitEN").value ;
+show_digital_assistant = document.getElementById("show_digital_assistantEN").value ;
 }	
 document.getElementById("welcomeTextHelpPopup").innerHTML = welcomeTextHelpPopup ;
-document.getElementById("show_on_exit").innerHTML = show_on_exit ;
+//document.getElementById("show_on_exit").innerHTML = show_on_exit ;//
 // END OF LOCALISATION
 
 
