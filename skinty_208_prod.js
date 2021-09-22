@@ -45,9 +45,9 @@ window.setTimeout(showFbMessengerWidget, 4500);
 let pageUrl = window.location.href ;
 let welcomeTextHelpPopup ;
 if (pageUrl.includes("/fr/")) {
-welcomeTextHelpPopup = "testtesttest" ;
+welcomeTextHelpPopup = document.getElementById("text_for_welcomeTextHelpPopupEN").innerText ;
 } else {
-welcomeTextHelpPopup = document.getElementById("text_for_welcomeTextHelpPopupEN").innerHTML ;
+welcomeTextHelpPopup = document.getElementById("text_for_welcomeTextHelpPopupEN").innerText ;
 }	
 document.getElementById("welcomeTextHelpPopup").innerHTML = welcomeTextHelpPopup ;
 // END OF LOCALISATION INSIDE HELP POPUP
