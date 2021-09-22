@@ -371,12 +371,14 @@ let classToOpen = x_value ;
 let elementsToHide = document.getElementsByClassName(classToOpen) ;
 for (let i = 0; i < elementsToHide.length; i++) {
      let y = elementsToHide[i].style.display ;
-     if (y == "block") {
+     if (!y) {
+     elementsToHide[i].style.display = "block";
+     } else if (y == "block") {
      elementsToHide[i].style.display = "none";
      } else {
      elementsToHide[i].style.display = "block";
      }
-}
+   }
 }
 });
 
