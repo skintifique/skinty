@@ -45,7 +45,7 @@ window.setTimeout(showFbMessengerWidget, 4500);
 let pageUrl = window.location.href ;
 let welcomeTextHelpPopup ;
 if (pageUrl.includes("/fr/")) {
-welcomeTextHelpPopup = document.getElementById("text_for_welcomeTextHelpPopupFR").innerHTML ;
+welcomeTextHelpPopup = "testtesttest" ;
 } else {
 welcomeTextHelpPopup = document.getElementById("text_for_welcomeTextHelpPopupEN").innerHTML ;
 }	
