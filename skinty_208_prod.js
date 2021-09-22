@@ -359,13 +359,13 @@ function closeChatPopup() {
 document.addEventListener("click", function(){
 let x = event.target ;
 let x_class = x.className ;
-if (x_class === "openInSkintyModal") {
-  document.getElementById("dev1").innerHTML = "Element clicked3";
+if (x_class.includes("openInSkintyModal") {
+  document.getElementById("dev1").innerHTML = "Element clicked7";
   openSkintyModal(x) ;
- } else if (x_class === "openHelpPopup") {
+ } else if (x_class.includes("openHelpPopup") {
   openHelpPopup() ;
-} else if (x_class === "openAccordion") {
-document.getElementById("dev1").innerHTML = "test6" ;
+} else if (x_class.includes("openAccordion") {
+document.getElementById("dev1").innerHTML = "test7" ;
 let x_value = x.value ;
 let classToOpen = x_value ;
 let elementsToHide = document.getElementsByClassName(classToOpen) ;
