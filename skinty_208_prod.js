@@ -41,8 +41,16 @@ window.setTimeout(openHelpPopup, 4000);
 window.setTimeout(showFbMessengerWidget, 4500);
 }
 
-document.getElementById("welcomeTextHelpPopup").innerHTML = "Hello! How can we help?" ;
-
+// LOCALISATION INSIDE HELP POPUP
+let pageUrl = window.session.href ;
+let welcomeTextHelpPopup ;
+if (pageUrl.includes("/fr/")) {
+welcomeTextHelpPopup = document.getElementById("welcomeTextHelpPopupFR").innerHTML ;
+} else {
+welcomeTextHelpPopup = document.getElementById("welcomeTextHelpPopupEN").innerHTML ;
+}	
+document.getElementById("welcomeTextHelpPopup").innerHTML = welcomeTextHelpPopup ;
+// END OF LOCALISATION INSIDE HELP POPUP
 
 // FOR SKINTY MODAL ON EXIT
 
