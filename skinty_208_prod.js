@@ -405,7 +405,11 @@ for (let i = 0; i < elementsToHide.length; i++) {
      } else {
      elementsToHide[i].style.display = "block";
      }
-} else if (y_class.includes("openHelpPopup")) {
+     }
+} else if (y_class.includes("openInSkintyModal")) {
+// document.getElementById("dev1").innerHTML = "Element clicked7";
+  openSkintyModal(x) ;
+ } else if (y_class.includes("openHelpPopup")) {
   openHelpPopup() ;
 } else if (y_class.includes("openAccordion")) {
 // document.getElementById("dev1").innerHTML = "test7" ;
@@ -421,7 +425,7 @@ for (let i = 0; i < elementsToHide.length; i++) {
      } else {
      elementsToHide[i].style.display = "block";
      }
-}
+     }
 }
 });
 
