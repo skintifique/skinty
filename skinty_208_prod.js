@@ -384,6 +384,8 @@ function closeChatPopup() {
 document.addEventListener("click", function(){
 let x = event.target ;
 let x_class = x.className ;
+let y = x.parentElement ;
+let y_class = y.className ;
 if (x_class.includes("openInSkintyModal")) {
 // document.getElementById("dev1").innerHTML = "Element clicked7";
   openSkintyModal(x) ;
@@ -395,15 +397,31 @@ let x_value = x.value ;
 let classToOpen = x_value ;
 let elementsToHide = document.getElementsByClassName(classToOpen) ;
 for (let i = 0; i < elementsToHide.length; i++) {
-     let y = elementsToHide[i].style.display ;
-     if (!y) {
+     let z = elementsToHide[i].style.display ;
+     if (!z) {
      elementsToHide[i].style.display = "block";
-     } else if (y == "block") {
+     } else if (z == "block") {
      elementsToHide[i].style.display = "none";
      } else {
      elementsToHide[i].style.display = "block";
      }
-   }
+} else if (y_class.includes("openHelpPopup")) {
+  openHelpPopup() ;
+} else if (y_class.includes("openAccordion")) {
+// document.getElementById("dev1").innerHTML = "test7" ;
+let y_value = y.value ;
+let classToOpen = y_value ;
+let elementsToHide = document.getElementsByClassName(classToOpen) ;
+for (let i = 0; i < elementsToHide.length; i++) {
+     let z = elementsToHide[i].style.display ;
+     if (!z) {
+     elementsToHide[i].style.display = "block";
+     } else if (z == "block") {
+     elementsToHide[i].style.display = "none";
+     } else {
+     elementsToHide[i].style.display = "block";
+     }
+}
 }
 });
 
