@@ -385,7 +385,6 @@ function closeChatPopup() {
 document.addEventListener("click", function(){
 let x = event.target ;
 let x_class = x.className ;
-let x_innerText = x.innerText ;
 let y = x.parentElement ;
 let y_class = y.className ;
 if (x_class.includes("openInSkintyModal")) {
@@ -428,8 +427,6 @@ for (let i = 0; i < elementsToHide.length; i++) {
      elementsToHide[i].style.display = "block";
      }
      }
-} else if (x_innerText.includes("Help & FAQ") {
-openHelpPopup() ;
 }	   
 });
 
