@@ -608,6 +608,7 @@ var offsetRect = elemRectTop + bodyRectTop ;
 // if (window.pageYOffset > sticky + 50) {
   elmtToStick.classList.add("sticky") ;
   elmtToStick.classList.add("btn-style7");
+  elmtToStick.style.background-color = "white" ;	 
   } else {
     elmtToStick.classList.remove("sticky");
     elmtToStick.classList.remove("btn-style7");
