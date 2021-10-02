@@ -581,7 +581,6 @@ document.getElementById("skintyframe").src = skintyPageUrl + "/call_us.html" ;
 }
 
 <!-- Start of script to get add-to-cart buttons on product pages to get sticky -->
-if (pageUrl.includes("/49-")) {
 window.onscroll = function() {myFunctionSticky()};
 let x = document.getElementsByClassName("add-to-cart") ;
 let navbar = x[0] ;
@@ -593,6 +592,8 @@ var sticky = navbar.offsetTop;
 }
 
 function myFunctionSticky() {
+let pageUrl2 = window.location.href ;
+if (pageUrl2.includes("/49-")) {
   if (window.pageYOffset >= sticky) {
     navbar.classList.add("sticky")
     navbar.classList.add("btn-style7");
