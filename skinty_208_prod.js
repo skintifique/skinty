@@ -594,10 +594,10 @@ var sticky = parentElmtToStick.offsetTop;
 
 function myFunctionSticky() {
   if (window.pageYOffset > sticky + 50) {
-    elmtToStick.classList.add("sticky")
+    parentElmtToStick.classList.add("sticky")
     elmtToStick.classList.add("btn-style7");
   } else {
-    elmtToStick.classList.remove("sticky");
+    parentElmtToStick.classList.remove("sticky");
     elmtToStick.classList.remove("btn-style7");
   }
 }
