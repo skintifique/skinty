@@ -584,10 +584,10 @@ document.getElementById("skintyframe").src = skintyPageUrl + "/call_us.html" ;
 let pageUrlSticky = window.location.href ;
 if (pageUrlSticky.includes("/49-")) {
 window.onscroll = function() {myFunctionSticky()};
-let x = document.getElementsByClassName("add") ;
+let x = document.getElementsByClassName("add-to-cart") ;
 let elmtToStick = x[0] ;
 let elmtToStickClass = elmtToStick.className ;
-if ((elmtToStickClass.includes("add")) && (elmtToStickClass.includes("add"))) {
+if ((elmtToStickClass.includes("btn-primary")) && (elmtToStickClass.includes("btn-lg"))) {
 let parentElmtToStick = elmtToStick.parentElement ;
 var sticky = parentElmtToStick.offsetTop;
 }
