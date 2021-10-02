@@ -594,7 +594,7 @@ var sticky = parentElmtToStick.offsetTop;
 
 function myFunctionSticky() {
   if (window.pageYOffset > sticky + 50) {
-    parentElmtToStick.classList.add("sticky")
+    parentElmtToStick.classList.add("sticky") ;
     elmtToStick.classList.add("btn-style7");
   } else {
     parentElmtToStick.classList.remove("sticky");
