@@ -580,6 +580,32 @@ function callUs () {
 document.getElementById("skintyframe").src = skintyPageUrl + "/call_us.html" ;
 }
 
+<!-- Start of script to get add-to-cart buttons on product pages to get sticky -->
+if (pageUrl.includes("/shop/")) {
+window.onscroll = function() {myFunction()};
+let x = document.getElementsByClassName("add-to-cart") ;
+let navbar = x[0] ;
+let navbarClass = navbar.className ;
+if ((navbarClass.includes("btn-primary")) && (navbarClass.includes("btn-lg"))) {
+
+//var navbar = document.getElementById("navbarOLD");
+var sticky = navbar.offsetTop;
+}
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+    navbar.classList.add("btn-style7");
+  } else {
+    navbar.classList.remove("sticky");
+    navbar.classList.remove("btn-style7");
+  }
+}
+}
+
+<!-- End of script to get add-to-cart buttons on product pages to get sticky -->
+
+
 //<!-- Start of skintifique Zendesk Widget script -->
 //<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=a11224ff-78c1-49da-8419-1a8006595ef5"> </script>
 //<script type="text/javascript">
@@ -617,29 +643,3 @@ document.getElementById("skintyframe").src = skintyPageUrl + "/call_us.html" ;
 <!-- Start Typeform script -->
 (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })()
 <!-- End of Typeform script -->
-
-<!-- Start of script to get add-to-cart buttons on product pages to get sticky -->
-if (pageUrl.includes("/shop/")) {
-window.onscroll = function() {myFunction()};
-let x = document.getElementsByClassName("add-to-cart") ;
-let navbar = x[0] ;
-let navbarClass = navbar.className ;
-if ((navbarClass.includes("btn-primary")) && (navbarClass.includes("btn-lg"))) {
-
-//var navbar = document.getElementById("navbarOLD");
-var sticky = navbar.offsetTop;
-}
-
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
-    navbar.classList.add("btn-style7");
-  } else {
-    navbar.classList.remove("sticky");
-    navbar.classList.remove("btn-style7");
-  }
-}
-}
-
-<!-- End of script to get add-to-cart buttons on product pages to get sticky -->
-
