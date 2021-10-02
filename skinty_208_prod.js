@@ -582,7 +582,7 @@ document.getElementById("skintyframe").src = skintyPageUrl + "/call_us.html" ;
 
 <!-- Start of script to get add-to-cart buttons on product pages to get sticky -->
 if (pageUrl.includes("/shop/")) {
-window.onscroll = function() {myFunction()};
+window.onscroll = function() {myFunctionSticky()};
 let x = document.getElementsByClassName("add-to-cart") ;
 let navbar = x[0] ;
 let navbarClass = navbar.className ;
@@ -592,7 +592,7 @@ if ((navbarClass.includes("btn-primary")) && (navbarClass.includes("btn-lg"))) {
 var sticky = navbar.offsetTop;
 }
 
-function myFunction() {
+function myFunctionSticky() {
   if (window.pageYOffset >= sticky) {
     navbar.classList.add("sticky")
     navbar.classList.add("btn-style7");
