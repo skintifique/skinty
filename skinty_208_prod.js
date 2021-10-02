@@ -581,7 +581,7 @@ document.getElementById("skintyframe").src = skintyPageUrl + "/call_us.html" ;
 }
 
 <!-- Start of script to get add-to-cart buttons on product pages to get sticky -->
-if (pageUrl.includes("/shop/")) {
+if (pageUrl.includes("/49-")) {
 window.onscroll = function() {myFunctionSticky()};
 let x = document.getElementsByClassName("add-to-cart") ;
 let navbar = x[0] ;
