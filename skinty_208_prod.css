@@ -279,3 +279,45 @@
   color: rgba(45,133,154,1);
   cursor: pointer;
 }
+
+/* css to get add-to-cart btn on product pages sticky */
+#navbar {
+  overflow: hidden;
+  background-color: #white;
+}
+
+#navbar button {
+  float: center;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar button:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#navbar button.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 5px;
+  width: 98%;
+  margin-left: 1% ;
+  
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
