@@ -607,10 +607,10 @@ var offsetRect = elemRectTop + bodyRectTop ;
  if (offsetRect < 0 ){
 // if (window.pageYOffset > sticky + 50) {
   elmtToStick.classList.add("sticky") ;
-  elmtToStick.classList.add("btn-style7"); 
+//  elmtToStick.classList.add("btn-style7"); 
   } else {
     elmtToStick.classList.remove("sticky");
-    elmtToStick.classList.remove("btn-style7");
+ //   elmtToStick.classList.remove("btn-style7");
   }
 }
 }
