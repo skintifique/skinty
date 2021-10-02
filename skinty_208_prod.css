@@ -315,7 +315,7 @@
   top: 5px;
   width: 98%;
   margin-left: 1% ;
-  
+  z-index: 99999;
 }
 
 .sticky + .content {
