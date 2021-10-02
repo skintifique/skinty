@@ -581,25 +581,24 @@ document.getElementById("skintyframe").src = skintyPageUrl + "/call_us.html" ;
 }
 
 <!-- Start of script to get add-to-cart buttons on product pages to get sticky -->
+let pageUrlSticky = window.location.href ;
+if (pageUrlSticky.includes("/49-")) {
 window.onscroll = function() {myFunctionSticky()};
 let x = document.getElementsByClassName("add-to-cart") ;
-let navbar = x[0] ;
-let navbarClass = navbar.className ;
-if ((navbarClass.includes("btn-primary")) && (navbarClass.includes("btn-lg"))) {
-
-//var navbar = document.getElementById("navbarOLD");
-var sticky = navbar.offsetTop;
+let elmtToStick = x[0] ;
+let elmtToStickClass = elmtToStick.className ;
+if ((elmtToStickClass.includes("btn-primary")) && (elmtToStickClass.includes("btn-lg"))) {
+let parentElmtToStick = elmtToStick.parentElement ;
+var sticky = parentElmtToStick.offsetTop;
 }
 
 function myFunctionSticky() {
-let pageUrl2 = window.location.href ;
-if (pageUrl2.includes("/490000000000000-")) {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
-    navbar.classList.add("btn-style7");
+  if (window.pageYOffset > sticky + 50) {
+    elmtToStick.classList.add("sticky")
+    elmtToStick.classList.add("btn-style7");
   } else {
-    navbar.classList.remove("sticky");
-    navbar.classList.remove("btn-style7");
+    elmtToStick.classList.remove("sticky");
+    elmtToStick.classList.remove("btn-style7");
   }
 }
 }
