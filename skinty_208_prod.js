@@ -593,7 +593,7 @@ var sticky = navbar.offsetTop;
 
 function myFunctionSticky() {
 let pageUrl2 = window.location.href ;
-if (pageUrl2.includes("/49-")) {
+if (pageUrl2.includes("/490000000000000-")) {
   if (window.pageYOffset >= sticky) {
     navbar.classList.add("sticky")
     navbar.classList.add("btn-style7");
