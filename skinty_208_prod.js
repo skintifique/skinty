@@ -582,20 +582,32 @@ document.getElementById("skintyframe").src = skintyPageUrl + "/call_us.html" ;
 
 <!-- Start of script to get add-to-cart buttons on product pages to get sticky -->
 let pageUrlSticky = window.location.href ;
+let elemToStick ;
+let elemRectTop ;
+let bodyRectTop ;
 if (pageUrlSticky.includes("/49-")) {
 window.onscroll = function() {myFunctionSticky()};
-let x = document.getElementsByClassName("add-to-cart") ;
-let elmtToStick = x[0] ;
-let elmtToStickClass = elmtToStick.className ;
-if ((elmtToStickClass.includes("btn-primary")) && (elmtToStickClass.includes("btn-lg"))) {
-let parentElmtToStick = elmtToStick.parentElement ;
-var sticky = parentElmtToStick.offsetTop;
+let xAddToCart = document.getElementsByClassName("add-to-cart") ;
+let elmtToTest = xAddToCart[0] ;
+let elmtToStick ;
+let elmtToTestClass = elmtToTest.className ;
+if ((elmtToTestClass.includes("btn-primary")) && (elmtToTestClass.includes("btn-lg"))) {
+elmtToStick = elmtToTest ;
+//document.getElementById("dev1").innerHTML = elmtToStick.className ;
+let elemRect = elmtToStick.getBoundingClientRect() ;
+elemRectTop = elemRect.top ;
 }
 
 function myFunctionSticky() {
-  if (window.pageYOffset > sticky + 50) {
-    elmtToStick.classList.add("sticky") ;
-    elmtToStick.classList.add("btn-style7");
+var bodyRect = document.body.getBoundingClientRect() ;
+//document.getElementById("dev3").innerHTML = elemRectTop ;
+bodyRectTop = bodyRect.top ;
+var offsetRect = elemRectTop + bodyRectTop ;
+//document.getElementById("dev2").innerHTML = offsetRect ;
+ if (offsetRect < 0 ){
+// if (window.pageYOffset > sticky + 50) {
+  elmtToStick.classList.add("sticky") ;
+  elmtToStick.classList.add("btn-style7");
   } else {
     elmtToStick.classList.remove("sticky");
     elmtToStick.classList.remove("btn-style7");
