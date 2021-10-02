@@ -619,7 +619,6 @@ document.getElementById("skintyframe").src = skintyPageUrl + "/call_us.html" ;
 <!-- End of Typeform script -->
 
 <!-- Start of script to get add-to-cart buttons on product pages to get sticky -->
-let pageUrl = window.location.href ;
 if (pageUrl.includes("/shop/")) {
 window.onscroll = function() {myFunction()};
 let x = document.getElementsByClassName("add-to-cart") ;
