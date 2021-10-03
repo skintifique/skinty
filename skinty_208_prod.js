@@ -35,11 +35,13 @@ if (skintySessionPage) {
 	skintySessionPage_updated = 1 ;
 }	
 sessionStorage.setItem("skintySessionPage",skintySessionPage_updated) ;
-let nbHelpPopupOpen = sessionStorage.getItem("nbHelpPopupOpen");
-if ((nbHelpPopupOpen != "1") && (skintySessionPage_updated == floatingBtnPopUp_displayPage)) {
-window.setTimeout(openHelpPopup, 4000);
-window.setTimeout(showFbMessengerWidget, 4500);
-}
+// the parameters just above may be used when assessing whether to show SkintyModal on exit, while code below is used to trigger the HelpPopup automatically
+// at the present time, the code below is inactivated. the if condition will need to be verified before reactivating
+//let nbHelpPopupOpen = sessionStorage.getItem("nbHelpPopupOpen");
+//if ((nbHelpPopupOpen != "1") && (skintySessionPage_updated == floatingBtnPopUp_displayPage)) {
+// window.setTimeout(openHelpPopup, 4000);
+// window.setTimeout(showFbMessengerWidget, 4500);
+// }
 
 // LOCALISATION
 let pageUrl = window.location.href ;
