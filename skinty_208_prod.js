@@ -585,36 +585,52 @@ let pageUrlSticky = window.location.href ;
 let elemToStick ;
 let elemRectTop ;
 let bodyRectTop ;
-if (pageUrlSticky.includes("/49-")) {
-window.onscroll = function() {myFunctionSticky()};
-let xAddToCart = document.getElementsByClassName("add-to-cart") ;
-let elmtToTest = xAddToCart[0] ;
+if (pageUrlSticky.includes("try")) {
+let x = document.getElementsByClassName("add-to-cart");
+let elmtToTest = x[0] ;
 let elmtToStick ;
 let elmtToTestClass = elmtToTest.className ;
+//document.getElementById("dev1").innerHTML = elmtToTestClass ;
 if ((elmtToTestClass.includes("btn-primary")) && (elmtToTestClass.includes("btn-lg"))) {
 elmtToStick = elmtToTest ;
-//document.getElementById("dev1").innerHTML = elmtToStick.className ;
+//document.getElementById("dev2").innerHTML = elmtToStick.className ;
 let elemRect = elmtToStick.getBoundingClientRect() ;
 elemRectTop = elemRect.top ;
+//document.getElementById("dev3").innerHTML = elemRectTop ;
+//let parentElmtToStick = elmtToStick.parentElement ;
+//parentElmtToStick.classList.add("sticky") ;
+//elmtToStick.classList.add("sticky") ;
+//var sticky = parentElmtToStick.offsetTop;
+//document.getElementById("dev1").innerHTML = parentElmtToStick.id ;
+window.onscroll = function() {myFunctionSticky()};
 }
 
 function myFunctionSticky() {
 var bodyRect = document.body.getBoundingClientRect() ;
-//document.getElementById("dev3").innerHTML = elemRectTop ;
 bodyRectTop = bodyRect.top ;
 var offsetRect = elemRectTop + bodyRectTop ;
-//document.getElementById("dev2").innerHTML = offsetRect ;
- if (offsetRect < 0 ){
-// if (window.pageYOffset > sticky + 50) {
-  elmtToStick.classList.add("sticky") ;
-//  elmtToStick.classList.add("btn-style7"); 
+//document.getElementById("dev4").innerHTML = offsetRect ;
+if (offsetRect < 40 ){
+// document.getElementById("dev5").innerHTML = "target" ;
+//    elmtToTest.classList.add("btn-style7","sticky");
+      document.getElementsByClassName("add-to-cart")[0].style.setProperty("transform", "translateZ(0)");
+      document.getElementsByClassName("add-to-cart")[0].classList.add("btn-style7","sticky") ;
+// this will remove the property 1 frame later
+     requestAnimationFrame(() => {
+     elmtToTest.style.removeProperty("transform");         
+        });
   } else {
-    elmtToStick.classList.remove("sticky");
- //   elmtToStick.classList.remove("btn-style7");
+//   document.getElementById("dev5").innerHTML = "off target" ;
+//   elmtToTest.classList.remove("btn-style7","sticky");
+     document.getElementsByClassName("add-to-cart")[0].style.setProperty("transform", "translateZ(0)");
+     document.getElementsByClassName("add-to-cart")[0].classList.remove("btn-style7","sticky") ;
+// this will remove the property 1 frame later
+     requestAnimationFrame(() => {
+     elmtToTest.style.removeProperty("transform");     
+        });
   }
 }
 }
-
 <!-- End of script to get add-to-cart buttons on product pages to get sticky -->
 
 
