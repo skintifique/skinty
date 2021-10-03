@@ -585,7 +585,7 @@ let pageUrlSticky = window.location.href ;
 let elemToStick ;
 let elemRectTop ;
 let bodyRectTop ;
-if (pageUrlSticky.includes("try")) {
+if (pageUrlSticky.includes("/49-")) {
 let x = document.getElementsByClassName("add-to-cart");
 let elmtToTest = x[0] ;
 let elmtToStick ;
