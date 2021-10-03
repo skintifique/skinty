@@ -582,19 +582,16 @@ document.getElementById("skintyframe").src = skintyPageUrl + "/call_us.html" ;
 
 <!-- Start of script to get add-to-cart buttons on product pages to get sticky -->
 let pageUrlSticky = window.location.href ;
-let elemToStick ;
 let elemRectTop ;
 let bodyRectTop ;
 if (pageUrlSticky.includes("/49-")) {
 let x = document.getElementsByClassName("add-to-cart");
-let elmtToTest = x[0] ;
-let elmtToStick ;
-let elmtToTestClass = elmtToTest.className ;
+let elemToStick = x[0] ;
+let elemToStickClass = elemToStick.className ;
 //document.getElementById("dev1").innerHTML = elmtToTestClass ;
-if ((elmtToTestClass.includes("btn-primary")) && (elmtToTestClass.includes("btn-lg"))) {
-elmtToStick = elmtToTest ;
+if ((elemToStickClass.includes("btn-primary")) && (elemToStickClass.includes("btn-lg"))) {
 //document.getElementById("dev2").innerHTML = elmtToStick.className ;
-let elemRect = elmtToStick.getBoundingClientRect() ;
+let elemRect = elemToStick.getBoundingClientRect() ;
 elemRectTop = elemRect.top ;
 //document.getElementById("dev3").innerHTML = elemRectTop ;
 //let parentElmtToStick = elmtToStick.parentElement ;
@@ -614,19 +611,19 @@ if (offsetRect < 40 ){
 // document.getElementById("dev5").innerHTML = "target" ;
 //    elmtToTest.classList.add("btn-style7","sticky");
       document.getElementsByClassName("add-to-cart")[0].style.setProperty("transform", "translateZ(0)");
-      document.getElementsByClassName("add-to-cart")[0].classList.add("btn-style7","sticky") ;
+      document.getElementsByClassName("add-to-cart")[0].classList.add("sticky") ;
 // this will remove the property 1 frame later
      requestAnimationFrame(() => {
-     elmtToTest.style.removeProperty("transform");         
+     elemToStick.style.removeProperty("transform");         
         });
   } else {
 //   document.getElementById("dev5").innerHTML = "off target" ;
 //   elmtToTest.classList.remove("btn-style7","sticky");
      document.getElementsByClassName("add-to-cart")[0].style.setProperty("transform", "translateZ(0)");
-     document.getElementsByClassName("add-to-cart")[0].classList.remove("btn-style7","sticky") ;
+     document.getElementsByClassName("add-to-cart")[0].classList.remove("sticky") ;
 // this will remove the property 1 frame later
      requestAnimationFrame(() => {
-     elmtToTest.style.removeProperty("transform");     
+     elemToStick.style.removeProperty("transform");     
         });
   }
 }
