@@ -586,21 +586,13 @@ document.getElementById("skintyframe").src = skintyPageUrl + "/call_us.html" ;
 let pageUrlSticky = window.location.href ;
 let elemRectTop ;
 let bodyRectTop ;
-if (pageUrlSticky.includes("/49-")) {
+if (pageUrlSticky.includes(".me/shop/")) {
 let x = document.getElementsByClassName("add-to-cart");
 let elemToStick = x[0] ;
 let elemToStickClass = elemToStick.className ;
-//document.getElementById("dev1").innerHTML = elmtToTestClass ;
 if ((elemToStickClass.includes("btn-primary")) && (elemToStickClass.includes("btn-lg"))) {
-//document.getElementById("dev2").innerHTML = elmtToStick.className ;
 let elemRect = elemToStick.getBoundingClientRect() ;
 elemRectTop = elemRect.top ;
-//document.getElementById("dev3").innerHTML = elemRectTop ;
-//let parentElmtToStick = elmtToStick.parentElement ;
-//parentElmtToStick.classList.add("sticky") ;
-//elmtToStick.classList.add("sticky") ;
-//var sticky = parentElmtToStick.offsetTop;
-//document.getElementById("dev1").innerHTML = parentElmtToStick.id ;
 window.onscroll = function() {myFunctionSticky()};
 }
 
@@ -610,8 +602,7 @@ bodyRectTop = bodyRect.top ;
 var offsetRect = elemRectTop + bodyRectTop ;
 //document.getElementById("dev4").innerHTML = offsetRect ;
 if (offsetRect < 40 ){
-// document.getElementById("dev5").innerHTML = "target" ;
-//    elmtToTest.classList.add("btn-style7","sticky");
+// required to force repaint on webkit
       document.getElementsByClassName("add-to-cart")[0].style.setProperty("transform", "translateZ(0)");
       document.getElementsByClassName("add-to-cart")[0].classList.add("sticky") ;
 // this will remove the property 1 frame later
@@ -619,8 +610,7 @@ if (offsetRect < 40 ){
      elemToStick.style.removeProperty("transform");         
         });
   } else {
-//   document.getElementById("dev5").innerHTML = "off target" ;
-//   elmtToTest.classList.remove("btn-style7","sticky");
+// required to force repaint on webkit
      document.getElementsByClassName("add-to-cart")[0].style.setProperty("transform", "translateZ(0)");
      document.getElementsByClassName("add-to-cart")[0].classList.remove("sticky") ;
 // this will remove the property 1 frame later
