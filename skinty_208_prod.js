@@ -586,7 +586,7 @@ document.getElementById("skintyframe").src = skintyPageUrl + "/call_us.html" ;
 let pageUrlSticky = window.location.href ;
 let elemRectTop ;
 let bodyRectTop ;
-if (pageUrlSticky.includes(".me/shop/")) {
+if (pageUrlSticky.includes("/shop/")) {
 let x = document.getElementsByClassName("add-to-cart");
 let elemToStick = x[0] ;
 let elemToStickClass = elemToStick.className ;
