@@ -625,7 +625,6 @@ if (offsetRect < 40 ){
 <!-- Start script to add additional style to specific pages -->
 let additional_page_style = document.getElementById("additional-page-style").value ;
 if (additional_page_style) {	
-document.getElementById("dev1").innerHTML = additional_page_style ;
 let wrapper_elmt = document.getElementById("wrapper") ;
 wrapper_elmt.classList.add(additional_page_style);
 }
