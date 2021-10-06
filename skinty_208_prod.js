@@ -660,3 +660,10 @@ if (offsetRect < 40 ){
 <!-- Start Typeform script -->
 (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })()
 <!-- End of Typeform script -->
+<!-- Start script to add additional style to specific pages -->
+let additional_page_style = getElementById("additional-page-style").value ;
+if (additional_page_style) {
+document.getElementById("dev1").innerHTML = additional_page_style ;
+body.classList.add(additional_page_style);	
+ }
+<!-- End script to add additional style to specific pages -->
