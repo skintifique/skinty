@@ -664,6 +664,6 @@ if (offsetRect < 40 ){
 let additional_page_style = getElementById("additional-page-style").value ;
 if (additional_page_style) {
 document.getElementById("dev1").innerHTML = additional_page_style ;
-body.classList.add(additional_page_style);	
+//body.classList.add(additional_page_style);	//
  }
 <!-- End script to add additional style to specific pages -->
