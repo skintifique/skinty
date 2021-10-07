@@ -1,6 +1,6 @@
 <!-- Start script to add additional style to specific pages -->
 let additional_header_style = document.getElementById("additional-header-style").value ;
-document.getElementById("dev3").innerHTML = "2" ;
+// document.getElementById("dev3").innerHTML = "2" ;
 if (additional_header_style) {	
 let cms_elmt = document.getElementById("cms") ;
 cms_elmt.classList.add(additional_header_style) ;
