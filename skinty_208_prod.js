@@ -1,11 +1,14 @@
 <!-- Start script to add additional style to specific pages -->
-let additional_header_style = document.getElementById("additional-header-style").value ;
-// document.getElementById("dev3").innerHTML = "2" ;
-if (additional_header_style) {	
-let cms_elmt = document.getElementById("cms") ;
-cms_elmt.classList.add(additional_header_style) ;
-}
+// THE SCRIPT BELOW ADDS A header-styleX STYLE TO THE #CMS WHEN THE PAGE CONTAINS AN #additional-header-style element with the value="header-styleX"
+// HOWEVER THE CUSTEX IS NOT GREAT HAS SHE CAN SEE THE PAGE MOVING UP WHEN THE JS PLAYS
+// THIS SCRIPT IS THEREFORE COMMENTED OUT FOR NOW AND THE OPERATION IS DONE THROUGH CSS DIRECTLY ON THE THEME
+//let additional_header_style = document.getElementById("additional-header-style").value ;
+//if (additional_header_style) {	
+//let cms_elmt = document.getElementById("cms") ;
+//cms_elmt.classList.add(additional_header_style) ;
+//}
 
+// THE SCRIPT BELOW ADDS A product-styleX STYLE TO THE PRODUCT PAGE #wrapper WHEN THE PAGE CONTAINS AN #additional-product-style element with the value="product-styleX"
 let additional_product_style = document.getElementById("additional-product-style").value ;
 if (additional_product_style) {	
 let wrapper_elmt = document.getElementById("wrapper") ;
