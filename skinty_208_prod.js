@@ -396,6 +396,11 @@ if (x_class.includes("openInSkintyModal")) {
   openHelpPopup() ;
 } else if (x_class.includes("openAccordion")) {
 // document.getElementById("dev1").innerHTML = "test7" ;
+// hide all the Elements with class accordionContent //
+let all_accordions = document.getElementsByClassName("accordionContent") ;
+for (let i = 0; i < all_accordions.length; i++) {
+     all_accordions[i].style.display = "none";
+     } 	
 let x_value = x.value ;
 let classToOpen = x_value ;
 let elementsToHide = document.getElementsByClassName(classToOpen) ;
