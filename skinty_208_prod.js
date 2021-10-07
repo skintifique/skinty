@@ -634,7 +634,7 @@ let wrapper_elmt = document.getElementById("wrapper") ;
 wrapper_elmt.classList.add(additional_product_style);
 }
 let additional_header_style = document.getElementById("additional-header-style").value ;
-document.getElementById("dev2").innerHTML = "additional_header_style" ;
+document.getElementById("dev3").innerHTML = "additional_header_style" ;
 if (additional_header_style) {	
 let cms_elmt = document.getElementById("cms") ;
 cms_elmt.classList.add(additional_header_style);
