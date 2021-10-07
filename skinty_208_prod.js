@@ -628,10 +628,15 @@ if (offsetRect < 40 ){
 <!-- End of script to get add-to-cart buttons on product pages to get sticky -->
 
 <!-- Start script to add additional style to specific pages -->
-let additional_page_style = document.getElementById("additional-page-style").value ;
-if (additional_page_style) {	
+let additional_product_style = document.getElementById("additional-product-style").value ;
+if (additional_product_style) {	
 let wrapper_elmt = document.getElementById("wrapper") ;
-wrapper_elmt.classList.add(additional_page_style);
+wrapper_elmt.classList.add(additional_product_style);
+}
+let additional_header_style = document.getElementById("additional-header-style").value ;
+if (additional_header_style) {	
+let wrapper_elmt = document.getElementById("wrapper") ;
+wrapper_elmt.classList.add(additional_header_style);
 }
  
 <!-- End script to add additional style to specific pages -->
