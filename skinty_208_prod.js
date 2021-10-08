@@ -652,7 +652,7 @@ iqitmegamenu.addEventListener("mouseover",loadMenuImages) ;
 
 function loadMenuImages () {
 let dev1 = document.getElementById("dev1") ;
-if !(dev1)  {
+if (dev1)  {
 document.getElementById("dev1").innerHTML = "a" ;
 	}
 	}
