@@ -646,6 +646,17 @@ wrapper_elmt.classList.add(additional_product_style);
  
 <!-- End script to add additional style to specific pages -->
 
+<!-- Start script to load top menu images (desktop) only when user needs them -->
+let iqitmegamenu =document.getElementById("iqitmegamenu-wrapper") ;
+iqitmegamenu.addEventListerner("mouseover",loadMenuImages) ;
+
+function loadMenuImages () {
+let img-menu1 = document.getElementById("img-menu1").getAttribute("data-menu-img") ;
+document.getElementById("img-menu1").src = img-menu1 ;	
+
+}
+<!-- End script to load top menu images (desktop) only when user needs them -->
+
 
 
 //<!-- Start of skintifique Zendesk Widget script -->
