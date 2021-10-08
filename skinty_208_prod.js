@@ -647,8 +647,8 @@ wrapper_elmt.classList.add(additional_product_style);
 <!-- End script to add additional style to specific pages -->
 
 <!-- Start script to load top menu images (desktop) only when user needs them -->
-let iqitmegamenu =document.getElementById("iqitmegamenu-wrapper") ;
-iqitmegamenu.addEventListener("mouseover",loadMenuImages) ;
+let iqitmegamenuXXX =document.getElementById("iqitmegamenu-wrapper") ;
+iqitmegamenuXXX.addEventListener("mouseover",loadMenuImages) ;
 
 function loadMenuImages () {
 document.getElementById("dev1").innerHTML = "a" ;
