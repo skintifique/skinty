@@ -648,7 +648,7 @@ wrapper_elmt.classList.add(additional_product_style);
 
 <!-- Start script to load top menu images (desktop) only when user needs them -->
 let iqitmegamenu =document.getElementById("iqitmegamenu-wrapper") ;
-iqitmegamenu.addEventListerner("mouseover",loadMenuImages) ;
+iqitmegamenu.addEventListener("mouseover",loadMenuImages) ;
 
 function loadMenuImages () {
 let dev1 = document.getElementById("dev1") ;
