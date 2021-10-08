@@ -1,3 +1,4 @@
+document.getElementById("dev1XX").innerHTML = "a" ;
 // IDENTIFY IF BROWSER SUPPORTS WEBP (FOR GIF FILES IN SKINTY)
 // CURRENTLY NOT IN USE
 //async function supportsWebp() {
@@ -651,7 +652,7 @@ wrapper_elmt.classList.add(additional_product_style);
 //iqitmegamenuXXX.addEventListener("mouseover",loadMenuImages) ;
 
 //function loadMenuImages () {
-document.getElementById("dev1XX").innerHTML = "a" ;
+//document.getElementById("dev1XX").innerHTML = "a" ;
 //}
 // let imgMenu1 = document.getElementById("imgMenu1").getAttribute("data-menu-src") ;
 // document.getElementById("img-menu1").src = imgMenu1 ;	
