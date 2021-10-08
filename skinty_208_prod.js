@@ -651,10 +651,14 @@ let iqitmegamenu =document.getElementById("iqitmegamenu-wrapper") ;
 iqitmegamenu.addEventListerner("mouseover",loadMenuImages) ;
 
 function loadMenuImages () {
-let img-menu1 = document.getElementById("img-menu1").getAttribute("data-menu-img") ;
-document.getElementById("img-menu1").src = img-menu1 ;	
-
-}
+let dev1 = document.getElementById("dev1") ;
+if !(dev1)  {
+document.getElementById("dev1").innerHTML : "a" ;
+	}
+	}
+// let img-menu1 = document.getElementById("img-menu1").getAttribute("data-menu-img") ;
+// document.getElementById("img-menu1").src = img-menu1 ;	
+//}
 <!-- End script to load top menu images (desktop) only when user needs them -->
 
 
