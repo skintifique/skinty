@@ -5,7 +5,7 @@ let iqitmegamenuXXX =document.getElementById("header") ;
 iqitmegamenuXXX.addEventListener("mouseover",loadMenuImages) ;
 
 function loadMenuImages () {
-document.getElementById("dev1XX").innerHTML = "12" ;
+document.getElementById("dev1XX").innerHTML = "111" ;
 
  let imgMenu1 = document.getElementById("imgMenu1").getAttribute("data-menu-src") ;
  document.getElementById("imgMenu1").src = imgMenu1 ;	
