@@ -654,11 +654,11 @@ function loadMenuImages () {
 let dev1 = document.getElementById("dev1") ;
 if (dev1)  {
 document.getElementById("dev1").innerHTML = "a" ;
-	
-let imgMenu1 = document.getElementById("imgMenu1").getAttribute("data-menu-src") ;
-document.getElementById("img-menu1").src = imgMenu1 ;	
-   }
+	   }
 }
+// let imgMenu1 = document.getElementById("imgMenu1").getAttribute("data-menu-src") ;
+// document.getElementById("img-menu1").src = imgMenu1 ;	
+
 <!-- End script to load top menu images (desktop) only when user needs them -->
 
 
