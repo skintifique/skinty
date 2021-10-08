@@ -652,7 +652,7 @@ wrapper_elmt.classList.add(additional_product_style);
 
 //function loadMenuImages () {
 document.getElementById("dev1XX").innerHTML = "a" ;
-}
+//}
 // let imgMenu1 = document.getElementById("imgMenu1").getAttribute("data-menu-src") ;
 // document.getElementById("img-menu1").src = imgMenu1 ;	
 
