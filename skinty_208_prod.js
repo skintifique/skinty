@@ -5,11 +5,11 @@ let iqitmegamenuXXX =document.getElementById("header") ;
 iqitmegamenuXXX.addEventListener("mouseover",loadMenuImages) ;
 
 function loadMenuImages () {
-document.getElementById("dev1XX").innerHTML = "11" ;
-}
-// let imgMenu1 = document.getElementById("imgMenu1").getAttribute("data-menu-src") ;
-// document.getElementById("img-menu1").src = imgMenu1 ;	
+document.getElementById("dev1XX").innerHTML = "12" ;
 
+ let imgMenu1 = document.getElementById("imgMenu1").getAttribute("data-menu-src") ;
+ document.getElementById("img-menu1").src = imgMenu1 ;	
+}
 <!-- End script to load top menu images (desktop) only when user needs them -->
 
 
