@@ -4,6 +4,7 @@
 // let iqitmegamenuXXX =document.getElementById("header") ;
 let iqitmegamenu_imgs = document.getElementsByClassName("mega-menu-imgs") ;
 document.getElementById("header").addEventListener("mouseover",loadMenuImages) ;
+document.addEventListener("scroll",loadMenuImages) ;
 
 function loadMenuImages () {
 	for (let i = 0; i < iqitmegamenu_imgs.length; i++) {
