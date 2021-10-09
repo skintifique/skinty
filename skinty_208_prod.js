@@ -1,8 +1,9 @@
 <!-- Start script to load top menu images (desktop) only when user needs them -->
 //let iqitmegamenuXXX =document.getElementById("iqitmegamenu-wrapper") ;
 //iqitmegamenuXXX.addEventListener("mouseover",loadMenuImages) ;
-let iqitmegamenuXXX =document.getElementById("header") ;
-iqitmegamenuXXX.addEventListener("mouseover",loadMenuImages) ;
+// let iqitmegamenuXXX =document.getElementById("header") ;
+let iqitmegamenu_imgs = document.getElementsByClassName("mega-menu-imgs") ;
+document.getElementById("header").addEventListener("mouseover",loadMenuImages) ;
 
 function loadMenuImages () {
 document.getElementById("dev1XX").innerHTML = "111" ;
