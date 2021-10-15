@@ -74,9 +74,9 @@ if (pageUrl.includes("/fr/")) {
 welcomeTextHelpPopup = document.getElementById("text_for_welcomeTextHelpPopupFR").value ;
 show_on_exit = document.getElementById("show_on_exitFR").value ;
 show_digital_assistant = document.getElementById("show_digital_assistantFR").value ;
-document.getElementById("email_link_popup").href = "https://www.skintifique.me/fr/contactez-nous/" ;
-document.getElementById("email_link_modal").href = "https://www.skintifique.me/fr/contactez-nous/" ;
-document.getElementById("faq_link_popup").href = "https://help.skintifique.me/hc/fr" ;
+document.getElementById("email_link_popup").href = "https://www.skintifique.me/shop/fr/72-contactez-nous" ;
+document.getElementById("email_link_modal").href = "https://www.skintifique.me/shop/fr/72-contactez-nous" ;
+document.getElementById("faq_link_popup").href = "https://www.skintifique.me/shop/fr/58-faq" ;
 } else {
 welcomeTextHelpPopup = document.getElementById("text_for_welcomeTextHelpPopupEN").value ;
 show_on_exit = document.getElementById("show_on_exitEN").value ;
