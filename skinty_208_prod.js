@@ -70,6 +70,10 @@ sessionStorage.setItem("skintySessionPage",skintySessionPage_updated) ;
 let pageUrl = window.location.href ;
 let welcomeTextHelpPopup ;
 let showOnExit ;
+// BELOW 2 VARIABLES ARE TO ADD TEXT ABOVE THE DISCOUNT TABLE ON PRODUCT PAGES
+let above_table_text = document.createElement("p");
+let discount_table = document.getElementsByClassName("table-product-discounts")[0] ;
+
 if (pageUrl.includes("/fr/")) {
 welcomeTextHelpPopup = document.getElementById("text_for_welcomeTextHelpPopupFR").value ;
 show_on_exit = document.getElementById("show_on_exitFR").value ;
@@ -77,11 +81,15 @@ show_digital_assistant = document.getElementById("show_digital_assistantFR").val
 document.getElementById("email_link_popup").href = "https://www.skintifique.me/shop/fr/72-contactez-nous" ;
 document.getElementById("email_link_modal").href = "https://www.skintifique.me/shop/fr/72-contactez-nous" ;
 document.getElementById("faq_link_popup").href = "https://www.skintifique.me/shop/fr/58-faq" ;
+above_table_text.innerText = "Bon pour votre peau, bon pour votre portefeuille, bon pour la planete.";
 } else {
 welcomeTextHelpPopup = document.getElementById("text_for_welcomeTextHelpPopupEN").value ;
 show_on_exit = document.getElementById("show_on_exitEN").value ;
 show_digital_assistant = document.getElementById("show_digital_assistantEN").value ;
-}	
+above_table_text.innerText = "Good for your skin, good for your wallet, good for the planet.";
+}
+
+discount_table.insertAdjacentElement("beforebegin",above_table_text);
 document.getElementById("welcomeTextHelpPopup").innerHTML = welcomeTextHelpPopup ;
 if (show_digital_assistant == "no") {
 document.getElementById("skinTyBtnInModal").style.display = "none";
@@ -91,11 +99,11 @@ document.getElementById("ModalBtnFloat").style.display = "none";
 //document.getElementById("show_on_exit").innerHTML = show_on_exit ;//
 // END OF LOCALISATION
 
-// ADD SCRIPT TO ADD BANNER TEXT BEFORE PRICE DISCOUNT TABLE ON PRODUCT PAGE 
-  let above_table_text = document.createElement("p");
-  above_table_text.innerText = "Good for your skin, good for your wallet, good for the planet.";
-  let discount_table = document.getElementsByClassName("table-product-discounts")[0] ;
-  discount_table.insertAdjacentElement("beforebegin",above_table_text);
+// ADD SCRIPT TO ADD BANNER TEXT BEFORE PRICE DISCOUNT TABLE ON PRODUCT PAGE - SHOULD BE TOSSED: ALREADY INCLUDED ABOVE
+//  let above_table_text = document.createElement("p");
+//  above_table_text.innerText = "Good for your skin, good for your wallet, good for the planet.";
+//  let discount_table = document.getElementsByClassName("table-product-discounts")[0] ;
+//  discount_table.insertAdjacentElement("beforebegin",above_table_text);
 // END SCRIPT TO ADD BANNER TEXT BEFORE PRICE DISCOUNT TABLE ON PRODUCT PAGE 
 
 
