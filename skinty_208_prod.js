@@ -71,8 +71,8 @@ let pageUrl = window.location.href ;
 let welcomeTextHelpPopup ;
 let showOnExit ;
 // BELOW 2 VARIABLES ARE TO ADD TEXT ABOVE THE DISCOUNT TABLE ON PRODUCT PAGES
-//let above_table_text = document.createElement("p");
-//let discount_table = document.getElementsByClassName("table-product-discounts")[0] ;
+let above_table_text = document.createElement("p");
+let discount_table = document.getElementsByClassName("table-product-discounts")[0] ;
 
 if (pageUrl.includes("/fr/")) {
 welcomeTextHelpPopup = document.getElementById("text_for_welcomeTextHelpPopupFR").value ;
@@ -81,15 +81,15 @@ show_digital_assistant = document.getElementById("show_digital_assistantFR").val
 document.getElementById("email_link_popup").href = "https://www.skintifique.me/shop/fr/72-contactez-nous" ;
 document.getElementById("email_link_modal").href = "https://www.skintifique.me/shop/fr/72-contactez-nous" ;
 document.getElementById("faq_link_popup").href = "https://www.skintifique.me/shop/fr/58-faq" ;
-//above_table_text.innerText = "Prenez-en plusieurs: bon pour votre peau, bon pour votre portefeuille, bon pour la planete.";
+above_table_text.innerText = "Prenez-en plusieurs: bon pour votre peau, bon pour votre portefeuille, bon pour la planete.";
 } else {
 welcomeTextHelpPopup = document.getElementById("text_for_welcomeTextHelpPopupEN").value ;
 show_on_exit = document.getElementById("show_on_exitEN").value ;
 show_digital_assistant = document.getElementById("show_digital_assistantEN").value ;
-//above_table_text.innerText = "Order several: good for your skin, good for your wallet, good for the planet.";
+above_table_text.innerText = "Order several: good for your skin, good for your wallet, good for the planet.";
 }
 
-//discount_table.insertAdjacentElement("beforebegin",above_table_text);
+discount_table.insertAdjacentElement("beforebegin",above_table_text);
 document.getElementById("welcomeTextHelpPopup").innerHTML = welcomeTextHelpPopup ;
 if (show_digital_assistant == "no") {
 document.getElementById("skinTyBtnInModal").style.display = "none";
