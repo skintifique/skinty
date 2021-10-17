@@ -91,6 +91,14 @@ document.getElementById("ModalBtnFloat").style.display = "none";
 //document.getElementById("show_on_exit").innerHTML = show_on_exit ;//
 // END OF LOCALISATION
 
+// ADD SCRIPT TO ADD BANNER TEXT BEFORE PRICE DISCOUNT TABLE ON PRODUCT PAGE 
+  let above_table_text = document.createElement("p");
+  above_table_text.innerText = "Good for your skin, good for your wallet, good for the planet.";
+  let discount_table = document.getElementsByClassName("table-product-discounts")[0] ;
+  discount_table.insertAdjacentElement("beforebegin",above_table_text);
+// END SCRIPT TO ADD BANNER TEXT BEFORE PRICE DISCOUNT TABLE ON PRODUCT PAGE 
+
+
 
 // FOR SKINTY MODAL ON EXIT
 
