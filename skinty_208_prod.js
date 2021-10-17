@@ -86,7 +86,7 @@ above_table_text.innerText = "Prenez-en plusieurs: bon pour votre peau, bon pour
 welcomeTextHelpPopup = document.getElementById("text_for_welcomeTextHelpPopupEN").value ;
 show_on_exit = document.getElementById("show_on_exitEN").value ;
 show_digital_assistant = document.getElementById("show_digital_assistantEN").value ;
-above_table_text.innerText = "Buy several: good for your skin, good for your wallet, good for the planet.";
+above_table_text.innerText = "Order several: good for your skin, good for your wallet, good for the planet.";
 }
 
 discount_table.insertAdjacentElement("beforebegin",above_table_text);
