@@ -110,7 +110,7 @@ document.getElementById("ModalBtnFloat").style.display = "none";
 let payment_option_1 = document.getElementById("payment-option-1") ;
 let pay_with_payment_option_1_form = document.getElementById("pay-with-payment-option-1-form") ;
 //if (payment_option_1) {
-//payment_option_1.checked = "checked" ;
+payment_option_1.checked = "checked" ;
 //}
 //if (pay_with_payment_option_1_form) {
 //pay_with_payment_option_1_form.style.display = "block" ;
