@@ -107,14 +107,12 @@ document.getElementById("ModalBtnFloat").style.display = "none";
 // END SCRIPT TO ADD BANNER TEXT BEFORE PRICE DISCOUNT TABLE ON PRODUCT PAGE 
 
 //  SCRIPT TO MAKE FIRST PAYMENT OPTION VISIBLE AND CORRESPONDING RADIO BTN CKECKED ON PAYMENT PAGE
+if (pageUrl.includes("/en/order")) {
 let payment_option_1 = document.getElementById("payment-option-1") ;
 let pay_with_payment_option_1_form = document.getElementById("pay-with-payment-option-1-form") ;
-//if (payment_option_1) {
-//payment_option_1.checked = "checked" ;
-//}
-//if (pay_with_payment_option_1_form) {
+payment_option_1.checked = "checked" ;
 pay_with_payment_option_1_form.style.display = "block" ;
-//}	
+}
 // END SCRIPT TO MAKE FIRST PAYMENT OPTION VISIBLE AND CORRESPONDING RADIO BTN CKECKED ON PAYMENT PAGE
 
 
