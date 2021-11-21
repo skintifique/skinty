@@ -469,6 +469,11 @@ for (let i = 0; i < elementsToHide.length; i++) {
 } else if (y_class.includes("openAccordion")) {
 // document.getElementById("dev1").innerHTML = "test7" ;
 let y_value = y.value ;
+
+//do not manage if this is for MILA pages	
+if ((currentURL.includes("https://www.skintifique.me/shop/en/150-mila") || (currentURL.includes("https://www.skintifique.me/shop/fr/150-mila")) {
+     //do nothing
+} else	{
 let classToOpen = y_value ;
 let elementsToHide = document.getElementsByClassName(classToOpen) ;
 for (let i = 0; i < elementsToHide.length; i++) {
@@ -481,6 +486,7 @@ for (let i = 0; i < elementsToHide.length; i++) {
      elementsToHide[i].style.display = "block";
      }
      }
+}
 }	   
 });
 
