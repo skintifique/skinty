@@ -487,7 +487,7 @@ for (let i = 0; i < elementsToHide.length; i++) {
      }
      }
 }
-}	   
+//} COMMENTED OUT AS SKINTY DOES NOT SEEM TO WORK ANYMORE 20211122   
 });
 
 
