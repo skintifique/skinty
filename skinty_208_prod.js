@@ -441,52 +441,55 @@ if (x_class.includes("openInSkintyModal")) {
   openSkintyModal(x) ;
  } else if (x_class.includes("openHelpPopup")) {
   openHelpPopup() ;
-} else if (x_class.includes("openAccordion")) {
-// document.getElementById("dev1").innerHTML = "test7" ;
+//} 
+// desactivation des scripts openAccordion on 20211123
+//	else if (x_class.includes("openAccordion")) {
 // hide all the Elements with class accordionContent //
-let all_accordions = document.getElementsByClassName("accordionContent") ;
-for (let i = 0; i < all_accordions.length; i++) {
-     all_accordions[i].style.display = "none";
-     } 	
-let x_value = x.value ;
-let classToOpen = x_value ;
-let elementsToHide = document.getElementsByClassName(classToOpen) ;
-for (let i = 0; i < elementsToHide.length; i++) {
-     let z = elementsToHide[i].style.display ;
-     if (!z) {
-     elementsToHide[i].style.display = "block";
-     } else if (z == "block") {
-     elementsToHide[i].style.display = "none";
-     } else {
-     elementsToHide[i].style.display = "block";
-     }
-     }
+//let all_accordions = document.getElementsByClassName("accordionContent") ;
+//for (let i = 0; i < all_accordions.length; i++) {
+ //    all_accordions[i].style.display = "none";
+//     } 	
+//let x_value = x.value ;
+//let classToOpen = x_value ;
+//let elementsToHide = document.getElementsByClassName(classToOpen) ;
+//for (let i = 0; i < elementsToHide.length; i++) {
+//     let z = elementsToHide[i].style.display ;
+//     if (!z) {
+//     elementsToHide[i].style.display = "block";
+//     } else if (z == "block") {
+//     elementsToHide[i].style.display = "none";
+//     } else {
+//     elementsToHide[i].style.display = "block";
+//    }
+//     }
 } else if (y_class.includes("openInSkintyModal")) {
 // document.getElementById("dev1").innerHTML = "Element clicked7";
   openSkintyModal(x) ;
  } else if (y_class.includes("openHelpPopup")) {
   openHelpPopup() ;
-} else if (y_class.includes("openAccordion")) {
+} 
+// desactivation des scripts openAccordion on 20211123
+//	else if (y_class.includes("openAccordion")) {
 // document.getElementById("dev1").innerHTML = "test7" ;
-let y_value = y.value ;
+//let y_value = y.value ;
 
 //do not manage if this is for MILA pages	
-if ((currentURL.includes("https://www.skintifique.me/shop/en/150-mila") || (currentURL.includes("https://www.skintifique.me/shop/fr/150-mila")) {
-     //do nothing
-} else	{
-let classToOpen = y_value ;
-let elementsToHide = document.getElementsByClassName(classToOpen) ;
-for (let i = 0; i < elementsToHide.length; i++) {
-     let z = elementsToHide[i].style.display ;
-     if (!z) {
-     elementsToHide[i].style.display = "block";
-     } else if (z == "block") {
-     elementsToHide[i].style.display = "none";
-     } else {
-     elementsToHide[i].style.display = "block";
-     }
-     }
-}
+//if ((currentURL.includes("https://www.skintifique.me/shop/en/150-mila") || (currentURL.includes("https://www.skintifique.me/shop/fr/150-mila")) {
+     //do nothing ! this probably created skinty to stop working
+//} else	{
+//let classToOpen = y_value ;
+//let elementsToHide = document.getElementsByClassName(classToOpen) ;
+//for (let i = 0; i < elementsToHide.length; i++) {
+//     let z = elementsToHide[i].style.display ;
+//     if (!z) {
+//     elementsToHide[i].style.display = "block";
+//     } else if (z == "block") {
+ //    elementsToHide[i].style.display = "none";
+ //    } else {
+ //    elementsToHide[i].style.display = "block";
+ //    }
+ //    }
+//}
 //} COMMENTED OUT AS SKINTY DOES NOT SEEM TO WORK ANYMORE 20211122   
 });
 
