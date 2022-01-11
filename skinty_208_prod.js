@@ -461,7 +461,7 @@ if (x_class.includes("openInSkintyModal")) {
   openHelpPopup() ;
 } 
 // desactivation des scripts openAccordion on 20211123 reactivated on 2022011 with new conditions
-//	else if ((y_class.includes("openAccordion")) && !(pageUrl.includes("/166-mila")) {
+	else if (y_class.includes("openAccordion")) {
 // document.getElementById("dev1").innerHTML = "test7" ;
 //let y_value = y.value ;
 
