@@ -463,25 +463,25 @@ if (x_class.includes("openInSkintyModal")) {
 // desactivation des scripts openAccordion on 20211123 reactivated on 2022011 with new conditions
 	else if (y_class.includes("openAccordion")) {
 // document.getElementById("dev1").innerHTML = "test7" ;
-//let y_value = y.value ;
+let y_value = y.value ;
 
 //do not manage if this is for MILA pages	
 //if ((currentURL.includes("https://www.skintifique.me/shop/en/150-mila") || (currentURL.includes("https://www.skintifique.me/shop/fr/150-mila")) {
      //do nothing ! this probably created skinty to stop working
 //} else	{
-//let classToOpen = y_value ;
-//let elementsToHide = document.getElementsByClassName(classToOpen) ;
-//for (let i = 0; i < elementsToHide.length; i++) {
-//     let z = elementsToHide[i].style.display ;
-//     if (!z) {
-//     elementsToHide[i].style.display = "block";
-//     } else if (z == "block") {
-//    elementsToHide[i].style.display = "none";
-//    } else {
-//    elementsToHide[i].style.display = "block";
-//    }
-//    }
-//}
+let classToOpen = y_value ;
+let elementsToHide = document.getElementsByClassName(classToOpen) ;
+for (let i = 0; i < elementsToHide.length; i++) {
+     let z = elementsToHide[i].style.display ;
+     if (!z) {
+     elementsToHide[i].style.display = "block";
+     } else if (z == "block") {
+    elementsToHide[i].style.display = "none";
+    } else {
+    elementsToHide[i].style.display = "block";
+    }
+    }
+}
 //} COMMENTED OUT AS SKINTY DOES NOT SEEM TO WORK ANYMORE 20211122   
 });
 
