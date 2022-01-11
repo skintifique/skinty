@@ -1,23 +1,15 @@
 <!-- Start script to load top menu images (desktop) only when user needs them -->
-//let iqitmegamenuXXX =document.getElementById("iqitmegamenu-wrapper") ;
-//iqitmegamenuXXX.addEventListener("mouseover",loadMenuImages) ;
-// let iqitmegamenuXXX =document.getElementById("header") ;
-let iqitmegamenu_imgs = document.getElementsByClassName("mega-menu-imgs") ;
-document.getElementById("header").addEventListener("mouseover",loadMenuImages) ;
-document.addEventListener("scroll",loadMenuImages) ;
+//let iqitmegamenu_imgs = document.getElementsByClassName("mega-menu-imgs") ;
+//document.getElementById("header").addEventListener("mouseover",loadMenuImages) ;
+//document.addEventListener("scroll",loadMenuImages) ;
 
-function loadMenuImages () {
-	for (let i = 0; i < iqitmegamenu_imgs.length; i++) {
-	let src = iqitmegamenu_imgs[i].getAttribute("data-menu-src") ;
-	iqitmegamenu_imgs[i].src = src ;
-		}
-}
-	
-//document.getElementById("dev1XX").innerHTML = "111" ;//
-
-// let imgMenu1 = document.getElementById("imgMenu1").getAttribute("data-menu-src") ;
- //document.getElementById("imgMenu1").src = imgMenu1 ;	
+//function loadMenuImages () {
+//	for (let i = 0; i < iqitmegamenu_imgs.length; i++) {
+//	let src = iqitmegamenu_imgs[i].getAttribute("data-menu-src") ;
+//	iqitmegamenu_imgs[i].src = src ;
+//		}
 //}
+	
 <!-- End script to load top menu images (desktop) only when user needs them -->
 
 
@@ -442,53 +434,53 @@ if (x_class.includes("openInSkintyModal")) {
  } else if (x_class.includes("openHelpPopup")) {
   openHelpPopup() ;
 //} 
-// desactivation des scripts openAccordion on 20211123
-//	else if (x_class.includes("openAccordion")) {
+// desactivation des scripts openAccordion on 20211123 - reactivated with new condition on 20220111
+	else if ((x_class.includes("openAccordion")) && !(pageUrl.includes("/166-mila")) {
 // hide all the Elements with class accordionContent //
-//let all_accordions = document.getElementsByClassName("accordionContent") ;
-//for (let i = 0; i < all_accordions.length; i++) {
- //    all_accordions[i].style.display = "none";
-//     } 	
-//let x_value = x.value ;
-//let classToOpen = x_value ;
-//let elementsToHide = document.getElementsByClassName(classToOpen) ;
-//for (let i = 0; i < elementsToHide.length; i++) {
-//     let z = elementsToHide[i].style.display ;
-//     if (!z) {
-//     elementsToHide[i].style.display = "block";
-//     } else if (z == "block") {
-//     elementsToHide[i].style.display = "none";
-//     } else {
-//     elementsToHide[i].style.display = "block";
-//    }
-//     }
+let all_accordions = document.getElementsByClassName("accordionContent") ;
+for (let i = 0; i < all_accordions.length; i++) {
+    all_accordions[i].style.display = "none";
+     } 	
+let x_value = x.value ;
+let classToOpen = x_value ;
+let elementsToHide = document.getElementsByClassName(classToOpen) ;
+for (let i = 0; i < elementsToHide.length; i++) {
+     let z = elementsToHide[i].style.display ;
+     if (!z) {
+     elementsToHide[i].style.display = "block";
+     } else if (z == "block") {
+     elementsToHide[i].style.display = "none";
+     } else {
+     elementsToHide[i].style.display = "block";
+    }
+     }
 } else if (y_class.includes("openInSkintyModal")) {
 // document.getElementById("dev1").innerHTML = "Element clicked7";
   openSkintyModal(x) ;
  } else if (y_class.includes("openHelpPopup")) {
   openHelpPopup() ;
 } 
-// desactivation des scripts openAccordion on 20211123
-//	else if (y_class.includes("openAccordion")) {
+// desactivation des scripts openAccordion on 20211123 reactivated on 2022011 with new conditions
+	else if ((y_class.includes("openAccordion")) && !(pageUrl.includes("/166-mila")) {
 // document.getElementById("dev1").innerHTML = "test7" ;
-//let y_value = y.value ;
+let y_value = y.value ;
 
 //do not manage if this is for MILA pages	
 //if ((currentURL.includes("https://www.skintifique.me/shop/en/150-mila") || (currentURL.includes("https://www.skintifique.me/shop/fr/150-mila")) {
      //do nothing ! this probably created skinty to stop working
 //} else	{
-//let classToOpen = y_value ;
-//let elementsToHide = document.getElementsByClassName(classToOpen) ;
-//for (let i = 0; i < elementsToHide.length; i++) {
-//     let z = elementsToHide[i].style.display ;
-//     if (!z) {
-//     elementsToHide[i].style.display = "block";
-//     } else if (z == "block") {
- //    elementsToHide[i].style.display = "none";
- //    } else {
- //    elementsToHide[i].style.display = "block";
- //    }
- //    }
+let classToOpen = y_value ;
+let elementsToHide = document.getElementsByClassName(classToOpen) ;
+for (let i = 0; i < elementsToHide.length; i++) {
+     let z = elementsToHide[i].style.display ;
+     if (!z) {
+     elementsToHide[i].style.display = "block";
+     } else if (z == "block") {
+    elementsToHide[i].style.display = "none";
+    } else {
+    elementsToHide[i].style.display = "block";
+    }
+    }
 //}
 //} COMMENTED OUT AS SKINTY DOES NOT SEEM TO WORK ANYMORE 20211122   
 });
