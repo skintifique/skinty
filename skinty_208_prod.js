@@ -636,43 +636,43 @@ document.getElementById("skintyframe").src = skintyPageUrl + "/call_us.html" ;
 }
 
 <!-- Start of script to get add-to-cart buttons on product pages to get sticky -->
-let pageUrlSticky = window.location.href ;
-let elemRectTop ;
-let bodyRectTop ;
-if (pageUrlSticky.includes("/shop/")) {
-let x = document.getElementsByClassName("add-to-cart");
-let elemToStick = x[0] ;
-let elemToStickClass = elemToStick.className ;
-if ((elemToStickClass.includes("btn-primary")) && (elemToStickClass.includes("btn-lg"))) {
-let elemRect = elemToStick.getBoundingClientRect() ;
-elemRectTop = elemRect.top ;
-window.onscroll = function() {myFunctionSticky()};
-}
+//let pageUrlSticky = window.location.href ;
+//let elemRectTop ;
+//let bodyRectTop ;
+//if (pageUrlSticky.includes("/shop/")) {
+//let x = document.getElementsByClassName("add-to-cart");
+//let elemToStick = x[0] ;
+//let elemToStickClass = elemToStick.className ;
+//if ((elemToStickClass.includes("btn-primary")) && (elemToStickClass.includes("btn-lg"))) {
+//let elemRect = elemToStick.getBoundingClientRect() ;
+//elemRectTop = elemRect.top ;
+//window.onscroll = function() {myFunctionSticky()};
+//}
 
-function myFunctionSticky() {
-var bodyRect = document.body.getBoundingClientRect() ;
-bodyRectTop = bodyRect.top ;
-var offsetRect = elemRectTop + bodyRectTop ;
-//document.getElementById("dev4").innerHTML = offsetRect ;
-if (offsetRect < 40 ){
-// required to force repaint on webkit
-      document.getElementsByClassName("add-to-cart")[0].style.setProperty("transform", "translateZ(0)");
-      document.getElementsByClassName("add-to-cart")[0].classList.add("sticky") ;
-// this will remove the property 1 frame later
-     requestAnimationFrame(() => {
-     elemToStick.style.removeProperty("transform");         
-        });
-  } else {
-// required to force repaint on webkit
-     document.getElementsByClassName("add-to-cart")[0].style.setProperty("transform", "translateZ(0)");
-     document.getElementsByClassName("add-to-cart")[0].classList.remove("sticky") ;
-// this will remove the property 1 frame later
-     requestAnimationFrame(() => {
-     elemToStick.style.removeProperty("transform");     
-        });
-  }
-}
-}
+//function myFunctionSticky() {
+//var bodyRect = document.body.getBoundingClientRect() ;
+//bodyRectTop = bodyRect.top ;
+//var offsetRect = elemRectTop + bodyRectTop ;
+////document.getElementById("dev4").innerHTML = offsetRect ;
+//if (offsetRect < 40 ){
+//// required to force repaint on webkit
+//      document.getElementsByClassName("add-to-cart")[0].style.setProperty("transform", "translateZ(0)");
+//      document.getElementsByClassName("add-to-cart")[0].classList.add("sticky") ;
+//// this will remove the property 1 frame later
+//     requestAnimationFrame(() => {
+//     elemToStick.style.removeProperty("transform");         
+//        });
+//  } else {
+//// required to force repaint on webkit
+//     document.getElementsByClassName("add-to-cart")[0].style.setProperty("transform", "translateZ(0)");
+//     document.getElementsByClassName("add-to-cart")[0].classList.remove("sticky") ;
+//// this will remove the property 1 frame later
+//     requestAnimationFrame(() => {
+//     elemToStick.style.removeProperty("transform");     
+//        });
+//  }
+//}
+//}
 <!-- End of script to get add-to-cart buttons on product pages to get sticky -->
 
 <!-- Start script to add additional style to specific pages -->
