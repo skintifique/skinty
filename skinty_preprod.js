@@ -266,59 +266,59 @@ document.getElementById("divSkintyFrame").className ="divSkintyForIframe" ;
 }
 
 // When the user clicks on floating button (help button) div, open the popup
-function openHelpPopup() {
-          window.fbAsyncInit = function() {
-          FB.init({
-            xfbml            : true,
-            version          : "v9.0"
-          });
-        };
-        (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, "script", "facebook-jssdk"));
+// function openHelpPopup() {
+//           window.fbAsyncInit = function() {
+//           FB.init({
+//             xfbml            : true,
+//             version          : "v9.0"
+//           });
+//         };
+//         (function(d, s, id) {
+//         var js, fjs = d.getElementsByTagName(s)[0];
+//         if (d.getElementById(id)) return;
+//         js = d.createElement(s); js.id = id;
+//         js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+//         fjs.parentNode.insertBefore(js, fjs);
+//       }(document, "script", "facebook-jssdk"));
 
-  (function() {
-    var el = document.createElement("div");
-    el.className = "fb-customerchat";
-    el.setAttribute("page_id", "592541754225652");
-    el.setAttribute("attribution", "setup_tool");
-    el.setAttribute("greeting_dialog_display", "hide");
-    document.body.appendChild(el);
-  })();
+  // (function() {
+  //   var el = document.createElement("div");
+  //   el.className = "fb-customerchat";
+  //   el.setAttribute("page_id", "592541754225652");
+  //   el.setAttribute("attribution", "setup_tool");
+  //   el.setAttribute("greeting_dialog_display", "hide");
+  //   document.body.appendChild(el);
+  // })();
 	
-(function() {
-let script1 = document.createElement("script");
-script1.setAttribute("id", "ze-snippet");
-script1.setAttribute("src", "https://static.zdassets.com/ekr/snippet.js?key=a11224ff-78c1-49da-8419-1a8006595ef5");
-let pZendesk = document.getElementById("pZendesk") ;
-pZendesk.appendChild(script1);
- })();
+// (function() {
+// let script1 = document.createElement("script");
+// script1.setAttribute("id", "ze-snippet");
+// script1.setAttribute("src", "https://static.zdassets.com/ekr/snippet.js?key=a11224ff-78c1-49da-8419-1a8006595ef5");
+// let pZendesk = document.getElementById("pZendesk") ;
+// pZendesk.appendChild(script1);
+//  })();
 
-setTimeout(function(){ hideZend(); }, 500);
+// setTimeout(function(){ hideZend(); }, 500);
 	
-  var popup = document.getElementById("myPopup");
-  popup.classList.toggle("show");
-//let fbMsgDiv = document.getElementById("fbMsgDiv") ;
- // let fbMsgDivDisplay = fbMsgDiv.style.display ;
-//  if (fbMsgDivDisplay === "block") {
-  document.getElementById("fbMsgDiv").style.display = "none" ;
- // }
-  showAvailableBtns() ;
+//   var popup = document.getElementById("myPopup");
+//   popup.classList.toggle("show");
+// //let fbMsgDiv = document.getElementById("fbMsgDiv") ;
+//  // let fbMsgDivDisplay = fbMsgDiv.style.display ;
+// //  if (fbMsgDivDisplay === "block") {
+//   document.getElementById("fbMsgDiv").style.display = "none" ;
+//  // }
+//   showAvailableBtns() ;
 	
-}
+// }
 
-function hideZend () {
-let launcher = document.getElementById("launcher") ;
-if (launcher) {
-launcher.style.display="none";	
-} else {
-setTimeout(function(){ hideZend(); }, 20);
-}	
-}
+// function hideZend () {
+// let launcher = document.getElementById("launcher") ;
+// if (launcher) {
+// launcher.style.display="none";	
+// } else {
+// setTimeout(function(){ hideZend(); }, 20);
+// }	
+// }
 	
 <!-- END display floating button and identification deviceType -->  
   
@@ -384,15 +384,15 @@ if ((today != "6") && (today != "0")) {
   } 
   } 
  if (availability == "available") {
-  document.getElementById("openChatBtn").style.display = "block" ;
+  // document.getElementById("openChatBtn").style.display = "block" ;
   document.getElementById("ModalBtnUrl2").style.display = "none" ;
   document.getElementById("callUsBtnInModal").style.display = "none" ;	 
-  document.getElementById("chatBtnInModal").style.display = "inline" ;	  
+  // document.getElementById("chatBtnInModal").style.display = "inline" ;	  
   } else {
-  document.getElementById("openChatBtn").style.display = "block" ;
+  // document.getElementById("openChatBtn").style.display = "block" ;
   document.getElementById("ModalBtnUrl2").style.display = "none" ;
   document.getElementById("callUsBtnInModal").style.display = "none" ;	 
-  document.getElementById("chatBtnInModal").style.display = "inline" ;		  
+  // document.getElementById("chatBtnInModal").style.display = "inline" ;		  
   } 
 sessionStorage.setItem("nbHelpPopupOpen","1") ;
 } 
@@ -614,7 +614,7 @@ let modal = document.getElementById("myModal");
 
 // For the buttons underneath the SkinTy window
 function liveAgent () {
-document.getElementById("skintyframe").src = skintyPageUrl + "/zendesk-widget.html" ;
+// document.getElementById("skintyframe").src = skintyPageUrl + "/zendesk-widget.html" ;
 }
 
 function flamingo () {
