@@ -686,10 +686,10 @@ document.getElementById("skintyframe").src = skintyPageUrl + "/call_us.html" ;
 //}
 
 // THE SCRIPT BELOW ADDS A product-styleX STYLE TO THE PRODUCT PAGE #wrapper WHEN THE PAGE CONTAINS AN #additional-product-style element with the value="product-styleX"
-let additional_product_style = document.getElementById("additional-product-style").value ;
+let additional_product_style = document.getElementById("additional-product-style") ;
 if (additional_product_style) {	
 let wrapper_elmt = document.getElementById("wrapper") ;
-wrapper_elmt.classList.add(additional_product_style);
+wrapper_elmt.classList.add(additional_product_style.value);
 }
  
 <!-- End script to add additional style to specific pages -->
